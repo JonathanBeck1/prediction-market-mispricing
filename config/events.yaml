@@ -1,0 +1,41 @@
+# Scheduled events -- edit this file to add upcoming speeches.
+# The system reads this at startup and on each scoring cycle.
+#
+# Optional fields for human-authored probability overrides:
+#
+#   p_overrides:            # HARD BYPASS — discard the frequency formula entirely.
+#     phrase: 0.95          # Use for causally certain phrases (e.g. the name of the
+#                           # person being sworn in, the title of a bill being signed).
+#
+#   p_floors:               # SOFT MINIMUM — frequency formula still runs but result
+#     phrase: 0.65          # is clamped to at least this value. Use for domain phrases
+#                           # that are structurally elevated by the event context.
+#                           # Valid range: 0.30 – 0.92
+#
+# Both fields are propagated into the event signal JSON file on startup so the
+# scorer picks them up automatically via EventSignalStore hot-reload.
+
+events:
+  - event_id: "trump:2026-03-24:signing-01"
+    speaker: trump
+    event_type: signing
+    scheduled_start_ts: "2026-03-24T12:00:00-05:00"
+    expected_duration_sec: 3600
+    kalshi_event_ticker: "KXTRUMPMENTION-26MAR24"   # links p_overrides/p_floors to auto-seeded event
+    notes: "Swearing-in ceremony for Secretary of Homeland Security. Key topics: border, illegal immigration, deportation, ICE, fentanyl, cartel, wall, DHS, TSA, shutdown, national security."
+    p_overrides:
+      kristi: 0.95      # Kristi Noem is being sworn in — Trump will address her by name
+      noem: 0.90        # He may use her surname in full
+    p_floors:
+      deport: 0.65      # DHS Secretary's core function is deportation
+      illegal alien: 0.72  # Trump's signature immigration phrase at DHS events
+      national guard: 0.55  # Used for border operations under DHS
+      border: 0.75      # Central to DHS mission
+
+# Example:
+#  - event_id: "trump:2026-03-05:rally-01"
+#    speaker: trump
+#    event_type: rally
+#    scheduled_start_ts: "2026-03-05T19:00:00-05:00"
+#    expected_duration_sec: 5400
+#    notes: "Campaign rally in Iowa"

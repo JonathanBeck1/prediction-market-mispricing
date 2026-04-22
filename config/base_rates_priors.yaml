@@ -1,0 +1,375 @@
+# Manual priors for speakers that lack resolved Kalshi outcome history.
+# This file is NEVER overwritten by calibrate_base_rates.py or compute_base_rates.py.
+# Once a speaker accumulates N >= 8 resolved outcomes, base_rates_auto.yaml will
+# override individual phrase entries automatically (it loads after this file).
+#
+# How to add a new speaker:
+#   1. Add an entry below with context buckets (press_conference, general, etc.)
+#   2. Set _context_base for the expected context type
+#   3. Once 20+ transcripts are in data/corpus/<speaker>/ and outcomes start
+#      resolving, the auto calibration will replace these priors.
+#
+# ─────────────────────────────────────────────────────────────────────────────
+# KXFEDMENTION — Jerome Powell / Fed chair press conferences
+# Fed language is highly formulaic. Calibrated from 20 FOMC transcripts (2022-2026).
+# ─────────────────────────────────────────────────────────────────────────────
+powell:
+  press_conference:
+    inflation: 0.98
+    interest rate: 0.97
+    rate: 0.95
+    economy: 0.95
+    labor market: 0.93
+    unemployment: 0.90
+    gdp: 0.85
+    growth: 0.90
+    uncertainty: 0.88
+    tariff: 0.80
+    trade: 0.75
+    balance sheet: 0.88
+    monetary policy: 0.93
+    federal reserve: 0.97
+    basis points: 0.85
+    data dependent: 0.80
+    mandate: 0.90
+    maximum employment: 0.88
+    price stability: 0.92
+    supply chain: 0.65
+    housing: 0.72
+    credit: 0.80
+    financial conditions: 0.78
+    yield curve: 0.50
+    recession: 0.55
+    soft landing: 0.60
+    volatility: 0.60
+    unchanged: 0.60
+    trump: 0.62
+    trade war: 0.60
+    tax: 0.60
+    tariff inflation: 0.58
+    dot plot: 0.75
+    anchored: 0.92
+    expectation: 0.88
+    energy: 0.70
+    dollar: 0.72
+    bitcoin: 0.45
+    artificial intelligence: 0.65
+  general:
+    inflation: 0.95
+    interest rate: 0.93
+    economy: 0.92
+    uncertainty: 0.85
+    tariff: 0.75
+    trade: 0.70
+    federal reserve: 0.93
+    monetary policy: 0.90
+    basis points: 0.82
+    mandate: 0.88
+    price stability: 0.90
+    growth: 0.88
+    unemployment: 0.85
+  _context_base:
+    press_conference: 0.72
+    general: 0.68
+    speech: 0.65
+
+# ─────────────────────────────────────────────────────────────────────────────
+# KXCARNEYMENTION — Mark Carney (Liberal PM of Canada, former central banker)
+# Economic / trade war focus. Calibrated from 1 Davos transcript (2026-01).
+# ─────────────────────────────────────────────────────────────────────────────
+carney:
+  announcement:
+    tariff: 0.82
+    trade: 0.80
+    canada: 0.90
+    economy: 0.85
+    jobs: 0.78
+    workers: 0.75
+    american: 0.72
+    united states: 0.72
+    sovereignty: 0.68
+    trump: 0.68
+    retaliation: 0.58
+    retaliatory: 0.58
+    inflation: 0.62
+    growth: 0.72
+    investment: 0.70
+    housing: 0.58
+    climate: 0.52
+    energy: 0.65
+    oil: 0.60
+    pipelines: 0.48
+    nato: 0.48
+    defence: 0.52
+    security: 0.62
+    arctic: 0.55
+    billion: 0.65
+    china: 0.62
+  general:
+    tariff: 0.75
+    trade: 0.75
+    canada: 0.85
+    economy: 0.80
+    trump: 0.65
+    american: 0.68
+    investment: 0.65
+    growth: 0.70
+    sovereignty: 0.62
+    housing: 0.55
+  _context_base:
+    announcement: 0.58
+    general: 0.55
+    press_conference: 0.58
+    speech: 0.55
+
+# ─────────────────────────────────────────────────────────────────────────────
+# KXSTARMERMENTIONB — Keir Starmer (UK Prime Minister)
+# Parliament / PMQs / press conferences. Calibrated from 3 Rev transcripts.
+# ─────────────────────────────────────────────────────────────────────────────
+starmer:
+  parliament:
+    prime minister: 0.82
+    government: 0.88
+    economy: 0.80
+    working people: 0.85
+    nhs: 0.78
+    labour: 0.82
+    conservative: 0.75
+    investment: 0.72
+    growth: 0.75
+    security: 0.68
+    housing: 0.68
+    energy: 0.65
+    nato: 0.62
+    defence: 0.68
+    united kingdom: 0.72
+    britain: 0.72
+    trade: 0.62
+    tariff: 0.52
+    trump: 0.58
+    ukraine: 0.62
+    russia: 0.58
+    ceasefire: 0.55
+    israel: 0.52
+  general:
+    prime minister: 0.80
+    government: 0.85
+    economy: 0.78
+    working people: 0.80
+    nhs: 0.72
+    labour: 0.80
+    growth: 0.70
+    investment: 0.68
+    security: 0.65
+    nato: 0.58
+    defense: 0.60
+    trump: 0.55
+    trade: 0.58
+    tariff: 0.48
+    ceasefire: 0.52
+    ukraine: 0.58
+  presser:
+    trade: 0.75
+    tariff: 0.68
+    nato: 0.72
+    ukraine: 0.70
+    ceasefire: 0.62
+    security: 0.72
+    defence: 0.70
+    trump: 0.65
+    united states: 0.68
+    economy: 0.72
+    investment: 0.65
+    growth: 0.65
+  _context_base:
+    parliament: 0.60
+    speech: 0.58
+    general: 0.56
+    press_conference: 0.55
+    presser: 0.60
+    interview: 0.52
+
+# ─────────────────────────────────────────────────────────────────────────────
+# KXHOMANMENTION — Tom Homan (White House Border Czar / ICE)
+# Enforcement / immigration focus. Calibrated from 1 Turning Point transcript.
+# ─────────────────────────────────────────────────────────────────────────────
+homan:
+  announcement:
+    border: 0.95
+    illegal: 0.90
+    illegal alien: 0.85
+    deport: 0.88
+    deportation: 0.88
+    ice: 0.92
+    enforcement: 0.90
+    crime: 0.80
+    criminal: 0.80
+    cartel: 0.78
+    fentanyl: 0.82
+    secure: 0.78
+    sanctuary: 0.70
+    ms-13: 0.65
+    gang: 0.70
+    national security: 0.75
+    trump: 0.80
+    president trump: 0.80
+    constitution: 0.60
+    law: 0.85
+    lawsuit: 0.60
+    judge: 0.60
+    court: 0.60
+    biden: 0.72
+  general:
+    border: 0.92
+    illegal: 0.88
+    deport: 0.82
+    deportation: 0.82
+    ice: 0.90
+    enforcement: 0.88
+    crime: 0.78
+    criminal: 0.78
+    cartel: 0.75
+    fentanyl: 0.78
+    trump: 0.78
+    law: 0.82
+    biden: 0.70
+    sanctuary: 0.65
+  summit:
+    border: 0.93
+    illegal: 0.88
+    deport: 0.85
+    deportation: 0.85
+    ice: 0.90
+    fentanyl: 0.80
+    crime: 0.78
+    criminal: 0.78
+    cartel: 0.75
+    trump: 0.80
+    law: 0.82
+    sanctuary: 0.68
+    biden: 0.72
+  _context_base:
+    announcement: 0.65
+    general: 0.62
+    summit: 0.65
+    interview: 0.60
+    speech: 0.62
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Sports broadcast mention markets
+# Priors calibrated from broadcast language patterns.
+# Context type "general" is used because no per-event type is set for games.
+# Venue-name phrases apply to games played AT that venue (very high hit rate).
+# Play/stat phrases apply across all games (moderate hit rate).
+# ─────────────────────────────────────────────────────────────────────────────
+
+# KXNCAABMENTION — College basketball announcers
+ncaab:
+  general:
+    walk on: 0.62
+    transfer: 0.72
+    schedule: 0.68
+    recruit: 0.65
+    record: 0.78
+    overtime: 0.28
+    nil: 0.58
+    elbow: 0.62
+    draft: 0.52
+    double double: 0.55
+    buzzer: 0.58
+    ankle: 0.48
+    alley-oop: 0.52
+    all american: 0.55
+    airball: 0.38
+  _context_base:
+    general: 0.55
+    game: 0.55
+
+# KXNBAMENTION — NBA broadcast announcers
+nba:
+  general:
+    triple double: 0.52
+    trade: 0.48
+    tech: 0.55
+    rookie: 0.52
+    retire: 0.22
+    playoff: 0.68
+    overtime: 0.32
+    mvp: 0.58
+    jordan: 0.52
+    injury: 0.65
+    elbow: 0.62
+    draft: 0.55
+    crowd: 0.48
+    buzzer: 0.58
+    ankle: 0.48
+    airball: 0.32
+    # Arena / venue names — almost always mentioned at home games
+    fiserv: 0.88
+    moda: 0.88
+    mortgage matchup: 0.85
+    spectrum: 0.88
+    target center: 0.88
+    rocket: 0.55
+  _context_base:
+    general: 0.55
+    game: 0.55
+
+# KXMLBMENTION — MLB broadcast announcers
+mlb:
+  general:
+    walk off: 0.45
+    what a catch: 0.55
+    grand slam: 0.38
+    wild pitch: 0.45
+    extra inning: 0.28
+    triple: 0.38
+    error: 0.55
+    double play: 0.58
+    bases loaded: 0.52
+    bunt: 0.42
+    challenge: 0.48
+    pitch clock: 0.62
+    robot: 0.42
+    mvp: 0.52
+    trade: 0.45
+    ohtani: 0.55
+    # Venue names — almost always said at home games
+    citi field: 0.85
+    daikin park: 0.85
+    dodger stadium: 0.85
+    oriole park: 0.85
+    t-mobile park: 0.85
+    uniqlo field: 0.85
+  _context_base:
+    general: 0.50
+    game: 0.50
+
+# KXFIGHTMENTION — MMA / combat sports broadcast announcers
+mma:
+  general:
+    knockout: 0.58
+    what a fight: 0.68
+    blood: 0.45
+    decision: 0.55
+    championship: 0.52
+    choke: 0.48
+    triangle: 0.42
+    slip: 0.45
+    tired: 0.42
+    legal: 0.38
+    lights out: 0.42
+    dana: 0.52
+    train: 0.45
+    hybrid: 0.38
+    future: 0.42
+    # Fighter nicknames / personas
+    bodybagz: 0.42
+    lobo: 0.42
+    maverick: 0.45
+    stylebender: 0.52
+    # Venue name
+    climate pledge arena: 0.82
+  _context_base:
+    general: 0.50
+    game: 0.50

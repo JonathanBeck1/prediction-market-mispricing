@@ -1,0 +1,19 @@
+# Core runtime
+httpx>=0.27.0
+pyyaml>=6.0
+numpy>=1.26.0
+scipy>=1.11.0
+
+# LLM signal layer (optional — only needed for ScoringEngine / USE_BAYESIAN_SCORER=0)
+openai>=1.30.0
+
+# Transcript ingestion utilities
+beautifulsoup4>=4.12.0
+
+# Signal data sources (optional)
+feedparser>=6.0.0   # RSS/news feeds
+pytrends>=4.9.0     # Google Trends (wallet flow signal)
+
+# Testing
+pytest>=8.0.0
+pytest-asyncio>=0.23.0

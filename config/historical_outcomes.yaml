@@ -1,0 +1,322 @@
+fetched_at: '2026-04-22T22:16:40.163870+00:00'
+total_outcomes: 12468
+by_speaker:
+  trump:
+    total: 2025
+    'yes': 916
+    'no': 1109
+  auto:
+    total: 3119
+    'yes': 1340
+    'no': 1779
+  leavitt:
+    total: 316
+    'yes': 114
+    'no': 202
+  mamdani:
+    total: 425
+    'yes': 188
+    'no': 237
+  whitehouse:
+    total: 3
+    'yes': 3
+    'no': 0
+  powell:
+    total: 54
+    'yes': 21
+    'no': 33
+  starmer:
+    total: 89
+    'yes': 34
+    'no': 55
+  homan:
+    total: 25
+    'yes': 13
+    'no': 12
+  carney:
+    total: 96
+    'yes': 33
+    'no': 63
+  aoc:
+    total: 14
+    'yes': 7
+    'no': 7
+  hochul:
+    total: 243
+    'yes': 121
+    'no': 122
+  newsom:
+    total: 126
+    'yes': 45
+    'no': 81
+  melania:
+    total: 84
+    'yes': 33
+    'no': 51
+  mlb:
+    total: 712
+    'yes': 408
+    'no': 304
+  nba:
+    total: 2747
+    'yes': 1596
+    'no': 1151
+  ncaab:
+    total: 1886
+    'yes': 826
+    'no': 1060
+  mma:
+    total: 504
+    'yes': 133
+    'no': 371
+series_counts:
+  KXTRUMPSAY:
+    total: 289
+    finalized: 260
+    'yes': 148
+    'no': 112
+  KXTRUMPSAYEP:
+    total: 0
+    finalized: 0
+    'yes': 0
+    'no': 0
+  KXTRUMPMENTION:
+    total: 1023
+    finalized: 887
+    'yes': 383
+    'no': 504
+  KXTRUMPMENTIONB:
+    total: 411
+    finalized: 411
+    'yes': 158
+    'no': 253
+  KXPRESMENTION:
+    total: 331
+    finalized: 331
+    'yes': 146
+    'no': 185
+  KXMENTION:
+    total: 871
+    finalized: 871
+    'yes': 383
+    'no': 488
+  KXDJTRALLY:
+    total: 0
+    finalized: 0
+    'yes': 0
+    'no': 0
+  KXDJTINVESTMENT:
+    total: 0
+    finalized: 0
+    'yes': 0
+    'no': 0
+  KXDJTWOMENS:
+    total: 0
+    finalized: 0
+    'yes': 0
+    'no': 0
+  KXTRUMPSAYMONTH:
+    total: 66
+    finalized: 58
+    'yes': 40
+    'no': 18
+  KXTRUMPSAYNICKNAME:
+    total: 39
+    finalized: 26
+    'yes': 15
+    'no': 11
+  KXTRUMPLATE:
+    total: 0
+    finalized: 0
+    'yes': 0
+    'no': 0
+  KXTRUMPMENTIONDURATION:
+    total: 75
+    finalized: 52
+    'yes': 26
+    'no': 26
+  KXDJTCONF:
+    total: 0
+    finalized: 0
+    'yes': 0
+    'no': 0
+  KXLEAVITTMENTION:
+    total: 0
+    finalized: 0
+    'yes': 0
+    'no': 0
+  KXLEAVITTSMFMENTION:
+    total: 71
+    finalized: 49
+    'yes': 18
+    'no': 31
+  KXSECPRESSMENTION:
+    total: 281
+    finalized: 240
+    'yes': 91
+    'no': 149
+  KXLEAVITTLATE:
+    total: 0
+    finalized: 0
+    'yes': 0
+    'no': 0
+  KXLEAVITTMENTIONDURATION:
+    total: 27
+    finalized: 27
+    'yes': 5
+    'no': 22
+  KXMAMDANIMENTION:
+    total: 466
+    finalized: 425
+    'yes': 188
+    'no': 237
+  KXTRUMPSAYMAM:
+    total: 0
+    finalized: 0
+    'yes': 0
+    'no': 0
+  KXWHPRESSBRIEFING:
+    total: 13
+    finalized: 3
+    'yes': 3
+    'no': 0
+  KXFEDMENTION:
+    total: 102
+    finalized: 54
+    'yes': 21
+    'no': 33
+  KXSTARMERMENTIONB:
+    total: 104
+    finalized: 89
+    'yes': 34
+    'no': 55
+  KXHOMANMENTION:
+    total: 39
+    finalized: 25
+    'yes': 13
+    'no': 12
+  KXCARNEYMENTION:
+    total: 96
+    finalized: 96
+    'yes': 33
+    'no': 63
+  KXAOCMENTION:
+    total: 14
+    finalized: 14
+    'yes': 7
+    'no': 7
+  KXHOCHULMENTION:
+    total: 265
+    finalized: 243
+    'yes': 121
+    'no': 122
+  KXNEWSOMMENTION:
+    total: 126
+    finalized: 126
+    'yes': 45
+    'no': 81
+  KXMELANIAMENTION:
+    total: 94
+    finalized: 84
+    'yes': 33
+    'no': 51
+  KXCONGRESSMENTION:
+    total: 149
+    finalized: 149
+    'yes': 93
+    'no': 56
+  KXSCOTUSMENTION:
+    total: 60
+    finalized: 60
+    'yes': 24
+    'no': 36
+  KXPERSONMENTION:
+    total: 388
+    finalized: 355
+    'yes': 136
+    'no': 219
+  KXPOLITICSMENTION:
+    total: 590
+    finalized: 544
+    'yes': 252
+    'no': 292
+  KXFOXNEWSMENTION:
+    total: 325
+    finalized: 325
+    'yes': 108
+    'no': 217
+  KXLASTWORDCOUNT:
+    total: 120
+    finalized: 120
+    'yes': 59
+    'no': 61
+  KXLASTWORDMENTION:
+    total: 174
+    finalized: 163
+    'yes': 61
+    'no': 102
+  KXTBPNMENTION:
+    total: 55
+    finalized: 55
+    'yes': 28
+    'no': 27
+  KXMLBMENTION:
+    total: 806
+    finalized: 712
+    'yes': 408
+    'no': 304
+  KXNBAMENTION:
+    total: 3274
+    finalized: 2747
+    'yes': 1596
+    'no': 1151
+  KXNCAABMENTION:
+    total: 1918
+    finalized: 1886
+    'yes': 826
+    'no': 1060
+  KXFIGHTMENTION:
+    total: 504
+    finalized: 504
+    'yes': 133
+    'no': 371
+  KXMENTIONEARNNKE:
+    total: 16
+    finalized: 16
+    'yes': 8
+    'no': 8
+  KXMENTIONEARNDAL:
+    total: 12
+    finalized: 12
+    'yes': 8
+    'no': 4
+  KXBARRMENTION:
+    total: 37
+    finalized: 37
+    'yes': 14
+    'no': 23
+  KXFEDGOVMENTION:
+    total: 26
+    finalized: 26
+    'yes': 11
+    'no': 15
+  KXMRBEASTMENTION:
+    total: 112
+    finalized: 95
+    'yes': 42
+    'no': 53
+  KXSNLMENTION:
+    total: 69
+    finalized: 58
+    'yes': 15
+    'no': 43
+  KXRUBIOMENTION:
+    total: 18
+    finalized: 18
+    'yes': 8
+    'no': 10
+  KXVANCEMENTION:
+    total: 215
+    finalized: 215
+    'yes': 90
+    'no': 125

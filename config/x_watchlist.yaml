@@ -1,0 +1,16 @@
+accounts:
+  - username: realDonaldTrump
+    priority: high
+    source_type: principal
+  - username: PressSec
+    priority: high
+    source_type: principal
+  - username: WhiteHouse
+    priority: high
+    source_type: principal
+  - username: MaggieNYT
+    priority: medium
+    source_type: reporter
+  - username: JonKarl
+    priority: medium
+    source_type: reporter

@@ -1,0 +1,2858 @@
+auto:
+  announcement:
+    afford: 0.45
+    affordability: 0.45
+    affordable: 0.45
+    billionaire: 0.22
+    buffalo: 0.38
+    childcare: 0.5
+    democrat: 0.21
+    dhs: 0.17
+    economic: 0.5
+    economy: 0.5
+    fraud: 0.49
+    healthcare: 0.38
+    ice: 0.17
+    immigrant: 0.32
+    immigration: 0.32
+    iran: 0.19
+    iranian: 0.09
+    mamdani: 0.39
+    mayor: 0.39
+    safe: 0.75
+    safer: 0.75
+    safety: 0.75
+    tariff: 0.39
+    teacher: 0.48
+    trump: 0.59
+  briefing:
+    afford: 0.72
+    affordability: 0.72
+    affordable: 0.72
+    artificial intelligence: 0.54
+    billion: 0.48
+    billionaire: 0.49
+    childcare: 0.21
+    corrupt: 0.49
+    corruption: 0.49
+    democrat: 0.19
+    florida: 0.6
+    fraud: 0.3
+    gas: 0.52
+    gasoline: 0.52
+    healthcare: 0.35
+    ice: 0.22
+    immigrant: 0.11
+    immigration: 0.11
+    iran: 0.5
+    iranian: 0.57
+    mamdani: 0.22
+    mayor: 0.22
+    oil: 0.42
+    republican: 0.59
+    safe: 0.58
+    safety: 0.58
+    sanctuary: 0.48
+    tariff: 0.17
+    trump: 0.37
+  general:
+    iran: 0.5
+    gas: 0.38
+    gasoline: 0.36
+    oil: 0.48
+    terrorist: 0.54
+    terrorism: 0.54
+    socialist: 0.26
+    socialism: 0.26
+    russia: 0.62
+    fentanyl: 0.55
+    constitution: 0.54
+    constitutional: 0.54
+    unconstitutional: 0.56
+    china: 0.48
+    border: 0.45
+    biden: 0.49
+    america first: 0.31
+    trump: 0.56
+    nuclear: 0.53
+    israel: 0.41
+    israeli: 0.41
+    hamas: 0.38
+    hezbollah: 0.21
+    fraud: 0.4
+    epstein: 0.35
+    bibi: 0.43
+    netanyahu: 0.43
+    ai: 0.5
+    artificial intelligence: 0.49
+    afford: 0.41
+    affordable: 0.41
+    affordability: 0.41
+    shutdown: 0.25
+    shut down: 0.25
+    republican: 0.67
+    ice: 0.35
+    dhs: 0.38
+    ghislaine: 0.39
+    maxwell: 0.39
+    fbi: 0.39
+    corrupt: 0.33
+    corruption: 0.33
+    president: 0.4
+    mamdani: 0.27
+    new york: 0.36
+    democrat: 0.54
+    debate: 0.6
+    '2028': 0.61
+    campaign: 0.61
+    trump (3+ times): 0.5
+    kristi: 0.18
+    noem: 0.18
+    illegal alien: 0.39
+    id: 0.36
+    identification: 0.36
+    filibuster: 0.57
+    tax on tips: 0.49
+    tax on overtime: 0.49
+    tariff: 0.29
+    somali: 0.31
+    somalia: 0.31
+    somalian: 0.31
+    save act: 0.27
+    save america act: 0.23
+    radical left: 0.19
+    middle class: 0.22
+    working class: 0.33
+    manufacturing: 0.32
+    inflation: 0.34
+    epic fury: 0.19
+    american made: 0.33
+    made in america: 0.33
+    american dream: 0.63
+    transgender: 0.14
+    tax cut: 0.47
+    housing: 0.36
+    healthcare: 0.42
+    childcare: 0.35
+    billionaire: 0.39
+    renee: 0.29
+    pretti: 0.29
+    minnesota: 0.65
+    minneapolis: 0.65
+    mexico: 0.5
+    mexican: 0.5
+    mask: 0.21
+    masked: 0.21
+    homan: 0.22
+    election: 0.47
+    deport: 0.74
+    deportation: 0.74
+    ukraine: 0.54
+    isis: 0.55
+    hormuz: 0.5
+    drone: 0.37
+    cyberattack: 0.12
+    cyber attack: 0.12
+    cartel: 0.5
+    espionage: 0.49
+    venezuela: 0.17
+    cuba: 0.25
+    investigate: 0.3
+    investigation: 0.3
+    supreme leader: 0.31
+    jd: 0.21
+    vance: 0.21
+    safe: 0.75
+    safer: 0.7
+    safety: 0.75
+    islam: 0.35
+    islamic: 0.35
+    ramadan: 0.27
+    iranian: 0.48
+    immigrant: 0.27
+    immigration: 0.27
+    governor: 0.49
+    hochul: 0.49
+    mayor: 0.18
+    economy: 0.59
+    economic: 0.56
+    budget: 0.72
+    stock market: 0.08
+    powell: 0.3
+    iraq: 0.41
+    domestic: 0.33
+    california: 0.55
+    national security: 0.22
+    fake news: 0.43
+    nypd: 0.49
+    landlord: 0.49
+    transition: 0.58
+    transitional: 0.67
+    protest: 0.23
+    protester: 0.23
+    peace: 0.67
+    peaceful: 0.67
+    democracy: 0.42
+    ayatollah: 0.27
+    khamenei: 0.27
+    robot: 0.35
+    robotic: 0.35
+    robotics: 0.35
+    chinese: 0.43
+    autonomous: 0.55
+    trump (5+ times): 0.74
+    obliterate: 0.41
+    obliterated: 0.41
+    obliteration: 0.41
+    muslim: 0.4
+    islamophobia: 0.3
+    mortgage: 0.51
+    leverage ratio: 0.31
+    jesus: 0.25
+    woke: 0.26
+    dei: 0.26
+    surveillance: 0.33
+    claude: 0.31
+    weather: 0.48
+    troubleshoot: 0.19
+    troubleshooting: 0.19
+    spacex: 0.16
+    quarantine: 0.41
+    preparation: 0.72
+    prepared: 0.72
+    houston: 0.77
+    florida: 0.6
+    elon: 0.08
+    musk: 0.08
+    centaur: 0.14
+    apollo: 0.73
+    social media: 0.23
+    saudi: 0.22
+    russian: 0.67
+    privacy: 0.15
+    midnight hammer: 0.41
+    zohran: 0.4
+    negotiate: 0.32
+    negotiated: 0.32
+    negotiation: 0.32
+    nato: 0.39
+    defense: 0.57
+    ceasefire: 0.3
+    supreme court: 0.53
+    medicare: 0.49
+    medicaid: 0.49
+    military: 0.48
+    bipartisan: 0.58
+    hegseth: 0.27
+    taxpayer: 0.61
+    climate: 0.49
+    billion: 0.36
+    f-15: 0.11
+    walz: 0.11
+    learing: 0.23
+    newsom: 0.51
+    deported: 0.67
+    iran (3+ times): 0.69
+    congress: 0.6
+    congressional: 0.6
+    hollywood: 0.48
+    insurance: 0.57
+    crypto: 0.14
+    cryptocurrency: 0.14
+    kash: 0.34
+    email: 0.34
+    accountable: 0.66
+    accountability: 0.66
+    sanctuary: 0.55
+    national guard: 0.28
+    survivor: 0.37
+    vaccine: 0.11
+    vaccination: 0.11
+    pandemic: 0.31
+    covid: 0.31
+    gaza: 0.59
+    palestine: 0.59
+    amicus: 0.51
+    free speech: 0.31
+    freedom of speech: 0.31
+    toilet: 0.44
+    splashdown: 0.58
+    san diego: 0.42
+    oxygen: 0.24
+    moon base: 0.75
+    mars: 0.37
+    gravity: 0.46
+    food: 0.06
+    eclipse: 0.23
+    crater: 0.32
+    alien: 0.08
+    trumprx: 0.13
+    obese: 0.24
+    obesity: 0.24
+    maha: 0.55
+    make america healthy again: 0.55
+    chronic: 0.42
+    bobby: 0.49
+    kennedy: 0.49
+    rfk: 0.57
+    radiation: 0.32
+    exercise: 0.32
+    exercising: 0.13
+    damage: 0.32
+    toilet (3+ times): 0.51
+    microsoft: 0.13
+    easter: 0.5
+    tiktok: 0.32
+    lunar base: 0.7
+    pam: 0.32
+    bondi: 0.32
+    tsa: 0.23
+    laguardia: 0.11
+    data center: 0.6
+    uranium: 0.24
+    rescue: 0.27
+    rescued: 0.27
+    melania: 0.13
+    marco: 0.51
+    rubio: 0.51
+    daycare: 0.2
+    water: 0.49
+    processed food: 0.14
+    autism: 0.43
+    deal: 0.59
+    settle: 0.59
+    investment: 0.51
+    invested: 0.51
+    newscum: 0.7
+    nasa: 0.43
+    rate cut: 0.13
+    olympic: 0.65
+    olympics: 0.65
+    canada: 0.15
+    canadian: 0.15
+    trump 95+ times: 0.18
+    trump 90+ times: 0.18
+    trump 85+ times: 0.27
+    trump 80+ times: 0.27
+    trump 75+ times: 0.57
+    trump 70+ times: 0.57
+    trump 65+ times: 0.66
+    trump 60+ times: 0.66
+    trump 55+ times: 0.66
+    trump 50+ times: 0.66
+    trump 45+ times: 0.75
+    trump 40+ times: 0.73
+    trump 35+ times: 0.73
+    trump 105+ times: 0.07
+    trump 100+ times: 0.07
+    redacted: 0.45
+    redaction: 0.45
+    unredacted: 0.45
+    twitch: 0.5
+    subscribe: 0.45
+    sponsor: 0.33
+    sponsored: 0.33
+    money: 0.38
+    million: 0.69
+    mario: 0.23
+    galaxy: 0.27
+    feastable: 0.44
+    contestant: 0.51
+    chandler: 0.5
+    challenge: 0.66
+    beast: 0.1
+    win: 0.44
+    prize: 0.42
+    time: 0.66
+    saudi arabia: 0.15
+    car: 0.3
+    moon: 0.32
+    new york city: 0.25
+  _default:
+    afford: 0.41
+    affordability: 0.41
+    affordable: 0.41
+    artificial intelligence: 0.49
+    beast: 0.1
+    billion: 0.36
+    billionaire: 0.39
+    buffalo: 0.38
+    challenge: 0.66
+    chandler: 0.5
+    charity: 0.16
+    childcare: 0.35
+    climate: 0.49
+    contestant: 0.51
+    corrupt: 0.33
+    corruption: 0.33
+    covid: 0.31
+    crime: 0.6
+    criminal: 0.6
+    democrat: 0.54
+    dhs: 0.38
+    economic: 0.56
+    economy: 0.59
+    event does not qualify: 0.17
+    feastable: 0.44
+    florida: 0.6
+    fraud: 0.4
+    galaxy: 0.27
+    gas: 0.38
+    gasoline: 0.36
+    healthcare: 0.42
+    homeless: 0.49
+    homelessness: 0.49
+    ice: 0.35
+    immigrant: 0.27
+    immigration: 0.27
+    iran: 0.5
+    iranian: 0.48
+    mamdani: 0.27
+    mario: 0.23
+    mayor: 0.18
+    mental health: 0.58
+    million: 0.69
+    money: 0.38
+    newsom: 0.51
+    oil: 0.48
+    pokemon: 0.16
+    refund: 0.22
+    regulation: 0.51
+    regulator: 0.51
+    regulatory: 0.51
+    republican: 0.67
+    safe: 0.75
+    safer: 0.7
+    safety: 0.75
+    sanctuary: 0.55
+    speed: 0.64
+    sponsor: 0.33
+    sponsored: 0.33
+    subscribe: 0.45
+    subscribed: 0.2
+    survivor: 0.37
+    tariff: 0.29
+    teacher: 0.48
+    trump: 0.56
+    tsa: 0.23
+    twitch: 0.5
+  _context_base:
+    general: 0.45
+    debate: 0.61
+    remarks: 0.57
+    visit: 0.33
+    announcement: 0.44
+    briefing: 0.42
+carney:
+  general:
+    trump: 0.19
+    tariff: 0.29
+    oil: 0.38
+    gas: 0.31
+    gasoline: 0.31
+    iran: 0.08
+    immigrant: 0.11
+    immigration: 0.11
+    afford: 0.55
+    affordable: 0.55
+    affordability: 0.55
+    nato: 0.5
+    climate: 0.31
+    china: 0.39
+    arctic: 0.74
+    ai: 0.43
+    artificial intelligence: 0.43
+  _context_base:
+    general: 0.35
+    announcement: 0.42
+hochul:
+  general:
+    trump: 0.33
+    tariff: 0.58
+    safe: 0.73
+    safer: 0.73
+    safety: 0.73
+    refund: 0.52
+    rebate: 0.52
+    oil: 0.6
+    gas: 0.6
+    gasoline: 0.6
+    mayor: 0.79
+    mamdani: 0.79
+    iran: 0.24
+    healthcare: 0.33
+    fraud: 0.52
+    economy: 0.38
+    economic: 0.38
+    childcare: 0.58
+    buffalo: 0.68
+    billionaire: 0.12
+    afford: 0.77
+    affordable: 0.78
+    affordability: 0.78
+    insurance: 0.75
+    republican: 0.15
+    common sense: 0.26
+    budget: 0.58
+    deficit: 0.58
+    tax: 0.31
+    inflation: 0.36
+    housing: 0.54
+    commute: 0.29
+    commuter: 0.29
+    billion: 0.59
+    ai: 0.15
+    artificial intelligence: 0.15
+  _context_base:
+    announcement: 0.51
+    general: 0.5
+homan:
+  _context_base:
+    general: 0.54
+leavitt:
+  briefing:
+    afford: 0.02
+    affordability: 0.14
+    affordable: 0.26
+    america first: 0.41
+    american dream: 0.18
+    biden: 0.76
+    big beautiful bill: 0.26
+    bitcoin: 0.01
+    blockade: 0.04
+    boat: 0.1
+    ceasefire: 0.33
+    china: 0.36
+    crypto: 0.04
+    cuba: 0.09
+    democrat: 0.63
+    economic fury: 0.02
+    epic fury: 0.11
+    event does not qualify: 0.02
+    fake news: 0.14
+    fraud: 0.44
+    gas: 0.37
+    gasoline: 0.15
+    hormuz: 0.11
+    illegal alien: 0.45
+    immigrant: 0.07
+    immigration: 0.66
+    iran (3+ times): 0.02
+    iran (5+ times): 0.02
+    israel: 0.48
+    israeli: 0.21
+    nato: 0.25
+    negotiate: 0.36
+    negotiated: 0.18
+    negotiation: 0.23
+    nuclear: 0.39
+    oil: 0.28
+    pakistan: 0.15
+    radical left: 0.06
+    save act: 0.13
+    save america act: 0.08
+    ship: 0.1
+    stock market: 0.11
+    stupid question: 0.01
+    supreme court: 0.24
+    tariff: 0.41
+    vance: 0.13
+  general:
+    epic fury: 0.62
+    fraud: 0.46
+    stock market: 0.07
+    ice: 0.51
+    tsa: 0.57
+    israel: 0.45
+    israeli: 0.13
+    tariff: 0.24
+    supreme court: 0.07
+    shutdown: 0.32
+    shut down: 0.32
+    save act: 0.49
+    save america act: 0.49
+    radical left: 0.07
+    oil: 0.42
+    gas: 0.5
+    gasoline: 0.5
+    nuclear: 0.67
+    iran: 0.7
+    id: 0.49
+    identification: 0.49
+    fake news: 0.26
+    china: 0.38
+    biden: 0.59
+    affordable: 0.32
+    affordability: 0.32
+    terrorist: 0.57
+    sanctuary: 0.27
+    national guard: 0.26
+    election: 0.41
+    border: 0.35
+    stupid question: 0.08
+    russia: 0.13
+    russian: 0.13
+    negotiate: 0.74
+    negotiated: 0.74
+    negotiation: 0.74
+    illegal alien: 0.48
+    dhs: 0.62
+    hormuz: 0.66
+    cuba: 0.5
+    crypto: 0.08
+    bitcoin: 0.08
+    healthcare: 0.19
+    fbi: 0.2
+    ukraine: 0.34
+    epstein: 0.12
+    narcoterrorist: 0.5
+    home: 0.65
+    housing: 0.65
+    credit: 0.15
+  signing:
+    afford: 0.09
+    affordability: 0.37
+    affordable: 0.23
+    america first: 0.09
+    american dream: 0.09
+    biden: 0.51
+    big beautiful bill: 0.37
+    bitcoin: 0.09
+    blockade: 0.09
+    boat: 0.23
+    ceasefire: 0.37
+    china: 0.66
+    crypto: 0.09
+    cuba: 0.09
+    democrat: 0.51
+    economic fury: 0.09
+    epic fury: 0.09
+    event does not qualify: 0.09
+    fake news: 0.23
+    fraud: 0.37
+    gas: 0.23
+    gasoline: 0.23
+    hormuz: 0.09
+    illegal alien: 0.37
+    immigrant: 0.23
+    immigration: 0.51
+    iran (3+ times): 0.09
+    iran (5+ times): 0.09
+    israel: 0.23
+    israeli: 0.09
+    nato: 0.09
+    negotiate: 0.23
+    negotiated: 0.09
+    negotiation: 0.23
+    nuclear: 0.23
+    oil: 0.23
+    pakistan: 0.09
+    radical left: 0.23
+    save act: 0.09
+    save america act: 0.09
+    ship: 0.09
+    stock market: 0.23
+    stupid question: 0.09
+    supreme court: 0.23
+    tariff: 0.51
+    vance: 0.09
+  summit:
+    afford: 0.03
+    affordability: 0.16
+    affordable: 0.42
+    america first: 0.37
+    american dream: 0.24
+    biden: 0.94
+    big beautiful bill: 0.37
+    bitcoin: 0.07
+    blockade: 0.03
+    boat: 0.11
+    ceasefire: 0.33
+    china: 0.33
+    crypto: 0.07
+    cuba: 0.16
+    democrat: 0.9
+    economic fury: 0.03
+    epic fury: 0.07
+    event does not qualify: 0.03
+    fake news: 0.07
+    fraud: 0.46
+    gas: 0.55
+    gasoline: 0.24
+    hormuz: 0.07
+    illegal alien: 0.59
+    immigrant: 0.03
+    immigration: 0.37
+    iran (3+ times): 0.03
+    iran (5+ times): 0.03
+    israel: 0.63
+    israeli: 0.24
+    nato: 0.24
+    negotiate: 0.29
+    negotiated: 0.16
+    negotiation: 0.07
+    nuclear: 0.37
+    oil: 0.42
+    pakistan: 0.29
+    radical left: 0.11
+    save act: 0.16
+    save america act: 0.16
+    ship: 0.16
+    stock market: 0.11
+    stupid question: 0.03
+    supreme court: 0.24
+    tariff: 0.33
+    vance: 0.07
+  visit:
+    afford: 0.07
+    affordability: 0.07
+    affordable: 0.07
+    america first: 0.2
+    american dream: 0.07
+    biden: 0.45
+    big beautiful bill: 0.2
+    bitcoin: 0.07
+    blockade: 0.07
+    boat: 0.07
+    ceasefire: 0.2
+    china: 0.33
+    crypto: 0.07
+    cuba: 0.07
+    democrat: 0.82
+    economic fury: 0.07
+    epic fury: 0.07
+    event does not qualify: 0.07
+    fake news: 0.07
+    fraud: 0.33
+    gas: 0.07
+    gasoline: 0.2
+    hormuz: 0.07
+    illegal alien: 0.2
+    immigrant: 0.2
+    immigration: 0.33
+    iran (3+ times): 0.07
+    iran (5+ times): 0.07
+    israel: 0.45
+    israeli: 0.07
+    nato: 0.45
+    negotiate: 0.07
+    negotiated: 0.07
+    negotiation: 0.07
+    nuclear: 0.2
+    oil: 0.2
+    pakistan: 0.07
+    radical left: 0.2
+    save act: 0.07
+    save america act: 0.07
+    ship: 0.2
+    stock market: 0.2
+    stupid question: 0.07
+    supreme court: 0.33
+    tariff: 0.2
+    vance: 0.07
+  _default:
+    afford: 0.01
+    affordability: 0.13
+    affordable: 0.26
+    america first: 0.32
+    american dream: 0.17
+    biden: 0.78
+    big beautiful bill: 0.27
+    bitcoin: 0.02
+    blockade: 0.02
+    boat: 0.09
+    ceasefire: 0.3
+    china: 0.38
+    crypto: 0.03
+    cuba: 0.07
+    democrat: 0.72
+    economic fury: 0.01
+    epic fury: 0.1
+    event does not qualify: 0.01
+    fake news: 0.15
+    fraud: 0.44
+    gas: 0.36
+    gasoline: 0.15
+    hormuz: 0.09
+    illegal alien: 0.48
+    immigrant: 0.08
+    immigration: 0.57
+    iran (3+ times): 0.01
+    iran (5+ times): 0.01
+    israel: 0.47
+    israeli: 0.16
+    nato: 0.26
+    negotiate: 0.28
+    negotiated: 0.12
+    negotiation: 0.15
+    nuclear: 0.34
+    oil: 0.28
+    pakistan: 0.14
+    radical left: 0.07
+    save act: 0.13
+    save america act: 0.08
+    ship: 0.1
+    stock market: 0.11
+    stupid question: 0.01
+    supreme court: 0.23
+    tariff: 0.35
+    vance: 0.1
+  _context_base:
+    general: 0.37
+    briefing: 0.38
+mamdani:
+  address:
+    afford: 0.64
+    affordability: 0.31
+    affordable: 0.44
+    billionaire: 0.31
+    budget: 0.31
+    bus: 0.37
+    childcare: 0.57
+    deficit: 0.11
+    economic: 0.17
+    economy: 0.31
+    fast & free: 0.04
+    iran: 0.04
+    iranian: 0.04
+    knicks: 0.04
+    nypd: 0.31
+    president: 0.64
+    safe: 0.51
+    safer: 0.04
+    safety: 0.77
+    trump: 0.57
+    world cup: 0.04
+  announcement:
+    afford: 0.72
+    affordability: 0.66
+    affordable: 0.66
+    billionaire: 0.19
+    budget: 0.38
+    bus: 0.09
+    childcare: 0.42
+    deficit: 0.38
+    economic: 0.4
+    economy: 0.4
+    fast & free: 0.09
+    iran: 0.06
+    iranian: 0.07
+    knicks: 0.27
+    nypd: 0.4
+    president: 0.42
+    safe: 0.5
+    safer: 0.5
+    safety: 0.5
+    trump: 0.4
+    world cup: 0.22
+  briefing:
+    afford: 0.49
+    affordability: 0.49
+    affordable: 0.21
+    billionaire: 0.15
+    budget: 0.3
+    bus: 0.65
+    childcare: 0.53
+    deficit: 0.3
+    economic: 0.21
+    economy: 0.21
+    fast & free: 0.15
+    iran: 0.1
+    iranian: 0.12
+    knicks: 0.65
+    nypd: 0.27
+    president: 0.42
+    safe: 0.39
+    safer: 0.39
+    safety: 0.68
+    trump: 0.37
+    world cup: 0.15
+  general:
+    trump: 0.38
+    president: 0.45
+    nypd: 0.4
+    knicks: 0.32
+    iran: 0.1
+    iranian: 0.13
+    billionaire: 0.17
+    afford: 0.68
+    affordable: 0.66
+    affordability: 0.66
+    socialist: 0.42
+    socialism: 0.42
+    muslim: 0.25
+    world cup: 0.28
+    safe: 0.58
+    safer: 0.58
+    safety: 0.58
+    grocery: 0.26
+    economy: 0.34
+    economic: 0.34
+    childcare: 0.45
+    bus: 0.11
+    fast & free: 0.26
+    budget: 0.51
+    deficit: 0.51
+    snow: 0.4
+    snowfall: 0.31
+    pothole: 0.51
+    new era: 0.38
+    landlord: 0.33
+    healthcare: 0.1
+    governor: 0.5
+    hochul: 0.5
+    free bus: 0.43
+    mental health: 0.43
+    working class: 0.4
+    middle class: 0.39
+    crisis: 0.79
+    five borough: 0.59
+    blizzard: 0.45
+    housing: 0.52
+    federal: 0.49
+    property tax: 0.32
+    laguardia: 0.14
+    freeze: 0.15
+    freezing: 0.15
+    homeless: 0.7
+    ramadan: 0.3
+    israel: 0.14
+    ice: 0.48
+    dhs: 0.48
+    cleanup: 0.21
+    clean up: 0.21
+    plow: 0.55
+    plowing: 0.55
+    fdny: 0.69
+    emergency: 0.69
+    adams: 0.17
+    previous administration: 0.17
+    home: 0.69
+  presser:
+    afford: 0.1
+    affordability: 0.1
+    affordable: 0.1
+    billionaire: 0.1
+    budget: 0.1
+    bus: 0.77
+    childcare: 0.1
+    deficit: 0.1
+    economic: 0.43
+    economy: 0.1
+    fast & free: 0.1
+    iran: 0.1
+    iranian: 0.1
+    knicks: 0.1
+    nypd: 0.6
+    president: 0.43
+    safe: 0.77
+    safer: 0.1
+    safety: 0.27
+    trump: 0.43
+    world cup: 0.1
+  _default:
+    afford: 0.67
+    affordability: 0.51
+    affordable: 0.57
+    billionaire: 0.15
+    budget: 0.34
+    bus: 0.42
+    childcare: 0.55
+    deficit: 0.22
+    economic: 0.27
+    economy: 0.24
+    fast & free: 0.07
+    iran: 0.04
+    iranian: 0.04
+    knicks: 0.11
+    nypd: 0.36
+    president: 0.53
+    safe: 0.57
+    safer: 0.19
+    safety: 0.71
+    trump: 0.51
+    world cup: 0.07
+  _context_base:
+    announcement: 0.44
+    general: 0.45
+    briefing: 0.49
+melania:
+  general:
+    take it down: 0.27
+    school: 0.26
+    safe: 0.38
+    safer: 0.38
+    safety: 0.44
+    peace: 0.21
+    chatgpt: 0.11
+    foster: 0.34
+    fostering: 0.34
+    education: 0.51
+    donald: 0.22
+    children: 0.77
+    barron: 0.13
+    ai: 0.43
+    artificial intelligence: 0.43
+    security: 0.4
+    robot: 0.14
+    robotics: 0.14
+    privacy: 0.49
+    history: 0.67
+    historic: 0.67
+    economy: 0.67
+    economic: 0.67
+  _context_base:
+    general: 0.38
+    summit: 0.49
+mlb:
+  general:
+    wild pitch: 0.45
+    what a catch: 0.09
+    walk off: 0.49
+    triple: 0.87
+    trade: 0.85
+    traded: 0.85
+    pitch clock: 0.23
+    pinch hitter: 0.7
+    pinch hit: 0.7
+    perfect game: 0.2
+    ohtani: 0.43
+    mvp: 0.74
+    grand slam: 0.55
+    extra inning: 0.41
+    error: 0.72
+    double play: 0.91
+    bunt: 0.73
+    bunted: 0.74
+    bullpen: 0.82
+    bases loaded: 0.6
+    kauffman stadium: 0.71
+    citizens bank park: 0.56
+    t-mobile park: 0.74
+    robot: 0.08
+    challenge: 0.95
+    oriole park: 0.33
+  _default:
+    bases loaded: 0.6
+    bullpen: 0.82
+    bunt: 0.73
+    bunted: 0.74
+    dodger stadium: 0.63
+    double play: 0.91
+    error: 0.72
+    extra inning: 0.41
+    fenway park: 0.65
+    grand slam: 0.55
+    mvp: 0.74
+    ohtani: 0.43
+    perfect game: 0.2
+    pinch hit: 0.7
+    pinch hitter: 0.7
+    pitch clock: 0.23
+    trade: 0.85
+    traded: 0.85
+    triple: 0.87
+    truist park: 0.52
+    walk off: 0.49
+    what a catch: 0.09
+    wild pitch: 0.45
+  _context_base:
+    general: 0.61
+mma:
+  general:
+    what a fight: 0.11
+    triangle: 0.29
+    train: 0.58
+    trained: 0.58
+    training: 0.58
+    tired: 0.31
+    tiring: 0.31
+    slip: 0.28
+    slips: 0.28
+    slipped: 0.28
+    lights out: 0.02
+    legal: 0.08
+    illegal: 0.08
+    knockout: 0.55
+    knock out: 0.55
+    knocked out: 0.55
+    decision: 0.48
+    judged: 0.47
+    dana: 0.09
+    choke: 0.3
+    choked: 0.3
+    chokehold: 0.3
+    championship: 0.16
+    blood: 0.27
+    bloody: 0.27
+    trump: 0.09
+    judge: 0.45
+    meta: 0.19
+    climate pledge arena: 0.13
+    o2 arena: 0.14
+    smashed: 0.07
+    smashing: 0.07
+  _context_base:
+    general: 0.28
+nba:
+  general:
+    wingspan: 0.24
+    triple double: 0.45
+    travel: 0.61
+    travels: 0.61
+    traveled: 0.61
+    trade: 0.77
+    trades: 0.77
+    traded: 0.77
+    tech: 0.6
+    technical: 0.6
+    sweep: 0.26
+    sweeps: 0.26
+    swept: 0.26
+    rookie: 0.8
+    retire: 0.15
+    retired: 0.15
+    retirement: 0.15
+    paycom: 0.47
+    overtime: 0.32
+    mvp: 0.64
+    legacy: 0.11
+    larry o'brien: 0.12
+    kobe: 0.12
+    jordan: 0.58
+    injury: 0.97
+    injured: 0.97
+    goat: 0.04
+    elbow: 0.8
+    draft: 0.59
+    drafted: 0.61
+    crowd: 0.88
+    crowded: 0.88
+    buzzer: 0.36
+    ankle: 0.54
+    alley-oop: 0.36
+    airball: 0.56
+    airballs: 0.56
+    airballed: 0.56
+    little caesars arena: 0.6
+    td garden: 0.77
+    mortgage matchup: 0.7
+    kia: 0.54
+    frost bank: 0.61
+    crypto: 0.58
+    crypto.com: 0.58
+    rocket: 0.75
+    ball arena: 0.71
+    msg: 0.83
+    madison square garden: 0.83
+    playoff: 0.88
+    xfinity: 0.73
+    intuit: 0.7
+    spectrum: 0.31
+    toyota: 0.79
+    state farm: 0.73
+    chase: 0.51
+    american airlines: 0.52
+    kaseya center: 0.43
+    fiserv: 0.64
+    target center: 0.3
+    moda: 0.67
+  _default:
+    airball: 0.56
+    airballed: 0.56
+    airballs: 0.56
+    alley-oop: 0.36
+    ankle: 0.54
+    ball arena: 0.71
+    buzzer: 0.36
+    crowd: 0.88
+    crowded: 0.88
+    draft: 0.59
+    drafted: 0.61
+    elbow: 0.8
+    goat: 0.04
+    injured: 0.97
+    injury: 0.97
+    jordan: 0.58
+    kia: 0.54
+    kobe: 0.12
+    larry o'brien: 0.12
+    legacy: 0.11
+    little caesars arena: 0.6
+    moda: 0.67
+    mortgage matchup: 0.7
+    mvp: 0.64
+    overtime: 0.32
+    paycom: 0.47
+    retire: 0.15
+    retired: 0.15
+    retirement: 0.15
+    rookie: 0.8
+    state farm: 0.73
+    sweep: 0.26
+    sweeps: 0.26
+    swept: 0.26
+    target center: 0.3
+    tech: 0.6
+    technical: 0.6
+    toyota: 0.79
+    trade: 0.77
+    traded: 0.77
+    trades: 0.77
+    travel: 0.61
+    traveled: 0.61
+    travels: 0.61
+    triple double: 0.45
+    wingspan: 0.24
+    xfinity: 0.73
+  _context_base:
+    general: 0.6
+ncaab:
+  general:
+    walk on: 0.13
+    transfer: 0.86
+    transferred: 0.86
+    schedule: 0.35
+    recruit: 0.49
+    recruited: 0.49
+    recruitment: 0.49
+    record: 0.64
+    overtime: 0.41
+    nil: 0.15
+    elbow: 0.52
+    draft: 0.44
+    drafted: 0.43
+    double double: 0.45
+    buzzer: 0.46
+    ankle: 0.47
+    alley-oop: 0.21
+    all american: 0.55
+    all america: 0.57
+    airball: 0.58
+    airballed: 0.58
+    mortgage matchup: 0.13
+    ud arena: 0.12
+    march madness: 0.28
+    airballs: 0.62
+    t-mobile center: 0.57
+    bridgestone arena: 0.67
+  _context_base:
+    general: 0.45
+newsom:
+  general:
+    wildfire: 0.29
+    trump: 0.66
+    republican: 0.38
+    oil: 0.34
+    gas: 0.34
+    gasoline: 0.34
+    iran: 0.11
+    democracy: 0.33
+    climate: 0.45
+    afford: 0.27
+    affordability: 0.27
+    affordable: 0.27
+    '2028': 0.22
+    campaign: 0.22
+    safe: 0.53
+    safer: 0.53
+    safety: 0.53
+    mental health: 0.47
+    election: 0.3
+    budget: 0.29
+    deficit: 0.29
+    ice: 0.43
+    border: 0.43
+  _context_base:
+    general: 0.34
+    briefing: 0.31
+starmer:
+  general:
+    ukraine: 0.35
+    trump: 0.17
+    reform: 0.73
+    oil: 0.49
+    nuclear: 0.39
+    nato: 0.3
+    israel: 0.39
+    israeli: 0.39
+    iran: 0.7
+    immigrant: 0.09
+    immigration: 0.09
+    epstein: 0.12
+    energy: 0.56
+    defense: 0.55
+    defence: 0.55
+    ceasefire: 0.33
+    drone: 0.3
+  parliament:
+    afford: 0.23
+    affordability: 0.09
+    affordable: 0.23
+    blockade: 0.09
+    ceasefire: 0.37
+    defence: 0.66
+    defense: 0.09
+    epstein: 0.09
+    healthcare: 0.09
+    immigrant: 0.09
+    immigration: 0.09
+    iran: 0.51
+    israel: 0.23
+    israeli: 0.37
+    king: 0.37
+    nato: 0.51
+    nhs: 0.66
+    oil: 0.51
+    reform: 0.66
+    trump: 0.66
+    ukraine: 0.8
+  _default:
+    afford: 0.15
+    affordability: 0.06
+    affordable: 0.15
+    blockade: 0.05
+    ceasefire: 0.42
+    defence: 0.52
+    defense: 0.39
+    epstein: 0.05
+    healthcare: 0.05
+    immigrant: 0.04
+    immigration: 0.04
+    iran: 0.52
+    israel: 0.38
+    israeli: 0.31
+    king: 0.26
+    nato: 0.4
+    nhs: 0.43
+    oil: 0.5
+    reform: 0.61
+    trump: 0.54
+    ukraine: 0.65
+  _context_base:
+    general: 0.38
+trump:
+  address:
+    50,000: 0.33
+    affordability: 0.61
+    affordable: 0.07
+    allah: 0.07
+    arc de trump: 0.07
+    artificial intelligence: 0.26
+    autism: 0.3
+    auto pen: 0.07
+    autopen: 0.07
+    ballrooom: 0.07
+    barack hussein obama: 0.28
+    barron: 0.2
+    be best: 0.07
+    bibi: 0.06
+    biden: 0.76
+    biden crime family: 0.07
+    bitcoin: 0.17
+    border: 0.82
+    cannabis: 0.07
+    ceasefire: 0.18
+    china: 0.48
+    communism: 0.33
+    communist: 0.33
+    comrade kamala: 0.07
+    con job: 0.2
+    crazy bernie: 0.07
+    crypto: 0.17
+    cryptocurrency: 0.07
+    dei: 0.31
+    democrat: 0.63
+    deport: 0.33
+    deportation: 0.2
+    dhs: 0.07
+    discombobulator: 0.07
+    donald: 0.57
+    drill baby drill: 0.26
+    election: 0.63
+    epic fury: 0.39
+    epstein: 0.07
+    epstein island: 0.07
+    event does not qualify: 0.07
+    fake news: 0.48
+    fat slob: 0.07
+    fort trump: 0.07
+    foster: 0.26
+    fostering: 0.07
+    fraud: 0.49
+    gas: 0.62
+    gasoline: 0.5
+    goat: 0.07
+    golden dome: 0.3
+    healthcare: 0.45
+    highest inflation: 0.19
+    hottest: 0.85
+    ice: 0.49
+    identification: 0.33
+    immigrant: 0.07
+    immigration: 0.33
+    investigate: 0.07
+    investigating: 0.07
+    investigation: 0.07
+    iran: 0.84
+    iranian: 0.45
+    israel: 0.64
+    israeli: 0.28
+    landslide: 0.45
+    little communist: 0.07
+    low energy: 0.07
+    make iran great again: 0.07
+    marijuana: 0.07
+    marjorie traitor greene: 0.07
+    melania: 0.33
+    mog: 0.07
+    mogged: 0.07
+    mogging: 0.07
+    moscow: 0.07
+    mount trump: 0.07
+    national security: 0.45
+    netanyahu: 0.06
+    newscum: 0.07
+    nobel: 0.45
+    november 5: 0.07
+    nuclear: 0.75
+    oil: 0.62
+    peace: 0.57
+    pelosi: 0.26
+    piggy: 0.07
+    planned parenthood: 0.07
+    pocahontas: 0.07
+    podcast: 0.07
+    pope: 0.07
+    predict: 0.07
+    prediction: 0.07
+    radical left: 0.42
+    rigged election: 0.07
+    rocket man: 0.07
+    save america act: 0.29
+    school: 0.45
+    sleepy joe: 0.19
+    stimulus: 0.07
+    stock market: 0.75
+    stolen election: 0.07
+    stupid question: 0.07
+    swamp: 0.07
+    take it down: 0.07
+    tampon tim: 0.07
+    tariff: 0.41
+    tds: 0.07
+    terrorism: 0.28
+    terrorist: 0.39
+    third term: 0.2
+    thug: 0.07
+    transgender: 0.38
+    trump: 0.85
+    trump (3+ times): 0.07
+    trump airport: 0.07
+    trump arc: 0.07
+    trump bill: 0.07
+    trump derangement syndrome: 0.07
+    trump dollar: 0.07
+    trump kennedy center: 0.07
+    trump tower: 0.07
+    trump university: 0.07
+    wack job: 0.07
+    weed: 0.07
+    whack job: 0.07
+    where are you from: 0.07
+    who are you with: 0.07
+    windmill: 0.07
+    woke: 0.42
+  announcement:
+    50,000: 0.09
+    affordability: 0.23
+    affordable: 0.09
+    allah: 0.09
+    arc de trump: 0.09
+    artificial intelligence: 0.09
+    autism: 0.09
+    auto pen: 0.23
+    autopen: 0.23
+    ballrooom: 0.09
+    barack hussein obama: 0.23
+    barron: 0.09
+    be best: 0.09
+    bibi: 0.09
+    biden: 0.8
+    biden crime family: 0.09
+    bitcoin: 0.09
+    border: 0.8
+    cannabis: 0.09
+    ceasefire: 0.23
+    china: 0.66
+    communism: 0.09
+    communist: 0.09
+    comrade kamala: 0.09
+    con job: 0.09
+    crazy bernie: 0.09
+    crypto: 0.23
+    cryptocurrency: 0.09
+    dei: 0.09
+    democrat: 0.51
+    deport: 0.09
+    deportation: 0.09
+    dhs: 0.09
+    discombobulator: 0.09
+    donald: 0.66
+    drill baby drill: 0.09
+    election: 0.8
+    epic fury: 0.09
+    epstein: 0.23
+    epstein island: 0.09
+    event does not qualify: 0.09
+    fake news: 0.51
+    fat slob: 0.09
+    fort trump: 0.09
+    foster: 0.09
+    fostering: 0.09
+    fraud: 0.09
+    gas: 0.37
+    gasoline: 0.23
+    goat: 0.09
+    golden dome: 0.09
+    healthcare: 0.23
+    highest inflation: 0.09
+    hottest: 0.23
+    ice: 0.23
+    identification: 0.09
+    immigrant: 0.09
+    immigration: 0.23
+    investigate: 0.09
+    investigating: 0.09
+    investigation: 0.09
+    iran: 0.51
+    iranian: 0.09
+    israel: 0.23
+    israeli: 0.09
+    landslide: 0.23
+    little communist: 0.09
+    low energy: 0.09
+    make iran great again: 0.09
+    marijuana: 0.23
+    marjorie traitor greene: 0.09
+    melania: 0.23
+    mog: 0.09
+    mogged: 0.09
+    mogging: 0.09
+    moscow: 0.09
+    mount trump: 0.09
+    national security: 0.51
+    netanyahu: 0.09
+    newscum: 0.09
+    nobel: 0.09
+    november 5: 0.09
+    nuclear: 0.37
+    oil: 0.66
+    peace: 0.51
+    pelosi: 0.37
+    piggy: 0.09
+    planned parenthood: 0.09
+    pocahontas: 0.09
+    podcast: 0.09
+    pope: 0.09
+    predict: 0.09
+    prediction: 0.09
+    radical left: 0.51
+    rigged election: 0.09
+    rocket man: 0.09
+    save america act: 0.09
+    school: 0.37
+    sleepy joe: 0.09
+    stimulus: 0.09
+    stock market: 0.37
+    stolen election: 0.09
+    stupid question: 0.23
+    swamp: 0.23
+    take it down: 0.09
+    tampon tim: 0.09
+    tariff: 0.51
+    tds: 0.09
+    terrorism: 0.23
+    terrorist: 0.23
+    third term: 0.09
+    thug: 0.09
+    transgender: 0.23
+    trump: 0.8
+    trump (3+ times): 0.09
+    trump airport: 0.09
+    trump arc: 0.09
+    trump bill: 0.09
+    trump derangement syndrome: 0.09
+    trump dollar: 0.09
+    trump kennedy center: 0.09
+    trump tower: 0.09
+    trump university: 0.09
+    wack job: 0.09
+    weed: 0.09
+    whack job: 0.09
+    where are you from: 0.23
+    who are you with: 0.09
+    windmill: 0.09
+    woke: 0.37
+  briefing:
+    50,000: 0.24
+    affordability: 0.13
+    affordable: 0.05
+    allah: 0.05
+    arc de trump: 0.05
+    artificial intelligence: 0.12
+    autism: 0.05
+    auto pen: 0.24
+    autopen: 0.05
+    ballrooom: 0.05
+    barack hussein obama: 0.21
+    barron: 0.05
+    be best: 0.05
+    bibi: 0.05
+    biden: 0.71
+    biden crime family: 0.05
+    bitcoin: 0.04
+    border: 0.6
+    cannabis: 0.05
+    ceasefire: 0.21
+    china: 0.48
+    communism: 0.05
+    communist: 0.24
+    comrade kamala: 0.05
+    con job: 0.05
+    crazy bernie: 0.05
+    crypto: 0.04
+    cryptocurrency: 0.05
+    dei: 0.05
+    democrat: 0.59
+    deport: 0.05
+    deportation: 0.05
+    dhs: 0.05
+    discombobulator: 0.05
+    donald: 0.51
+    drill baby drill: 0.05
+    election: 0.51
+    epic fury: 0.16
+    epstein: 0.14
+    epstein island: 0.05
+    event does not qualify: 0.05
+    fake news: 0.35
+    fat slob: 0.05
+    fort trump: 0.05
+    foster: 0.05
+    fostering: 0.05
+    fraud: 0.15
+    gas: 0.05
+    gasoline: 0.05
+    goat: 0.05
+    golden dome: 0.05
+    healthcare: 0.15
+    highest inflation: 0.05
+    hottest: 0.32
+    ice: 0.24
+    identification: 0.15
+    immigrant: 0.05
+    immigration: 0.05
+    investigate: 0.15
+    investigating: 0.05
+    investigation: 0.05
+    iran: 0.66
+    iranian: 0.05
+    israel: 0.3
+    israeli: 0.22
+    landslide: 0.24
+    little communist: 0.05
+    low energy: 0.05
+    make iran great again: 0.05
+    marijuana: 0.05
+    marjorie traitor greene: 0.05
+    melania: 0.24
+    mog: 0.05
+    mogged: 0.05
+    mogging: 0.05
+    moscow: 0.05
+    mount trump: 0.05
+    national security: 0.24
+    netanyahu: 0.05
+    newscum: 0.05
+    nobel: 0.05
+    november 5: 0.05
+    nuclear: 0.59
+    oil: 0.45
+    peace: 0.15
+    pelosi: 0.05
+    piggy: 0.05
+    planned parenthood: 0.05
+    pocahontas: 0.05
+    podcast: 0.05
+    pope: 0.05
+    predict: 0.05
+    prediction: 0.05
+    radical left: 0.26
+    rigged election: 0.05
+    rocket man: 0.05
+    save america act: 0.35
+    school: 0.15
+    sleepy joe: 0.15
+    stimulus: 0.05
+    stock market: 0.19
+    stolen election: 0.05
+    stupid question: 0.05
+    swamp: 0.05
+    take it down: 0.15
+    tampon tim: 0.05
+    tariff: 0.37
+    tds: 0.05
+    terrorism: 0.22
+    terrorist: 0.3
+    third term: 0.05
+    thug: 0.05
+    transgender: 0.51
+    trump: 0.8
+    trump (3+ times): 0.05
+    trump airport: 0.05
+    trump arc: 0.05
+    trump bill: 0.05
+    trump derangement syndrome: 0.05
+    trump dollar: 0.05
+    trump kennedy center: 0.05
+    trump tower: 0.05
+    trump university: 0.05
+    wack job: 0.05
+    weed: 0.05
+    whack job: 0.05
+    where are you from: 0.05
+    who are you with: 0.15
+    windmill: 0.05
+    woke: 0.05
+  general:
+    pope: 0.32
+    windmill: 0.53
+    who are you with: 0.48
+    where are you from: 0.48
+    transgender: 0.6
+    thug: 0.55
+    tds: 0.58
+    trump derangement syndrome: 0.57
+    stupid question: 0.19
+    sleepy joe: 0.8
+    rigged election: 0.47
+    stolen election: 0.52
+    predict: 0.62
+    prediction: 0.62
+    nobel: 0.38
+    newscum: 0.68
+    mog: 0.03
+    mogged: 0.03
+    mogging: 0.03
+    melania: 0.77
+    marijuana: 0.06
+    weed: 0.06
+    cannabis: 0.06
+    landslide: 0.71
+    hottest: 0.45
+    golden dome: 0.05
+    epstein: 0.31
+    drill baby drill: 0.63
+    discombobulator: 0.06
+    crypto: 0.13
+    bitcoin: 0.13
+    communist: 0.5
+    communism: 0.5
+    bibi: 0.4
+    netanyahu: 0.4
+    barack hussein obama: 0.57
+    autopen: 0.55
+    auto pen: 0.6
+    autism: 0.65
+    50,000: 0.76
+    cookie: 0.35
+    eight war: 0.43
+    world cup: 0.44
+    khamenei: 0.19
+    pelosi: 0.49
+    space force: 0.31
+    somalia: 0.44
+    somali: 0.5
+    somalian: 0.5
+    olympic: 0.58
+    olympics: 0.61
+    hockey: 0.36
+    mental institution: 0.35
+    fake news: 0.6
+    obliterate: 0.56
+    obliterated: 0.56
+    obliteration: 0.6
+    trillion: 0.52
+    tariff: 0.5
+    stock market: 0.47
+    too late: 0.48
+    peace: 0.09
+    oil: 0.61
+    nuclear: 0.78
+    negotiate: 0.57
+    negotiated: 0.55
+    negotiation: 0.57
+    israel: 0.58
+    israeli: 0.57
+    hormuz: 0.36
+    gas: 0.56
+    gasoline: 0.56
+    election: 0.67
+    democrat: 0.61
+    ceasefire: 0.28
+    blockade: 0.43
+    biden: 0.58
+    ai: 0.25
+    artificial intelligence: 0.25
+    afford: 0.19
+    affordability: 0.19
+    affordable: 0.17
+    supreme court: 0.34
+    shutdown: 0.31
+    shut down: 0.31
+    radical left: 0.52
+    maga: 0.49
+    make america great again: 0.49
+    kamala: 0.11
+    iran: 0.62
+    fraud: 0.41
+    cheat: 0.68
+    cheater: 0.68
+    cheating: 0.62
+    new york: 0.64
+    mamdani: 0.27
+    gulf of america: 0.55
+    ice: 0.58
+    tsa: 0.46
+    china: 0.48
+    hezbollah: 0.13
+    endorse: 0.39
+    endorsed: 0.3
+    endorsement: 0.39
+    cuba: 0.28
+    venezuela: 0.65
+    mcdonald: 0.13
+    mcdonald's: 0.13
+    midterm: 0.53
+    inflation: 0.36
+    american dream: 0.4
+    uranium: 0.07
+    nato: 0.54
+    iran (3+ times): 0.74
+    america first: 0.14
+    trump: 0.77
+    id: 0.7
+    identification: 0.7
+    fentanyl: 0.52
+    epic fury: 0.4
+    crime: 0.6
+    criminal: 0.6
+    save america act: 0.42
+    big beautiful bill: 0.59
+    nasa: 0.5
+    moon: 0.56
+    supreme leader: 0.11
+    iran (5+ times): 0.59
+    starmer: 0.32
+    russia: 0.4
+    russian: 0.31
+    rare earth: 0.09
+    mineral: 0.09
+    greenland: 0.38
+    drone: 0.55
+    deal: 0.61
+    settle: 0.56
+    ufo: 0.33
+    rescue: 0.51
+    rescued: 0.51
+    genius: 0.73
+    alien: 0.23
+    ayatollah: 0.09
+    terrorist: 0.6
+    terrorism: 0.57
+    peace in the middle east: 0.17
+    ukraine: 0.55
+    midnight hammer: 0.59
+    nine war: 0.3
+    marco: 0.3
+    rubio: 0.3
+    hegseth: 0.5
+    excursion: 0.16
+    ballroom: 0.23
+    movie star: 0.42
+    kennedy: 0.13
+    gianni: 0.51
+    infantino: 0.51
+    highest inflation: 0.18
+    '250': 0.76
+    kristi: 0.2
+    noem: 0.2
+    trumprx: 0.3
+    rino: 0.35
+    november 5: 0.33
+    no no no: 0.34
+    filibuster: 0.49
+    save act: 0.57
+    national guard: 0.43
+    illegal alien: 0.26
+    deport: 0.34
+    deportation: 0.34
+    cartel: 0.32
+    pam: 0.37
+    bondi: 0.37
+    investment: 0.15
+    invested: 0.15
+    taiwan: 0.14
+    manufacturing: 0.15
+    national security: 0.2
+    maduro: 0.44
+    nil: 0.3
+    kickoff: 0.29
+    golf: 0.77
+    golfing: 0.77
+    bad bunny: 0.09
+    egg: 0.72
+    ufc: 0.47
+    nicki minaj: 0.31
+    dei: 0.41
+    woke: 0.41
+    zohran: 0.13
+    draft: 0.13
+    drafted: 0.13
+    saint patrick day: 0.5
+    immigrant: 0.32
+    immigration: 0.32
+    son: 0.32
+    ozempic: 0.35
+    kurd: 0.14
+    kurdish: 0.14
+    turning point: 0.34
+  interview:
+    50,000: 0.18
+    affordability: 0.05
+    affordable: 0.14
+    allah: 0.07
+    arc de trump: 0.07
+    artificial intelligence: 0.24
+    autism: 0.18
+    auto pen: 0.18
+    autopen: 0.29
+    ballrooom: 0.07
+    barack hussein obama: 0.24
+    barron: 0.07
+    be best: 0.07
+    bibi: 0.07
+    biden: 0.77
+    biden crime family: 0.07
+    bitcoin: 0.05
+    border: 0.51
+    cannabis: 0.07
+    ceasefire: 0.06
+    china: 0.66
+    communism: 0.07
+    communist: 0.4
+    comrade kamala: 0.07
+    con job: 0.07
+    crazy bernie: 0.07
+    crypto: 0.14
+    cryptocurrency: 0.07
+    dei: 0.07
+    democrat: 0.54
+    deport: 0.07
+    deportation: 0.07
+    dhs: 0.07
+    discombobulator: 0.07
+    donald: 0.4
+    drill baby drill: 0.07
+    election: 0.75
+    epic fury: 0.06
+    epstein: 0.14
+    epstein island: 0.07
+    event does not qualify: 0.07
+    fake news: 0.59
+    fat slob: 0.07
+    fort trump: 0.07
+    foster: 0.07
+    fostering: 0.07
+    fraud: 0.29
+    gas: 0.62
+    gasoline: 0.71
+    goat: 0.07
+    golden dome: 0.07
+    healthcare: 0.4
+    highest inflation: 0.18
+    hottest: 0.37
+    ice: 0.06
+    identification: 0.14
+    immigrant: 0.07
+    immigration: 0.07
+    investigate: 0.18
+    investigating: 0.07
+    investigation: 0.4
+    iran: 0.38
+    iranian: 0.07
+    israel: 0.37
+    israeli: 0.28
+    landslide: 0.18
+    little communist: 0.07
+    low energy: 0.07
+    make iran great again: 0.07
+    marijuana: 0.07
+    marjorie traitor greene: 0.07
+    melania: 0.18
+    mog: 0.06
+    mogged: 0.06
+    mogging: 0.06
+    moscow: 0.18
+    mount trump: 0.07
+    national security: 0.29
+    netanyahu: 0.07
+    newscum: 0.07
+    nobel: 0.07
+    november 5: 0.07
+    nuclear: 0.56
+    oil: 0.5
+    peace: 0.42
+    pelosi: 0.29
+    piggy: 0.07
+    planned parenthood: 0.07
+    pocahontas: 0.07
+    podcast: 0.18
+    pope: 0.07
+    predict: 0.07
+    prediction: 0.07
+    radical left: 0.26
+    rigged election: 0.4
+    rocket man: 0.07
+    save america act: 0.06
+    school: 0.18
+    sleepy joe: 0.07
+    stimulus: 0.07
+    stock market: 0.41
+    stolen election: 0.07
+    stupid question: 0.07
+    swamp: 0.07
+    take it down: 0.07
+    tampon tim: 0.07
+    tariff: 0.25
+    tds: 0.07
+    terrorism: 0.07
+    terrorist: 0.07
+    third term: 0.07
+    thug: 0.07
+    transgender: 0.25
+    trump: 0.84
+    trump (3+ times): 0.07
+    trump airport: 0.07
+    trump arc: 0.07
+    trump bill: 0.07
+    trump derangement syndrome: 0.07
+    trump dollar: 0.07
+    trump kennedy center: 0.07
+    trump tower: 0.07
+    trump university: 0.07
+    wack job: 0.07
+    weed: 0.07
+    whack job: 0.07
+    where are you from: 0.07
+    who are you with: 0.07
+    windmill: 0.07
+    woke: 0.29
+  presser:
+    50,000: 0.12
+    affordability: 0.12
+    affordable: 0.12
+    allah: 0.12
+    arc de trump: 0.12
+    artificial intelligence: 0.12
+    autism: 0.12
+    auto pen: 0.12
+    autopen: 0.32
+    ballrooom: 0.12
+    barack hussein obama: 0.12
+    barron: 0.12
+    be best: 0.12
+    bibi: 0.32
+    biden: 0.72
+    biden crime family: 0.12
+    bitcoin: 0.12
+    border: 0.52
+    cannabis: 0.12
+    ceasefire: 0.32
+    china: 0.72
+    communism: 0.12
+    communist: 0.12
+    comrade kamala: 0.12
+    con job: 0.12
+    crazy bernie: 0.12
+    crypto: 0.12
+    cryptocurrency: 0.12
+    dei: 0.12
+    democrat: 0.12
+    deport: 0.12
+    deportation: 0.12
+    dhs: 0.12
+    discombobulator: 0.12
+    donald: 0.12
+    drill baby drill: 0.12
+    election: 0.72
+    epic fury: 0.12
+    epstein: 0.32
+    epstein island: 0.12
+    event does not qualify: 0.12
+    fake news: 0.32
+    fat slob: 0.12
+    fort trump: 0.12
+    foster: 0.12
+    fostering: 0.12
+    fraud: 0.12
+    gas: 0.32
+    gasoline: 0.12
+    goat: 0.12
+    golden dome: 0.12
+    healthcare: 0.32
+    highest inflation: 0.12
+    hottest: 0.32
+    ice: 0.32
+    identification: 0.12
+    immigrant: 0.12
+    immigration: 0.32
+    investigate: 0.12
+    investigating: 0.12
+    investigation: 0.12
+    iran: 0.32
+    iranian: 0.12
+    israel: 0.52
+    israeli: 0.32
+    landslide: 0.12
+    little communist: 0.12
+    low energy: 0.12
+    make iran great again: 0.12
+    marijuana: 0.12
+    marjorie traitor greene: 0.12
+    melania: 0.12
+    mog: 0.12
+    mogged: 0.12
+    mogging: 0.12
+    moscow: 0.12
+    mount trump: 0.12
+    national security: 0.52
+    netanyahu: 0.32
+    newscum: 0.12
+    nobel: 0.12
+    november 5: 0.12
+    nuclear: 0.32
+    oil: 0.52
+    peace: 0.72
+    pelosi: 0.12
+    piggy: 0.12
+    planned parenthood: 0.12
+    pocahontas: 0.12
+    podcast: 0.12
+    pope: 0.12
+    predict: 0.12
+    prediction: 0.32
+    radical left: 0.32
+    rigged election: 0.12
+    rocket man: 0.12
+    save america act: 0.12
+    school: 0.12
+    sleepy joe: 0.12
+    stimulus: 0.12
+    stock market: 0.32
+    stolen election: 0.12
+    stupid question: 0.12
+    swamp: 0.12
+    take it down: 0.12
+    tampon tim: 0.12
+    tariff: 0.32
+    tds: 0.12
+    terrorism: 0.12
+    terrorist: 0.12
+    third term: 0.12
+    thug: 0.12
+    transgender: 0.32
+    trump: 0.72
+    trump (3+ times): 0.12
+    trump airport: 0.12
+    trump arc: 0.12
+    trump bill: 0.12
+    trump derangement syndrome: 0.12
+    trump dollar: 0.12
+    trump kennedy center: 0.12
+    trump tower: 0.12
+    trump university: 0.12
+    wack job: 0.12
+    weed: 0.12
+    whack job: 0.12
+    where are you from: 0.12
+    who are you with: 0.52
+    windmill: 0.32
+    woke: 0.12
+  rally:
+    50,000: 0.1
+    affordability: 0.13
+    affordable: 0.13
+    allah: 0.02
+    arc de trump: 0.02
+    artificial intelligence: 0.14
+    autism: 0.14
+    auto pen: 0.22
+    autopen: 0.18
+    ballrooom: 0.02
+    barack hussein obama: 0.1
+    barron: 0.06
+    be best: 0.06
+    bibi: 0.06
+    biden: 0.8
+    biden crime family: 0.02
+    bitcoin: 0.06
+    border: 0.52
+    cannabis: 0.02
+    ceasefire: 0.02
+    china: 0.48
+    communism: 0.1
+    communist: 0.18
+    comrade kamala: 0.02
+    con job: 0.1
+    crazy bernie: 0.02
+    crypto: 0.1
+    cryptocurrency: 0.02
+    dei: 0.02
+    democrat: 0.55
+    deport: 0.06
+    deportation: 0.1
+    dhs: 0.1
+    discombobulator: 0.02
+    donald: 0.33
+    drill baby drill: 0.06
+    election: 0.72
+    epic fury: 0.02
+    epstein: 0.06
+    epstein island: 0.02
+    event does not qualify: 0.02
+    fake news: 0.64
+    fat slob: 0.02
+    fort trump: 0.02
+    foster: 0.06
+    fostering: 0.02
+    fraud: 0.2
+    gas: 0.36
+    gasoline: 0.32
+    goat: 0.02
+    golden dome: 0.1
+    healthcare: 0.25
+    highest inflation: 0.21
+    hottest: 0.59
+    ice: 0.17
+    identification: 0.12
+    immigrant: 0.02
+    immigration: 0.22
+    investigate: 0.06
+    investigating: 0.02
+    investigation: 0.1
+    iran: 0.42
+    iranian: 0.06
+    israel: 0.37
+    israeli: 0.02
+    landslide: 0.45
+    little communist: 0.02
+    low energy: 0.02
+    make iran great again: 0.02
+    marijuana: 0.02
+    marjorie traitor greene: 0.02
+    melania: 0.06
+    mog: 0.02
+    mogged: 0.02
+    mogging: 0.02
+    moscow: 0.02
+    mount trump: 0.02
+    national security: 0.14
+    netanyahu: 0.06
+    newscum: 0.02
+    nobel: 0.06
+    november 5: 0.05
+    nuclear: 0.52
+    oil: 0.43
+    peace: 0.29
+    pelosi: 0.1
+    piggy: 0.02
+    planned parenthood: 0.02
+    pocahontas: 0.02
+    podcast: 0.06
+    pope: 0.02
+    predict: 0.02
+    prediction: 0.02
+    radical left: 0.55
+    rigged election: 0.1
+    rocket man: 0.02
+    save america act: 0.06
+    school: 0.37
+    sleepy joe: 0.31
+    stimulus: 0.02
+    stock market: 0.5
+    stolen election: 0.02
+    stupid question: 0.06
+    swamp: 0.02
+    take it down: 0.02
+    tampon tim: 0.02
+    tariff: 0.52
+    tds: 0.02
+    terrorism: 0.14
+    terrorist: 0.22
+    third term: 0.02
+    thug: 0.14
+    transgender: 0.31
+    trump: 0.79
+    trump (3+ times): 0.02
+    trump airport: 0.02
+    trump arc: 0.02
+    trump bill: 0.02
+    trump derangement syndrome: 0.1
+    trump dollar: 0.02
+    trump kennedy center: 0.02
+    trump tower: 0.1
+    trump university: 0.02
+    wack job: 0.02
+    weed: 0.02
+    whack job: 0.06
+    where are you from: 0.1
+    who are you with: 0.1
+    windmill: 0.02
+    woke: 0.18
+  signing:
+    50,000: 0.11
+    affordability: 0.16
+    affordable: 0.16
+    allah: 0.04
+    arc de trump: 0.04
+    artificial intelligence: 0.04
+    autism: 0.11
+    auto pen: 0.11
+    autopen: 0.24
+    ballrooom: 0.04
+    barack hussein obama: 0.33
+    barron: 0.04
+    be best: 0.04
+    bibi: 0.11
+    biden: 0.66
+    biden crime family: 0.04
+    bitcoin: 0.03
+    border: 0.69
+    cannabis: 0.04
+    ceasefire: 0.04
+    china: 0.65
+    communism: 0.04
+    communist: 0.26
+    comrade kamala: 0.04
+    con job: 0.11
+    crazy bernie: 0.04
+    crypto: 0.09
+    cryptocurrency: 0.04
+    dei: 0.04
+    democrat: 0.57
+    deport: 0.22
+    deportation: 0.22
+    dhs: 0.19
+    discombobulator: 0.04
+    donald: 0.19
+    drill baby drill: 0.04
+    election: 0.56
+    epic fury: 0.08
+    epstein: 0.04
+    epstein island: 0.04
+    event does not qualify: 0.04
+    fake news: 0.31
+    fat slob: 0.04
+    fort trump: 0.04
+    foster: 0.11
+    fostering: 0.11
+    fraud: 0.21
+    gas: 0.27
+    gasoline: 0.27
+    goat: 0.04
+    golden dome: 0.04
+    healthcare: 0.31
+    highest inflation: 0.19
+    hottest: 0.37
+    ice: 0.25
+    identification: 0.21
+    immigrant: 0.04
+    immigration: 0.11
+    investigate: 0.04
+    investigating: 0.04
+    investigation: 0.04
+    iran: 0.4
+    iranian: 0.11
+    israel: 0.48
+    israeli: 0.13
+    landslide: 0.04
+    little communist: 0.04
+    low energy: 0.04
+    make iran great again: 0.04
+    marijuana: 0.11
+    marjorie traitor greene: 0.04
+    melania: 0.11
+    mog: 0.04
+    mogged: 0.04
+    mogging: 0.04
+    moscow: 0.04
+    mount trump: 0.04
+    national security: 0.24
+    netanyahu: 0.18
+    newscum: 0.11
+    nobel: 0.04
+    november 5: 0.04
+    nuclear: 0.33
+    oil: 0.29
+    peace: 0.4
+    pelosi: 0.11
+    piggy: 0.04
+    planned parenthood: 0.04
+    pocahontas: 0.11
+    podcast: 0.04
+    pope: 0.04
+    predict: 0.11
+    prediction: 0.04
+    radical left: 0.43
+    rigged election: 0.19
+    rocket man: 0.04
+    save america act: 0.25
+    school: 0.4
+    sleepy joe: 0.19
+    stimulus: 0.04
+    stock market: 0.31
+    stolen election: 0.04
+    stupid question: 0.04
+    swamp: 0.04
+    take it down: 0.04
+    tampon tim: 0.04
+    tariff: 0.42
+    tds: 0.04
+    terrorism: 0.16
+    terrorist: 0.29
+    third term: 0.04
+    thug: 0.18
+    transgender: 0.46
+    trump: 0.7
+    trump (3+ times): 0.04
+    trump airport: 0.04
+    trump arc: 0.04
+    trump bill: 0.04
+    trump derangement syndrome: 0.26
+    trump dollar: 0.04
+    trump kennedy center: 0.04
+    trump tower: 0.04
+    trump university: 0.04
+    wack job: 0.04
+    weed: 0.04
+    whack job: 0.04
+    where are you from: 0.11
+    who are you with: 0.19
+    windmill: 0.04
+    woke: 0.24
+  summit:
+    50,000: 0.16
+    affordability: 0.06
+    affordable: 0.02
+    allah: 0.03
+    arc de trump: 0.03
+    artificial intelligence: 0.1
+    autism: 0.07
+    auto pen: 0.03
+    autopen: 0.07
+    ballrooom: 0.03
+    barack hussein obama: 0.11
+    barron: 0.03
+    be best: 0.03
+    bibi: 0.15
+    biden: 0.69
+    biden crime family: 0.03
+    bitcoin: 0.05
+    border: 0.54
+    cannabis: 0.03
+    ceasefire: 0.23
+    china: 0.52
+    communism: 0.07
+    communist: 0.07
+    comrade kamala: 0.03
+    con job: 0.03
+    crazy bernie: 0.03
+    crypto: 0.09
+    cryptocurrency: 0.03
+    dei: 0.07
+    democrat: 0.28
+    deport: 0.03
+    deportation: 0.03
+    dhs: 0.03
+    discombobulator: 0.03
+    donald: 0.16
+    drill baby drill: 0.03
+    election: 0.52
+    epic fury: 0.02
+    epstein: 0.03
+    epstein island: 0.03
+    event does not qualify: 0.03
+    fake news: 0.32
+    fat slob: 0.03
+    fort trump: 0.03
+    foster: 0.03
+    fostering: 0.03
+    fraud: 0.19
+    gas: 0.26
+    gasoline: 0.34
+    goat: 0.03
+    golden dome: 0.07
+    healthcare: 0.11
+    highest inflation: 0.11
+    hottest: 0.34
+    ice: 0.14
+    identification: 0.03
+    immigrant: 0.06
+    immigration: 0.31
+    investigate: 0.03
+    investigating: 0.03
+    investigation: 0.07
+    iran: 0.52
+    iranian: 0.07
+    israel: 0.37
+    israeli: 0.12
+    landslide: 0.24
+    little communist: 0.03
+    low energy: 0.03
+    make iran great again: 0.03
+    marijuana: 0.03
+    marjorie traitor greene: 0.03
+    melania: 0.2
+    mog: 0.02
+    mogged: 0.02
+    mogging: 0.02
+    moscow: 0.07
+    mount trump: 0.03
+    national security: 0.26
+    netanyahu: 0.15
+    newscum: 0.03
+    nobel: 0.14
+    november 5: 0.03
+    nuclear: 0.53
+    oil: 0.55
+    peace: 0.55
+    pelosi: 0.11
+    piggy: 0.03
+    planned parenthood: 0.03
+    pocahontas: 0.03
+    podcast: 0.03
+    pope: 0.03
+    predict: 0.11
+    prediction: 0.03
+    radical left: 0.19
+    rigged election: 0.07
+    rocket man: 0.07
+    save america act: 0.02
+    school: 0.07
+    sleepy joe: 0.14
+    stimulus: 0.03
+    stock market: 0.19
+    stolen election: 0.03
+    stupid question: 0.03
+    swamp: 0.03
+    take it down: 0.07
+    tampon tim: 0.03
+    tariff: 0.47
+    tds: 0.03
+    terrorism: 0.11
+    terrorist: 0.13
+    third term: 0.03
+    thug: 0.03
+    transgender: 0.07
+    trump: 0.54
+    trump (3+ times): 0.03
+    trump airport: 0.03
+    trump arc: 0.03
+    trump bill: 0.03
+    trump derangement syndrome: 0.11
+    trump dollar: 0.03
+    trump kennedy center: 0.03
+    trump tower: 0.03
+    trump university: 0.03
+    wack job: 0.03
+    weed: 0.03
+    whack job: 0.03
+    where are you from: 0.07
+    who are you with: 0.11
+    windmill: 0.12
+    woke: 0.11
+  visit:
+    50,000: 0.15
+    affordability: 0.31
+    affordable: 0.21
+    allah: 0.04
+    arc de trump: 0.04
+    artificial intelligence: 0.15
+    autism: 0.04
+    auto pen: 0.04
+    autopen: 0.27
+    ballrooom: 0.04
+    barack hussein obama: 0.31
+    barron: 0.04
+    be best: 0.04
+    bibi: 0.09
+    biden: 0.67
+    biden crime family: 0.04
+    bitcoin: 0.06
+    border: 0.45
+    cannabis: 0.04
+    ceasefire: 0.09
+    china: 0.63
+    communism: 0.04
+    communist: 0.04
+    comrade kamala: 0.04
+    con job: 0.04
+    crazy bernie: 0.04
+    crypto: 0.11
+    cryptocurrency: 0.04
+    dei: 0.03
+    democrat: 0.56
+    deport: 0.04
+    deportation: 0.04
+    dhs: 0.04
+    discombobulator: 0.04
+    donald: 0.27
+    drill baby drill: 0.04
+    election: 0.71
+    epic fury: 0.09
+    epstein: 0.04
+    epstein island: 0.04
+    event does not qualify: 0.04
+    fake news: 0.48
+    fat slob: 0.04
+    fort trump: 0.04
+    foster: 0.04
+    fostering: 0.04
+    fraud: 0.25
+    gas: 0.44
+    gasoline: 0.34
+    goat: 0.09
+    golden dome: 0.04
+    healthcare: 0.54
+    highest inflation: 0.21
+    hottest: 0.54
+    ice: 0.34
+    identification: 0.13
+    immigrant: 0.09
+    immigration: 0.15
+    investigate: 0.09
+    investigating: 0.09
+    investigation: 0.21
+    iran: 0.54
+    iranian: 0.15
+    israel: 0.24
+    israeli: 0.12
+    landslide: 0.37
+    little communist: 0.04
+    low energy: 0.04
+    make iran great again: 0.09
+    marijuana: 0.04
+    marjorie traitor greene: 0.04
+    melania: 0.09
+    mog: 0.03
+    mogged: 0.03
+    mogging: 0.03
+    moscow: 0.04
+    mount trump: 0.04
+    national security: 0.26
+    netanyahu: 0.09
+    newscum: 0.09
+    nobel: 0.04
+    november 5: 0.04
+    nuclear: 0.61
+    oil: 0.48
+    peace: 0.56
+    pelosi: 0.04
+    piggy: 0.04
+    planned parenthood: 0.04
+    pocahontas: 0.04
+    podcast: 0.04
+    pope: 0.04
+    predict: 0.04
+    prediction: 0.09
+    radical left: 0.31
+    rigged election: 0.15
+    rocket man: 0.04
+    save america act: 0.23
+    school: 0.21
+    sleepy joe: 0.33
+    stimulus: 0.04
+    stock market: 0.38
+    stolen election: 0.04
+    stupid question: 0.04
+    swamp: 0.04
+    take it down: 0.09
+    tampon tim: 0.04
+    tariff: 0.53
+    tds: 0.09
+    terrorism: 0.09
+    terrorist: 0.15
+    third term: 0.04
+    thug: 0.08
+    transgender: 0.45
+    trump: 0.62
+    trump (3+ times): 0.04
+    trump airport: 0.04
+    trump arc: 0.04
+    trump bill: 0.04
+    trump derangement syndrome: 0.04
+    trump dollar: 0.04
+    trump kennedy center: 0.04
+    trump tower: 0.04
+    trump university: 0.04
+    wack job: 0.04
+    weed: 0.04
+    whack job: 0.09
+    where are you from: 0.04
+    who are you with: 0.09
+    windmill: 0.07
+    woke: 0.2
+  _default:
+    50,000: 0.16
+    affordability: 0.14
+    affordable: 0.11
+    allah: 0.01
+    arc de trump: 0.0
+    artificial intelligence: 0.11
+    autism: 0.1
+    auto pen: 0.12
+    autopen: 0.17
+    ballrooom: 0.0
+    barack hussein obama: 0.23
+    barron: 0.03
+    be best: 0.01
+    bibi: 0.1
+    biden: 0.75
+    biden crime family: 0.0
+    bitcoin: 0.06
+    border: 0.6
+    cannabis: 0.0
+    ceasefire: 0.12
+    china: 0.6
+    communism: 0.07
+    communist: 0.15
+    comrade kamala: 0.0
+    con job: 0.05
+    crazy bernie: 0.0
+    crypto: 0.09
+    cryptocurrency: 0.0
+    dei: 0.04
+    democrat: 0.53
+    deport: 0.04
+    deportation: 0.04
+    dhs: 0.03
+    discombobulator: 0.0
+    donald: 0.34
+    drill baby drill: 0.08
+    election: 0.71
+    epic fury: 0.08
+    epstein: 0.08
+    epstein island: 0.0
+    event does not qualify: 0.0
+    fake news: 0.46
+    fat slob: 0.0
+    fort trump: 0.0
+    foster: 0.06
+    fostering: 0.01
+    fraud: 0.21
+    gas: 0.35
+    gasoline: 0.33
+    goat: 0.01
+    golden dome: 0.06
+    healthcare: 0.28
+    highest inflation: 0.12
+    hottest: 0.5
+    ice: 0.23
+    identification: 0.13
+    immigrant: 0.01
+    immigration: 0.2
+    investigate: 0.03
+    investigating: 0.02
+    investigation: 0.1
+    iran: 0.56
+    iranian: 0.11
+    israel: 0.41
+    israeli: 0.13
+    landslide: 0.3
+    little communist: 0.0
+    low energy: 0.0
+    make iran great again: 0.01
+    marijuana: 0.01
+    marjorie traitor greene: 0.01
+    melania: 0.17
+    mog: 0.0
+    mogged: 0.0
+    mogging: 0.0
+    moscow: 0.03
+    mount trump: 0.0
+    national security: 0.26
+    netanyahu: 0.09
+    newscum: 0.08
+    nobel: 0.1
+    november 5: 0.01
+    nuclear: 0.61
+    oil: 0.49
+    peace: 0.47
+    pelosi: 0.1
+    piggy: 0.0
+    planned parenthood: 0.0
+    pocahontas: 0.02
+    podcast: 0.03
+    pope: 0.02
+    predict: 0.06
+    prediction: 0.06
+    radical left: 0.36
+    rigged election: 0.14
+    rocket man: 0.01
+    save america act: 0.12
+    school: 0.25
+    sleepy joe: 0.26
+    stimulus: 0.0
+    stock market: 0.36
+    stolen election: 0.03
+    stupid question: 0.03
+    swamp: 0.01
+    take it down: 0.03
+    tampon tim: 0.0
+    tariff: 0.47
+    tds: 0.04
+    terrorism: 0.14
+    terrorist: 0.23
+    third term: 0.02
+    thug: 0.09
+    transgender: 0.35
+    trump: 0.75
+    trump (3+ times): 0.0
+    trump airport: 0.0
+    trump arc: 0.0
+    trump bill: 0.0
+    trump derangement syndrome: 0.11
+    trump dollar: 0.0
+    trump kennedy center: 0.01
+    trump tower: 0.04
+    trump university: 0.0
+    wack job: 0.01
+    weed: 0.01
+    whack job: 0.02
+    where are you from: 0.08
+    who are you with: 0.11
+    windmill: 0.07
+    woke: 0.17
+  _context_base:
+    general: 0.47
+    rally: 0.46
+    visit: 0.39
+    interview: 0.43
+    summit: 0.47
+    address: 0.38
+    signing: 0.45
+    briefing: 0.52
+    remarks: 0.59
+_global_default: 0.48

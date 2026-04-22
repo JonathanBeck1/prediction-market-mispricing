@@ -1,0 +1,48 @@
+# Transcript URLs to scrape for building the historical corpus.
+# Run: python3 scripts/scrape_corpus.py
+#
+# After scraping, analyze with: python3 scripts/analyze_corpus.py
+#
+# Good sources:
+#   Trump rallies/speeches: rev.com/blog/transcripts, factba.se
+#   Leavitt briefings: whitehouse.gov/briefing-room/press-briefings
+#   Mamdani: NYC council transcripts, local news
+#   General: c-span.org video transcripts
+#
+# IMPORTANT: Fill in real URLs below before running the scraper.
+# The URLs below are examples -- replace with actual transcript pages.
+
+transcripts:
+  # --- Trump rallies ---
+  # - speaker: trump
+  #   event_type: rally
+  #   date: "2026-02-20"
+  #   url: "https://rev.com/blog/transcripts/trump-rally-feb-20-2026"
+
+  # - speaker: trump
+  #   event_type: rally
+  #   date: "2026-02-15"
+  #   url: "https://rev.com/blog/transcripts/trump-rally-feb-15-2026"
+
+  # --- Trump interviews ---
+  # - speaker: trump
+  #   event_type: interview
+  #   date: "2026-02-25"
+  #   url: "https://rev.com/blog/transcripts/trump-interview-feb-25-2026"
+
+  # --- Leavitt press briefings ---
+  # - speaker: leavitt
+  #   event_type: briefing
+  #   date: "2026-02-28"
+  #   url: "https://www.whitehouse.gov/briefing-room/press-briefings/2026/02/28/press-briefing/"
+
+  # - speaker: leavitt
+  #   event_type: briefing
+  #   date: "2026-02-27"
+  #   url: "https://www.whitehouse.gov/briefing-room/press-briefings/2026/02/27/press-briefing/"
+
+  # --- Mamdani ---
+  # - speaker: mamdani
+  #   event_type: townhall
+  #   date: "2026-02-22"
+  #   url: "https://example.com/mamdani-townhall-transcript"

@@ -1,5 +1,5 @@
-fetched_at: '2026-04-22T22:16:40.163870+00:00'
-total_outcomes: 12468
+fetched_at: '2026-04-22T23:44:12.642855+00:00'
+total_outcomes: 12490
 by_speaker:
   trump:
     total: 2025
@@ -10,9 +10,9 @@ by_speaker:
     'yes': 1340
     'no': 1779
   leavitt:
-    total: 316
-    'yes': 114
-    'no': 202
+    total: 338
+    'yes': 122
+    'no': 216
   mamdani:
     total: 425
     'yes': 188
@@ -81,7 +81,7 @@ series_counts:
     'yes': 0
     'no': 0
   KXTRUMPMENTION:
-    total: 1023
+    total: 1053
     finalized: 887
     'yes': 383
     'no': 504
@@ -147,9 +147,9 @@ series_counts:
     'no': 0
   KXLEAVITTSMFMENTION:
     total: 71
-    finalized: 49
-    'yes': 18
-    'no': 31
+    finalized: 71
+    'yes': 26
+    'no': 45
   KXSECPRESSMENTION:
     total: 281
     finalized: 240

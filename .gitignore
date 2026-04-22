@@ -17,9 +17,10 @@ dist/
 .DS_Store
 Thumbs.db
 
-# Editor
+# Editor / IDE
 .idea/
 .vscode/
+.cursor/
 *.swp
 *.swo
 *~

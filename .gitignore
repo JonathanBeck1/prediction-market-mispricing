@@ -1,0 +1,64 @@
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Secrets — NEVER commit these
+config/runtime.env
+config/*.env
+!config/runtime.env.example
+!config/safe_mode.env
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Data — this is runtime state, not source code
+data/
+!data/.gitkeep
+logs/
+*.db
+*.db-shm
+*.db-wal
+*.db.backup-*
+*.db.pre_heal_*
+*.db.corrupt_*
+*.db.pre_repair_*
+*.db.malformed_*
+
+# Runtime artifacts
+data/runner.lock
+data/action_cards.jsonl
+data/raw/
+data/logs/
+
+# LaunchAgents (user-specific)
+*.plist
+
+# Local terminal state
+terminals/
+
+# Jupyter
+.ipynb_checkpoints/

@@ -1,4 +1,4 @@
-# Kalshi mention markets - fetched 2026-04-22T23:33:16.997107+00:00
+# Kalshi mention markets - fetched 2026-04-22T23:52:54.432948+00:00
 # Total: 1421 open markets
 
 auto:  # 151 markets
@@ -6,7 +6,7 @@ auto:  # 151 markets
     - phrase: "Afford"
       variants: "Afford / Affordable / Affordability"
       ticker: KXHOCHULMENTION-26APR22B-AFFO
-      yes_ask: 0.8300
+      yes_ask: 0.8400
       volume_24h: 0
       close: 2026-05-13
     - phrase: "Billionaire"
@@ -16,12 +16,12 @@ auto:  # 151 markets
       close: 2026-05-13
     - phrase: "Buffalo"
       ticker: KXHOCHULMENTION-26APR22B-BUFF
-      yes_ask: 0.8300
+      yes_ask: 0.8400
       volume_24h: 0
       close: 2026-05-13
     - phrase: "Childcare"
       ticker: KXHOCHULMENTION-26APR22B-CHIL
-      yes_ask: 0.5300
+      yes_ask: 0.5400
       volume_24h: 0
       close: 2026-05-13
     - phrase: "Economy"
@@ -32,36 +32,36 @@ auto:  # 151 markets
       close: 2026-05-13
     - phrase: "Healthcare"
       ticker: KXHOCHULMENTION-26APR22B-HEAL
-      yes_ask: 0.7300
+      yes_ask: 0.7400
       volume_24h: 0
       close: 2026-05-13
     - phrase: "Iran"
       variants: "Iran / Iranian"
       ticker: KXHOCHULMENTION-26APR22B-IRAN
-      yes_ask: 0.5300
+      yes_ask: 0.5400
       volume_24h: 0
       close: 2026-05-13
     - phrase: "Mayor"
       variants: "Mayor / Mamdani"
       ticker: KXHOCHULMENTION-26APR22B-MAYO
-      yes_ask: 0.7300
+      yes_ask: 0.7400
       volume_24h: 0
       close: 2026-05-13
     - phrase: "Oil"
       variants: "Oil / Gas / Gasoline"
       ticker: KXHOCHULMENTION-26APR22B-OIL
-      yes_ask: 0.7300
+      yes_ask: 0.7400
       volume_24h: 0
       close: 2026-05-13
     - phrase: "Refund"
       variants: "Refund / Rebate"
       ticker: KXHOCHULMENTION-26APR22B-REFU
-      yes_ask: 0.2800
+      yes_ask: 0.2900
       volume_24h: 0
       close: 2026-05-13
     - phrase: "Tariff"
       ticker: KXHOCHULMENTION-26APR22B-TARI
-      yes_ask: 0.5300
+      yes_ask: 0.5400
       volume_24h: 0
       close: 2026-05-13
     - phrase: "Trump"
@@ -77,29 +77,14 @@ auto:  # 151 markets
       close: 2026-05-07
     - phrase: "AI"
       variants: "AI / Artificial Intelligence"
-      ticker: KXPORTERMENTION-26APR22-AI
-      yes_ask: 0.5800
+      ticker: KXSTEYERMENTION-26APR22-AI
+      yes_ask: 0.6500
       volume_24h: 0
       close: 2026-05-07
     - phrase: "AI"
       variants: "AI / Artificial Intelligence"
-      ticker: KXSTEYERMENTION-26APR22-AI
-      yes_ask: 0.6600
-      volume_24h: 0
-      close: 2026-05-07
-    - phrase: "Billionaire"
-      ticker: KXPORTERMENTION-26APR22-BILL
-      yes_ask: 0.8700
-      volume_24h: 0
-      close: 2026-05-07
-    - phrase: "Billionaire"
-      ticker: KXBIANCOMENTION-26APR22-BILL
-      yes_ask: 0.4500
-      volume_24h: 0
-      close: 2026-05-07
-    - phrase: "Billionaire"
-      ticker: KXHILTONMENTION-26APR22-BILL
-      yes_ask: 0.6300
+      ticker: KXPORTERMENTION-26APR22-AI
+      yes_ask: 0.5900
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Billionaire"
@@ -107,10 +92,25 @@ auto:  # 151 markets
       yes_ask: 0.7200
       volume_24h: 0
       close: 2026-05-07
+    - phrase: "Billionaire"
+      ticker: KXBIANCOMENTION-26APR22-BILL
+      yes_ask: 0.4100
+      volume_24h: 0
+      close: 2026-05-07
+    - phrase: "Billionaire"
+      ticker: KXPORTERMENTION-26APR22-BILL
+      yes_ask: 0.8800
+      volume_24h: 0
+      close: 2026-05-07
+    - phrase: "Billionaire"
+      ticker: KXHILTONMENTION-26APR22-BILL
+      yes_ask: 0.6700
+      volume_24h: 0
+      close: 2026-05-07
     - phrase: "CEQA"
       variants: "CEQA / Environmental"
       ticker: KXHILTONMENTION-26APR22-CEQA
-      yes_ask: 0.6800
+      yes_ask: 0.6900
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Childcare"
@@ -119,13 +119,13 @@ auto:  # 151 markets
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Climate"
-      ticker: KXPORTERMENTION-26APR22-CLIM
-      yes_ask: 0.6400
+      ticker: KXSTEYERMENTION-26APR22-CLIM
+      yes_ask: 0.8700
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Climate"
-      ticker: KXSTEYERMENTION-26APR22-CLIM
-      yes_ask: 0.8700
+      ticker: KXPORTERMENTION-26APR22-CLIM
+      yes_ask: 0.6300
       volume_24h: 0
       close: 2026-05-07
     - phrase: "CoreCivic"
@@ -136,7 +136,7 @@ auto:  # 151 markets
     - phrase: "Corrupt"
       variants: "Corrupt / Corruption"
       ticker: KXHILTONMENTION-26APR22-CORR
-      yes_ask: 0.7900
+      yes_ask: 0.8300
       volume_24h: 0
       close: 2026-05-07
     - phrase: "COVID"
@@ -147,14 +147,14 @@ auto:  # 151 markets
       close: 2026-05-07
     - phrase: "Crime"
       variants: "Crime / Criminal"
-      ticker: KXBIANCOMENTION-26APR22-CRIM
-      yes_ask: 0.8900
+      ticker: KXSTEYERMENTION-26APR22-CRIM
+      yes_ask: 0.6300
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Crime"
       variants: "Crime / Criminal"
-      ticker: KXSTEYERMENTION-26APR22-CRIM
-      yes_ask: 0.5600
+      ticker: KXBIANCOMENTION-26APR22-CRIM
+      yes_ask: 0.8900
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Democrat"
@@ -164,39 +164,34 @@ auto:  # 151 markets
       close: 2026-05-07
     - phrase: "Democrat"
       ticker: KXHILTONMENTION-26APR22-DEMO
-      yes_ask: 0.9000
+      yes_ask: 0.9100
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Electric"
       variants: "Electric / Electricity"
       ticker: KXSTEYERMENTION-26APR22-ELEC
-      yes_ask: 0.8700
+      yes_ask: 0.8800
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Florida"
       variants: "Florida / Texas"
       ticker: KXHILTONMENTION-26APR22-FLOR
-      yes_ask: 0.5800
+      yes_ask: 0.5500
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Fox"
       ticker: KXHILTONMENTION-26APR22-FOX
-      yes_ask: 0.2600
+      yes_ask: 0.2700
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Fraud"
       ticker: KXBIANCOMENTION-26APR22-FRAU
-      yes_ask: 0.7800
+      yes_ask: 0.7700
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Fraud"
       ticker: KXHILTONMENTION-26APR22-FRAU
-      yes_ask: 0.8000
-      volume_24h: 0
-      close: 2026-05-07
-    - phrase: "Healthcare"
-      ticker: KXPORTERMENTION-26APR22-HEAL
-      yes_ask: 0.8700
+      yes_ask: 0.8100
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Healthcare"
@@ -204,46 +199,51 @@ auto:  # 151 markets
       yes_ask: 0.8900
       volume_24h: 0
       close: 2026-05-07
-    - phrase: "Homeless"
-      variants: "Homeless / Homelessness"
-      ticker: KXBIANCOMENTION-26APR22-HOME
-      yes_ask: 0.7700
-      volume_24h: 0
-      close: 2026-05-07
-    - phrase: "Homeless"
-      variants: "Homeless / Homelessness"
-      ticker: KXHILTONMENTION-26APR22-HOME
-      yes_ask: 0.9000
+    - phrase: "Healthcare"
+      ticker: KXPORTERMENTION-26APR22-HEAL
+      yes_ask: 0.8800
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Homeless"
       variants: "Homeless / Homelessness"
       ticker: KXSTEYERMENTION-26APR22-HOME
-      yes_ask: 0.5600
+      yes_ask: 0.5900
       volume_24h: 0
       close: 2026-05-07
-    - phrase: "ICE"
-      variants: "ICE / TSA"
-      ticker: KXPORTERMENTION-26APR22-ICE
-      yes_ask: 0.6600
+    - phrase: "Homeless"
+      variants: "Homeless / Homelessness"
+      ticker: KXBIANCOMENTION-26APR22-HOME
+      yes_ask: 0.7300
       volume_24h: 0
       close: 2026-05-07
-    - phrase: "ICE"
-      variants: "ICE / DHS"
-      ticker: KXBIANCOMENTION-26APR22-ICE
-      yes_ask: 0.8400
-      volume_24h: 0
-      close: 2026-05-07
-    - phrase: "ICE"
-      variants: "ICE / DHS"
-      ticker: KXHILTONMENTION-26APR22-ICE
-      yes_ask: 0.5300
+    - phrase: "Homeless"
+      variants: "Homeless / Homelessness"
+      ticker: KXHILTONMENTION-26APR22-HOME
+      yes_ask: 0.8800
       volume_24h: 0
       close: 2026-05-07
     - phrase: "ICE"
       variants: "ICE / TSA"
       ticker: KXSTEYERMENTION-26APR22-ICE
-      yes_ask: 0.9200
+      yes_ask: 0.9100
+      volume_24h: 0
+      close: 2026-05-07
+    - phrase: "ICE"
+      variants: "ICE / DHS"
+      ticker: KXBIANCOMENTION-26APR22-ICE
+      yes_ask: 0.8500
+      volume_24h: 0
+      close: 2026-05-07
+    - phrase: "ICE"
+      variants: "ICE / TSA"
+      ticker: KXPORTERMENTION-26APR22-ICE
+      yes_ask: 0.6900
+      volume_24h: 0
+      close: 2026-05-07
+    - phrase: "ICE"
+      variants: "ICE / DHS"
+      ticker: KXHILTONMENTION-26APR22-ICE
+      yes_ask: 0.5500
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Immigrant"
@@ -254,44 +254,50 @@ auto:  # 151 markets
       close: 2026-05-07
     - phrase: "Mental Health"
       ticker: KXBIANCOMENTION-26APR22-MENT
-      yes_ask: 0.5400
+      yes_ask: 0.6300
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Mental Health"
       ticker: KXHILTONMENTION-26APR22-MENT
-      yes_ask: 0.5200
-      volume_24h: 0
-      close: 2026-05-07
-    - phrase: "Newsom"
-      ticker: KXPORTERMENTION-26APR22-NEWS
-      yes_ask: 0.5000
-      volume_24h: 0
-      close: 2026-05-07
-    - phrase: "Newsom"
-      ticker: KXBIANCOMENTION-26APR22-NEWS
-      yes_ask: 0.8900
-      volume_24h: 0
-      close: 2026-05-07
-    - phrase: "Newsom"
-      ticker: KXHILTONMENTION-26APR22-NEWS
-      yes_ask: 0.7900
+      yes_ask: 0.5300
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Newsom"
       ticker: KXSTEYERMENTION-26APR22-NEWS
-      yes_ask: 0.4000
+      yes_ask: 0.4600
+      volume_24h: 0
+      close: 2026-05-07
+    - phrase: "Newsom"
+      ticker: KXBIANCOMENTION-26APR22-NEWS
+      yes_ask: 0.9000
+      volume_24h: 0
+      close: 2026-05-07
+    - phrase: "Newsom"
+      ticker: KXPORTERMENTION-26APR22-NEWS
+      yes_ask: 0.5900
+      volume_24h: 0
+      close: 2026-05-07
+    - phrase: "Newsom"
+      ticker: KXHILTONMENTION-26APR22-NEWS
+      yes_ask: 0.8700
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Oil"
       variants: "Oil / Gas / Gasoline"
-      ticker: KXPORTERMENTION-26APR22-OIL
-      yes_ask: 0.6600
+      ticker: KXSTEYERMENTION-26APR22-OIL
+      yes_ask: 0.8700
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Oil"
       variants: "Oil / Gas / Gasoline"
       ticker: KXBIANCOMENTION-26APR22-OIL
-      yes_ask: 0.7700
+      yes_ask: 0.7500
+      volume_24h: 0
+      close: 2026-05-07
+    - phrase: "Oil"
+      variants: "Oil / Gas / Gasoline"
+      ticker: KXPORTERMENTION-26APR22-OIL
+      yes_ask: 0.6700
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Oil"
@@ -300,39 +306,33 @@ auto:  # 151 markets
       yes_ask: 0.9300
       volume_24h: 0
       close: 2026-05-07
-    - phrase: "Oil"
-      variants: "Oil / Gas / Gasoline"
-      ticker: KXSTEYERMENTION-26APR22-OIL
-      yes_ask: 0.8100
-      volume_24h: 0
-      close: 2026-05-07
-    - phrase: "Palisades"
-      variants: "Palisades / Wildfire"
-      ticker: KXPORTERMENTION-26APR22-PALI
-      yes_ask: 0.5100
-      volume_24h: 0
-      close: 2026-05-07
     - phrase: "Palisades"
       variants: "Palisades / Wildfire"
       ticker: KXSTEYERMENTION-26APR22-PALI
       yes_ask: 0.5200
       volume_24h: 0
       close: 2026-05-07
+    - phrase: "Palisades"
+      variants: "Palisades / Wildfire"
+      ticker: KXPORTERMENTION-26APR22-PALI
+      yes_ask: 0.5200
+      volume_24h: 0
+      close: 2026-05-07
     - phrase: "Regulation"
       variants: "Regulation / Regulator / Regulatory"
       ticker: KXHILTONMENTION-26APR22-REGU
-      yes_ask: 0.7000
+      yes_ask: 0.7200
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Regulator"
       variants: "Regulator / Regulatory / Regulation"
       ticker: KXBIANCOMENTION-26APR22-REGU
-      yes_ask: 0.8300
+      yes_ask: 0.8700
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Republican"
       ticker: KXPORTERMENTION-26APR22-REPU
-      yes_ask: 0.8600
+      yes_ask: 0.8700
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Safe"
@@ -343,22 +343,7 @@ auto:  # 151 markets
       close: 2026-05-07
     - phrase: "Sanctuary"
       ticker: KXBIANCOMENTION-26APR22-SANC
-      yes_ask: 0.6500
-      volume_24h: 0
-      close: 2026-05-07
-    - phrase: "Swalwell"
-      ticker: KXPORTERMENTION-26APR22-SWAL
-      yes_ask: 0.3100
-      volume_24h: 0
-      close: 2026-05-07
-    - phrase: "Swalwell"
-      ticker: KXBIANCOMENTION-26APR22-SWAL
-      yes_ask: 0.4500
-      volume_24h: 0
-      close: 2026-05-07
-    - phrase: "Swalwell"
-      ticker: KXHILTONMENTION-26APR22-SWAL
-      yes_ask: 0.5900
+      yes_ask: 0.6600
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Swalwell"
@@ -366,9 +351,34 @@ auto:  # 151 markets
       yes_ask: 0.3200
       volume_24h: 0
       close: 2026-05-07
+    - phrase: "Swalwell"
+      ticker: KXBIANCOMENTION-26APR22-SWAL
+      yes_ask: 0.4600
+      volume_24h: 0
+      close: 2026-05-07
+    - phrase: "Swalwell"
+      ticker: KXPORTERMENTION-26APR22-SWAL
+      yes_ask: 0.3000
+      volume_24h: 0
+      close: 2026-05-07
+    - phrase: "Swalwell"
+      ticker: KXHILTONMENTION-26APR22-SWAL
+      yes_ask: 0.6000
+      volume_24h: 0
+      close: 2026-05-07
     - phrase: "Teacher"
       ticker: KXPORTERMENTION-26APR22-TEAC
-      yes_ask: 0.7100
+      yes_ask: 0.7300
+      volume_24h: 0
+      close: 2026-05-07
+    - phrase: "Trump"
+      ticker: KXSTEYERMENTION-26APR22-TRUM
+      yes_ask: 0.9000
+      volume_24h: 0
+      close: 2026-05-07
+    - phrase: "Trump"
+      ticker: KXBIANCOMENTION-26APR22-TRUM
+      yes_ask: 0.7400
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Trump"
@@ -377,23 +387,13 @@ auto:  # 151 markets
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Trump"
-      ticker: KXBIANCOMENTION-26APR22-TRUM
-      yes_ask: 0.7300
-      volume_24h: 0
-      close: 2026-05-07
-    - phrase: "Trump"
       ticker: KXHILTONMENTION-26APR22-TRUM
-      yes_ask: 0.8100
-      volume_24h: 0
-      close: 2026-05-07
-    - phrase: "Trump"
-      ticker: KXSTEYERMENTION-26APR22-TRUM
-      yes_ask: 0.9000
+      yes_ask: 0.8000
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Whiteboard"
       ticker: KXPORTERMENTION-26APR22-WHIT
-      yes_ask: 0.6200
+      yes_ask: 0.7500
       volume_24h: 0
       close: 2026-05-07
   general:
@@ -405,15 +405,21 @@ auto:  # 151 markets
     - phrase: "Afford"
       variants: "Afford / Affordable / Affordability"
       ticker: KXPERSONMENTION-26APR22-AFFO
-      yes_ask: 0.6300
+      yes_ask: 0.6400
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Afford"
       variants: "Afford / Affordable / Affordability"
       ticker: KXPSAKIMENTION-26APR22-AFFO
-      yes_ask: 0.6200
+      yes_ask: 0.6100
       volume_24h: 0
       close: 2026-05-07
+    - phrase: "AI"
+      variants: "AI / Artificial Intelligence"
+      ticker: KXKINGMENTION-26APR28C-AI
+      yes_ask: 0.5500
+      volume_24h: 0
+      close: 2026-05-13
     - phrase: "AI"
       variants: "AI / Artificial Intelligence"
       ticker: KXMRBEASTMENTION-26APR19-AI
@@ -422,22 +428,16 @@ auto:  # 151 markets
       close: 2026-06-12
     - phrase: "AI"
       variants: "AI / Artificial Intelligence"
-      ticker: KXPEARLMANMENTION-26APR25-AI
-      yes_ask: 0.6200
-      volume_24h: 0
-      close: 2026-05-10
-    - phrase: "AI"
-      variants: "AI / Artificial Intelligence"
-      ticker: KXKINGMENTION-26APR28C-AI
-      yes_ask: 0.5600
-      volume_24h: 0
-      close: 2026-05-13
-    - phrase: "AI"
-      variants: "AI / Artificial Intelligence"
       ticker: KXPSAKIMENTION-26APR22-AI
-      yes_ask: 0.3600
+      yes_ask: 0.3700
       volume_24h: 0
       close: 2026-05-07
+    - phrase: "AI"
+      variants: "AI / Artificial Intelligence"
+      ticker: KXPEARLMANMENTION-26APR25-AI
+      yes_ask: 0.6300
+      volume_24h: 0
+      close: 2026-05-10
     - phrase: "Ballroom"
       ticker: KXKINGMENTION-26APR28C-BALL
       yes_ask: 0.3300
@@ -445,7 +445,7 @@ auto:  # 151 markets
       close: 2026-05-13
     - phrase: "Beast"
       ticker: KXMRBEASTMENTION-26APR19-BEAS
-      yes_ask: 0.5800
+      yes_ask: 0.6000
       volume_24h: 0
       close: 2026-06-12
     - phrase: "Billion"
@@ -455,22 +455,22 @@ auto:  # 151 markets
       close: 2026-06-12
     - phrase: "Bipartisan"
       ticker: KXPERSONMENTION-26APR22-BIPA
-      yes_ask: 0.5700
+      yes_ask: 0.5800
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Blockade"
       ticker: KXPERSONMENTION-26APR22-BLOC
-      yes_ask: 0.7300
+      yes_ask: 0.7400
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Ceasefire"
       ticker: KXPERSONMENTION-26APR22-CEAS
-      yes_ask: 0.7300
+      yes_ask: 0.7400
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Ceasefire"
       ticker: KXPSAKIMENTION-26APR22-CEAS
-      yes_ask: 0.3900
+      yes_ask: 0.3600
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Challenge"
@@ -500,23 +500,23 @@ auto:  # 151 markets
       close: 2026-05-13
     - phrase: "Contestant"
       ticker: KXMRBEASTMENTION-26APR19-CONT
-      yes_ask: 0.5900
+      yes_ask: 0.5800
       volume_24h: 0
       close: 2026-06-12
     - phrase: "Corrupt"
       variants: "Corrupt / Corruption"
       ticker: KXPSAKIMENTION-26APR22-CORR
-      yes_ask: 0.6700
+      yes_ask: 0.6500
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Democracy"
       ticker: KXKINGMENTION-26APR28C-DEMO
-      yes_ask: 0.6600
+      yes_ask: 0.6700
       volume_24h: 0
       close: 2026-05-13
     - phrase: "Democrat"
       ticker: KXPERSONMENTION-26APR22-DEMO
-      yes_ask: 0.8800
+      yes_ask: 0.8900
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Economy"
@@ -527,21 +527,36 @@ auto:  # 151 markets
       close: 2026-05-07
     - phrase: "Election"
       ticker: KXPSAKIMENTION-26APR22-ELEC
-      yes_ask: 0.7500
+      yes_ask: 0.7600
       volume_24h: 0
       close: 2026-05-07
-    - phrase: "Epstein"
-      ticker: KXPEARLMANMENTION-26APR25-EPST
-      yes_ask: 0.2200
-      volume_24h: 0
-      close: 2026-05-10
     - phrase: "Epstein"
       ticker: KXKINGMENTION-26APR28C-EPST
       yes_ask: 0.0800
       volume_24h: 0
       close: 2026-05-13
+    - phrase: "Epstein"
+      ticker: KXPEARLMANMENTION-26APR25-EPST
+      yes_ask: 0.2500
+      volume_24h: 0
+      close: 2026-05-10
     - phrase: "Event does not qualify"
       ticker: KXPERSONMENTION-26APR22-NQE
+      yes_ask: 0.1100
+      volume_24h: 0
+      close: 2026-05-07
+    - phrase: "Event does not qualify"
+      ticker: KXSTEYERMENTION-26APR22-NQE
+      yes_ask: 0.1300
+      volume_24h: 0
+      close: 2026-05-07
+    - phrase: "Event does not qualify"
+      ticker: KXKINGMENTION-26APR28C-NQE
+      yes_ask: 0.1800
+      volume_24h: 0
+      close: 2026-05-13
+    - phrase: "Event does not qualify"
+      ticker: KXBIANCOMENTION-26APR22-NQE
       yes_ask: 0.1200
       volume_24h: 0
       close: 2026-05-07
@@ -551,38 +566,23 @@ auto:  # 151 markets
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Event does not qualify"
-      ticker: KXBIANCOMENTION-26APR22-NQE
-      yes_ask: 0.1000
-      volume_24h: 0
-      close: 2026-05-07
-    - phrase: "Event does not qualify"
       ticker: KXHILTONMENTION-26APR22-NQE
       yes_ask: 0.0200
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Event does not qualify"
-      ticker: KXSTEYERMENTION-26APR22-NQE
-      yes_ask: 0.1300
+      ticker: KXPSAKIMENTION-26APR22-NQE
+      yes_ask: 0.2400
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Event does not qualify"
       ticker: KXPEARLMANMENTION-26APR25-NQE
-      yes_ask: 0.2600
+      yes_ask: 0.2700
       volume_24h: 0
       close: 2026-05-10
-    - phrase: "Event does not qualify"
-      ticker: KXKINGMENTION-26APR28C-NQE
-      yes_ask: 0.1800
-      volume_24h: 0
-      close: 2026-05-13
-    - phrase: "Event does not qualify"
-      ticker: KXPSAKIMENTION-26APR22-NQE
-      yes_ask: 0.2500
-      volume_24h: 0
-      close: 2026-05-07
     - phrase: "Fake News"
       ticker: KXPEARLMANMENTION-26APR25-FAKE
-      yes_ask: 0.7500
+      yes_ask: 0.7900
       volume_24h: 0
       close: 2026-05-10
     - phrase: "Feastable"
@@ -592,7 +592,7 @@ auto:  # 151 markets
       close: 2026-06-12
     - phrase: "FISA"
       ticker: KXPERSONMENTION-26APR22-FISA
-      yes_ask: 0.5000
+      yes_ask: 0.5200
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Founding Father"
@@ -603,40 +603,34 @@ auto:  # 151 markets
     - phrase: "Free Speech"
       variants: "Free Speech / Freedom of Speech"
       ticker: KXPEARLMANMENTION-26APR25-FREE
-      yes_ask: 0.3700
+      yes_ask: 0.4000
       volume_24h: 0
       close: 2026-05-10
     - phrase: "God Bless America"
       ticker: KXKINGMENTION-26APR28C-GOD
-      yes_ask: 0.7900
+      yes_ask: 0.8000
       volume_24h: 0
       close: 2026-05-13
     - phrase: "Healthcare"
       ticker: KXPERSONMENTION-26APR22-HEAL
-      yes_ask: 0.4400
+      yes_ask: 0.4500
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Healthcare"
       ticker: KXPSAKIMENTION-26APR22-HEAL
-      yes_ask: 0.6900
+      yes_ask: 0.6600
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Hemp"
       ticker: KXPERSONMENTION-26APR22-HEMP
-      yes_ask: 0.4600
+      yes_ask: 0.4500
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Hormuz"
       ticker: KXPERSONMENTION-26APR22-HORM
-      yes_ask: 0.8300
+      yes_ask: 0.8400
       volume_24h: 0
       close: 2026-05-07
-    - phrase: "Iran"
-      variants: "Iran / Iranian"
-      ticker: KXPEARLMANMENTION-26APR25-IRAN
-      yes_ask: 0.3700
-      volume_24h: 0
-      close: 2026-05-10
     - phrase: "Iran"
       variants: "Iran / Iranian"
       ticker: KXKINGMENTION-26APR28C-IRAN
@@ -646,12 +640,18 @@ auto:  # 151 markets
     - phrase: "Iran"
       variants: "Iran / Iranian"
       ticker: KXPSAKIMENTION-26APR22-IRAN
-      yes_ask: 0.5400
+      yes_ask: 0.5100
       volume_24h: 0
       close: 2026-05-07
+    - phrase: "Iran"
+      variants: "Iran / Iranian"
+      ticker: KXPEARLMANMENTION-26APR25-IRAN
+      yes_ask: 0.4000
+      volume_24h: 0
+      close: 2026-05-10
     - phrase: "Kushner"
       ticker: KXPSAKIMENTION-26APR22-KUSH
-      yes_ask: 0.3600
+      yes_ask: 0.3800
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Mario"
@@ -662,7 +662,7 @@ auto:  # 151 markets
       close: 2026-06-12
     - phrase: "Melania"
       ticker: KXPEARLMANMENTION-26APR25-MELA
-      yes_ask: 0.7700
+      yes_ask: 0.8000
       volume_24h: 0
       close: 2026-05-10
     - phrase: "Million"
@@ -677,29 +677,29 @@ auto:  # 151 markets
       close: 2026-06-12
     - phrase: "NATO"
       ticker: KXKINGMENTION-26APR28C-NATO
-      yes_ask: 0.5900
+      yes_ask: 0.6000
       volume_24h: 0
       close: 2026-05-13
     - phrase: "Netflix"
       ticker: KXPEARLMANMENTION-26APR25-NETF
-      yes_ask: 0.3400
+      yes_ask: 0.3500
       volume_24h: 0
       close: 2026-05-10
     - phrase: "Obama"
       ticker: KXPEARLMANMENTION-26APR25-OBAM
-      yes_ask: 0.3700
+      yes_ask: 0.4000
       volume_24h: 0
       close: 2026-05-10
     - phrase: "Oil"
       variants: "Oil / Gas / Gasoline"
       ticker: KXPERSONMENTION-26APR22-OIL
-      yes_ask: 0.6600
+      yes_ask: 0.6900
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Oil"
       variants: "Oil / Gas / Gasoline"
       ticker: KXPSAKIMENTION-26APR22-OIL
-      yes_ask: 0.8100
+      yes_ask: 0.4400
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Peace"
@@ -709,13 +709,13 @@ auto:  # 151 markets
       close: 2026-05-13
     - phrase: "Pokemon"
       ticker: KXMRBEASTMENTION-26APR19-POKE
-      yes_ask: 0.1200
+      yes_ask: 0.1300
       volume_24h: 0
       close: 2026-06-12
     - phrase: "Predict"
       variants: "Predict / Predicted / Prediction"
       ticker: KXPEARLMANMENTION-26APR25-PRED
-      yes_ask: 0.5700
+      yes_ask: 0.6000
       volume_24h: 0
       close: 2026-05-10
     - phrase: "Queen"
@@ -725,34 +725,34 @@ auto:  # 151 markets
       close: 2026-05-13
     - phrase: "Republican"
       ticker: KXPSAKIMENTION-26APR22-REPU
-      yes_ask: 0.8000
+      yes_ask: 0.7500
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Roast"
       ticker: KXPEARLMANMENTION-26APR25-ROAS
-      yes_ask: 0.3700
+      yes_ask: 0.4000
       volume_24h: 0
       close: 2026-05-10
     - phrase: "Save Act"
       variants: "Save Act / Save America Act"
       ticker: KXPERSONMENTION-26APR22-SAVE
-      yes_ask: 0.5300
+      yes_ask: 0.5400
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Sinatra"
       variants: "Sinatra / Conan / Leno"
       ticker: KXPEARLMANMENTION-26APR25-SINA
-      yes_ask: 0.4200
+      yes_ask: 0.5000
       volume_24h: 0
       close: 2026-05-10
     - phrase: "Special Relationship"
       ticker: KXKINGMENTION-26APR28C-SPEC
-      yes_ask: 0.8000
+      yes_ask: 0.8100
       volume_24h: 0
       close: 2026-05-13
     - phrase: "Speed"
       ticker: KXMRBEASTMENTION-26APR19-SPEE
-      yes_ask: 0.4800
+      yes_ask: 0.4700
       volume_24h: 0
       close: 2026-06-12
     - phrase: "Sponsor"
@@ -774,12 +774,12 @@ auto:  # 151 markets
       close: 2026-06-12
     - phrase: "Tariff"
       ticker: KXPERSONMENTION-26APR22-TARI
-      yes_ask: 0.5000
+      yes_ask: 0.4800
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Trump"
       ticker: KXPERSONMENTION-26APR22-TRUM
-      yes_ask: 0.8900
+      yes_ask: 0.9000
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Trump"
@@ -789,12 +789,12 @@ auto:  # 151 markets
       close: 2026-05-13
     - phrase: "Trump (3+ times)"
       ticker: KXPSAKIMENTION-26APR22-TRUM
-      yes_ask: 0.8000
+      yes_ask: 0.7500
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Trump (5+ times)"
       ticker: KXPEARLMANMENTION-26APR25-TRUM
-      yes_ask: 0.6700
+      yes_ask: 0.7000
       volume_24h: 0
       close: 2026-05-10
     - phrase: "Twitch"
@@ -827,13 +827,13 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Acquisition"
-      ticker: KXEARNINGSMENTIONHOOD-26APR28-ACQU
-      yes_ask: 0.9000
+      ticker: KXEARNINGSMENTIONABNB-26MAY07-ACQU
+      yes_ask: 0.4000
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Acquisition"
-      ticker: KXEARNINGSMENTIONABNB-26MAY07-ACQU
-      yes_ask: 0.4000
+      ticker: KXEARNINGSMENTIONHOOD-26APR28-ACQU
+      yes_ask: 0.9000
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Acquisition"
@@ -844,6 +844,12 @@ earnings:  # 331 markets
     - phrase: "Advertising"
       ticker: KXEARNINGSMENTIONPG-26APR24-ADVE
       yes_ask: 0.7000
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "AI"
+      variants: "AI / Artificial Intelligence"
+      ticker: KXEARNINGSMENTIONPG-26APR24-AI
+      yes_ask: 0.8700
       volume_24h: 0
       close: 2026-09-30
     - phrase: "AI"
@@ -860,20 +866,14 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "AI"
       variants: "AI / Artificial Intelligence"
-      ticker: KXEARNINGSMENTIONLLY-26APR30-AI
-      yes_ask: 0.8100
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "AI"
-      variants: "AI / Artificial Intelligence"
       ticker: KXEARNINGSMENTIONPGR-26APR15-AI
       yes_ask: 0.7600
       volume_24h: 0
       close: 2026-09-30
     - phrase: "AI"
       variants: "AI / Artificial Intelligence"
-      ticker: KXEARNINGSMENTIONPG-26APR24-AI
-      yes_ask: 0.8700
+      ticker: KXEARNINGSMENTIONLLY-26APR30-AI
+      yes_ask: 0.8100
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Al Pastor"
@@ -894,18 +894,18 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Algorithm"
-      ticker: KXEARNINGSMENTIONRDDT-26APR30-ALGO
-      yes_ask: 0.8100
+      ticker: KXEARNINGSMENTIONMETA-26APR29-ALGO
+      yes_ask: 0.7100
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Algorithm"
-      ticker: KXEARNINGSMENTIONMETA-26APR29-ALGO
-      yes_ask: 0.6500
+      ticker: KXEARNINGSMENTIONRDDT-26APR30-ALGO
+      yes_ask: 0.8300
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Ally"
       ticker: KXEARNINGSMENTIONCVNA-26APR29-ALLY
-      yes_ask: 0.7300
+      yes_ask: 0.7100
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Anna's Archive"
@@ -925,7 +925,7 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "Apple"
       ticker: KXEARNINGSMENTIONINTC-26APR23-APPL
-      yes_ask: 0.2500
+      yes_ask: 0.2400
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Apple Pay"
@@ -940,17 +940,12 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "Auction"
       ticker: KXEARNINGSMENTIONCVNA-26APR29-AUCT
-      yes_ask: 0.8700
+      yes_ask: 0.8900
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Autocado"
       ticker: KXEARNINGSMENTIONCMG-26APR29-AUTO
       yes_ask: 0.2000
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Automation"
-      ticker: KXEARNINGSMENTIONCMG-26APR29-AUTOM
-      yes_ask: 0.4100
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Automation"
@@ -960,7 +955,12 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "Automation"
       ticker: KXEARNINGSMENTIONCVNA-26APR29-AUTO
-      yes_ask: 0.4600
+      yes_ask: 0.4400
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Automation"
+      ticker: KXEARNINGSMENTIONCMG-26APR29-AUTOM
+      yes_ask: 0.4100
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Autonomous"
@@ -970,7 +970,7 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "Avride"
       ticker: KXEARNINGSMENTIONUBER-26MAY06-AVRI
-      yes_ask: 0.6600
+      yes_ask: 0.6400
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Award"
@@ -989,13 +989,13 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Blockchain"
-      ticker: KXEARNINGSMENTIONAXP-26APR23-BLOC
-      yes_ask: 0.1700
+      ticker: KXEARNINGSMENTIONHOOD-26APR28-BLOC
+      yes_ask: 0.7100
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Blockchain"
-      ticker: KXEARNINGSMENTIONHOOD-26APR28-BLOC
-      yes_ask: 0.7100
+      ticker: KXEARNINGSMENTIONAXP-26APR23-BLOC
+      yes_ask: 0.1700
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Blockchain"
@@ -1006,7 +1006,7 @@ earnings:  # 331 markets
     - phrase: "Bookshop"
       variants: "Bookshop / Bookshop.org"
       ticker: KXEARNINGSMENTIONSPOT-26APR28-BOOK
-      yes_ask: 0.3900
+      yes_ask: 0.4100
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Boutique"
@@ -1036,7 +1036,7 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "Canada"
       ticker: KXEARNINGSMENTIONSBUX-26APR28-CANA
-      yes_ask: 0.6300
+      yes_ask: 0.6100
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Cane Sugar"
@@ -1065,18 +1065,13 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "China"
-      ticker: KXEARNINGSMENTIONLLY-26APR30-CHIN
-      yes_ask: 0.9000
+      ticker: KXEARNINGSMENTIONAMZN-26APR29-CHIN
+      yes_ask: 0.4100
       volume_24h: 0
       close: 2026-09-30
     - phrase: "China"
       ticker: KXEARNINGSMENTIONAAPL-26APR30-CHIN
       yes_ask: 0.9300
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "China"
-      ticker: KXEARNINGSMENTIONAMZN-26APR29-CHIN
-      yes_ask: 0.4100
       volume_24h: 0
       close: 2026-09-30
     - phrase: "China"
@@ -1091,6 +1086,11 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "China"
       ticker: KXEARNINGSMENTIONKO-26APR28-CHIN
+      yes_ask: 0.9000
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "China"
+      ticker: KXEARNINGSMENTIONLLY-26APR30-CHIN
       yes_ask: 0.9000
       volume_24h: 0
       close: 2026-09-30
@@ -1131,13 +1131,13 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Competition"
-      ticker: KXEARNINGSMENTIONLYFT-26MAY07-COMP
-      yes_ask: 0.7200
+      ticker: KXEARNINGSMENTIONPG-26APR24-COMP
+      yes_ask: 0.4600
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Competition"
-      ticker: KXEARNINGSMENTIONPG-26APR24-COMP
-      yes_ask: 0.4600
+      ticker: KXEARNINGSMENTIONLYFT-26MAY07-COMP
+      yes_ask: 0.7100
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Condiment Bar"
@@ -1212,23 +1212,23 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Dividend"
-      ticker: KXEARNINGSMENTIONMETA-26APR29-DIVI
-      yes_ask: 0.9000
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Dividend"
       ticker: KXEARNINGSMENTIONPG-26APR24-DIVI
       yes_ask: 0.9800
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Dividend"
-      ticker: KXEARNINGSMENTIONINTC-26APR23-DIVI
-      yes_ask: 0.2100
+      ticker: KXEARNINGSMENTIONMETA-26APR29-DIVI
+      yes_ask: 0.9000
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Dividend"
       ticker: KXEARNINGSMENTIONKO-26APR28-DIVI
-      yes_ask: 0.8800
+      yes_ask: 0.8900
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Dividend"
+      ticker: KXEARNINGSMENTIONINTC-26APR23-DIVI
+      yes_ask: 0.2100
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Domestic"
@@ -1268,7 +1268,7 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "Elite"
       ticker: KXEARNINGSMENTIONUBER-26MAY06-ELIT
-      yes_ask: 0.3400
+      yes_ask: 0.3300
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Emergency Pizza"
@@ -1287,13 +1287,13 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Expansion"
-      ticker: KXEARNINGSMENTIONUBER-26MAY06-EXPA
-      yes_ask: 0.8900
+      ticker: KXEARNINGSMENTIONLYFT-26MAY07-EXPA
+      yes_ask: 0.7600
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Expansion"
-      ticker: KXEARNINGSMENTIONLYFT-26MAY07-EXPA
-      yes_ask: 0.7400
+      ticker: KXEARNINGSMENTIONUBER-26MAY06-EXPA
+      yes_ask: 0.8900
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Fairlife"
@@ -1303,13 +1303,13 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "Fairwater"
       ticker: KXEARNINGSMENTIONMSFT-26APR29-FAIR
-      yes_ask: 0.8600
+      yes_ask: 0.8500
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Fold"
       variants: "Fold / Folding / Foldable"
       ticker: KXEARNINGSMENTIONAAPL-26APR30-FOLD
-      yes_ask: 0.4000
+      yes_ask: 0.4400
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Formula 1"
@@ -1331,7 +1331,7 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "Freight"
       ticker: KXEARNINGSMENTIONUBER-26MAY06-FREI
-      yes_ask: 0.5900
+      yes_ask: 0.5800
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Frontier"
@@ -1382,43 +1382,13 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Headwind"
-      ticker: KXEARNINGSMENTIONCMG-26APR29-HEAD
-      yes_ask: 0.7900
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Headwind"
-      ticker: KXEARNINGSMENTIONWING-26APR29-HEAD
-      yes_ask: 0.3800
+      ticker: KXEARNINGSMENTIONGOOGL-26APR29-HEAD
+      yes_ask: 0.4500
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Headwind"
       ticker: KXEARNINGSMENTIONSPOT-26APR28-HEAD
-      yes_ask: 0.7700
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Headwind"
-      ticker: KXEARNINGSMENTIONRDDT-26APR30-HEAD
-      yes_ask: 0.4000
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Headwind"
-      ticker: KXEARNINGSMENTIONCVNA-26APR29-HEAD
-      yes_ask: 0.4100
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Headwind"
-      ticker: KXEARNINGSMENTIONLLY-26APR30-HEAD
-      yes_ask: 0.5400
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Headwind"
-      ticker: KXEARNINGSMENTIONVZ-26APR27-HEAD
-      yes_ask: 0.7700
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Headwind"
-      ticker: KXEARNINGSMENTIONGOOGL-26APR29-HEAD
-      yes_ask: 0.4500
+      yes_ask: 0.7900
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Headwind"
@@ -1427,8 +1397,38 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Headwind"
+      ticker: KXEARNINGSMENTIONWING-26APR29-HEAD
+      yes_ask: 0.3800
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Headwind"
+      ticker: KXEARNINGSMENTIONCVNA-26APR29-HEAD
+      yes_ask: 0.4100
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Headwind"
       ticker: KXEARNINGSMENTIONPGR-26APR15-HEAD
       yes_ask: 0.6200
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Headwind"
+      ticker: KXEARNINGSMENTIONVZ-26APR27-HEAD
+      yes_ask: 0.7700
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Headwind"
+      ticker: KXEARNINGSMENTIONLLY-26APR30-HEAD
+      yes_ask: 0.5400
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Headwind"
+      ticker: KXEARNINGSMENTIONRDDT-26APR30-HEAD
+      yes_ask: 0.4000
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Headwind"
+      ticker: KXEARNINGSMENTIONCMG-26APR29-HEAD
+      yes_ask: 0.7900
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Hippo"
@@ -1488,8 +1488,8 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Inflation"
-      ticker: KXEARNINGSMENTIONCMG-26APR29-INFL
-      yes_ask: 0.9200
+      ticker: KXEARNINGSMENTIONPG-26APR24-INFL
+      yes_ask: 0.8500
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Inflation"
@@ -1503,8 +1503,8 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Inflation"
-      ticker: KXEARNINGSMENTIONPG-26APR24-INFL
-      yes_ask: 0.8500
+      ticker: KXEARNINGSMENTIONCMG-26APR29-INFL
+      yes_ask: 0.9200
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Inflation"
@@ -1523,13 +1523,13 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Innovation"
-      ticker: KXEARNINGSMENTIONUBER-26MAY06-INNV
-      yes_ask: 0.6600
+      ticker: KXEARNINGSMENTIONLYFT-26MAY07-INNO
+      yes_ask: 0.9000
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Innovation"
-      ticker: KXEARNINGSMENTIONLYFT-26MAY07-INNO
-      yes_ask: 0.9000
+      ticker: KXEARNINGSMENTIONUBER-26MAY06-INNV
+      yes_ask: 0.7100
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Insurance"
@@ -1539,22 +1539,22 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "Insurance"
       ticker: KXEARNINGSMENTIONCVNA-26APR29-INSU
-      yes_ask: 0.3500
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "International"
-      ticker: KXEARNINGSMENTIONHOOD-26APR28-INTE
-      yes_ask: 0.9500
+      yes_ask: 0.3200
       volume_24h: 0
       close: 2026-09-30
     - phrase: "International"
       ticker: KXEARNINGSMENTIONLYFT-26MAY07-INTE
-      yes_ask: 0.6700
+      yes_ask: 0.7100
       volume_24h: 0
       close: 2026-09-30
     - phrase: "International"
       ticker: KXEARNINGSMENTIONABNB-26MAY07-INTE
       yes_ask: 0.8100
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "International"
+      ticker: KXEARNINGSMENTIONHOOD-26APR28-INTE
+      yes_ask: 0.9500
       volume_24h: 0
       close: 2026-09-30
     - phrase: "International"
@@ -1634,7 +1634,7 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "Lucid"
       ticker: KXEARNINGSMENTIONUBER-26MAY06-LUCD
-      yes_ask: 0.7600
+      yes_ask: 0.7400
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Lyft"
@@ -1706,7 +1706,7 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "Mobileye"
       ticker: KXEARNINGSMENTIONLYFT-26MAY07-MOBI
-      yes_ask: 0.6000
+      yes_ask: 0.6400
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Mobileye"
@@ -1716,7 +1716,7 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "Modem"
       ticker: KXEARNINGSMENTIONAAPL-26APR30-MODE
-      yes_ask: 0.4500
+      yes_ask: 0.4100
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Monetization"
@@ -1736,7 +1736,7 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "Netflix"
       ticker: KXEARNINGSMENTIONSPOT-26APR28-NETF
-      yes_ask: 0.4500
+      yes_ask: 0.4400
       volume_24h: 0
       close: 2026-09-30
     - phrase: "NII"
@@ -1747,12 +1747,17 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "Nissan"
       ticker: KXEARNINGSMENTIONUBER-26MAY06-NISS
-      yes_ask: 0.6300
+      yes_ask: 0.6400
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Non Dairy"
       ticker: KXEARNINGSMENTIONSBUX-26APR28-NON
       yes_ask: 0.2400
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Nvidia"
+      ticker: KXEARNINGSMENTIONLYFT-26MAY07-NVID
+      yes_ask: 0.7300
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Nvidia"
@@ -1763,11 +1768,6 @@ earnings:  # 331 markets
     - phrase: "Nvidia"
       ticker: KXEARNINGSMENTIONLLY-26APR30-NVID
       yes_ask: 0.5300
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Nvidia"
-      ticker: KXEARNINGSMENTIONLYFT-26MAY07-NVID
-      yes_ask: 0.7300
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Nvidia"
@@ -1788,25 +1788,24 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "Oil"
       variants: "Oil / Gas / Gasoline"
-      ticker: KXEARNINGSMENTIONUBER-26MAY06-OIL
-      yes_ask: 0.4500
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Oil"
-      variants: "Oil / Gas / Gasoline"
       ticker: KXEARNINGSMENTIONLYFT-26MAY07-OIL
       yes_ask: 0.4700
       volume_24h: 0
       close: 2026-09-30
-    - phrase: "Old Spice"
-      ticker: KXEARNINGSMENTIONPG-26APR24-OLD
+    - phrase: "Oil"
+      variants: "Oil / Gas / Gasoline"
+      ticker: KXEARNINGSMENTIONUBER-26MAY06-OIL
       yes_ask: 0.4300
       volume_24h: 0
       close: 2026-09-30
+    - phrase: "Old Spice"
+      ticker: KXEARNINGSMENTIONPG-26APR24-OLD
+      yes_ask: 0.4200
+      volume_24h: 0
+      close: 2026-09-30
     - phrase: "OpenAI"
-      variants: "OpenAI / Open AI"
-      ticker: KXEARNINGSMENTIONRDDT-26APR30-OPEN
-      yes_ask: 0.4600
+      ticker: KXEARNINGSMENTIONAMZN-26APR29-OPEN
+      yes_ask: 0.8000
       volume_24h: 0
       close: 2026-09-30
     - phrase: "OpenAI"
@@ -1815,8 +1814,9 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "OpenAI"
-      ticker: KXEARNINGSMENTIONAMZN-26APR29-OPEN
-      yes_ask: 0.8000
+      variants: "OpenAI / Open AI"
+      ticker: KXEARNINGSMENTIONRDDT-26APR30-OPEN
+      yes_ask: 0.4600
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Orion"
@@ -1891,13 +1891,13 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Privacy"
-      ticker: KXEARNINGSMENTIONAAPL-26APR30-PRIV
-      yes_ask: 0.7800
+      ticker: KXEARNINGSMENTIONGOOGL-26APR29-PRIV
+      yes_ask: 0.3900
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Privacy"
-      ticker: KXEARNINGSMENTIONGOOGL-26APR29-PRIV
-      yes_ask: 0.3900
+      ticker: KXEARNINGSMENTIONAAPL-26APR30-PRIV
+      yes_ask: 0.7800
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Project Kuiper"
@@ -1906,13 +1906,13 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Promotion"
-      ticker: KXEARNINGSMENTIONCMG-26APR29-PROM
-      yes_ask: 0.9000
+      ticker: KXEARNINGSMENTIONSBUX-26APR28-PROM
+      yes_ask: 0.5700
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Promotion"
-      ticker: KXEARNINGSMENTIONSBUX-26APR28-PROM
-      yes_ask: 0.5700
+      ticker: KXEARNINGSMENTIONCMG-26APR29-PROM
+      yes_ask: 0.9000
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Protein"
@@ -1933,7 +1933,7 @@ earnings:  # 331 markets
     - phrase: "Rate Cap"
       variants: "Rate Cap / 10% Cap"
       ticker: KXEARNINGSMENTIONAXP-26APR23-RATE
-      yes_ask: 0.3800
+      yes_ask: 0.4000
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Rate Cap"
@@ -1944,7 +1944,7 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "Ray-Ban"
       ticker: KXEARNINGSMENTIONMETA-26APR29-RAY
-      yes_ask: 0.8200
+      yes_ask: 0.8000
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Recycle"
@@ -2004,13 +2004,13 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Revenue"
-      ticker: KXEARNINGSMENTIONLYFT-26MAY07-REVE
-      yes_ask: 0.8700
+      ticker: KXEARNINGSMENTIONPG-26APR24-REVE
+      yes_ask: 0.2900
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Revenue"
-      ticker: KXEARNINGSMENTIONPG-26APR24-REVE
-      yes_ask: 0.2900
+      ticker: KXEARNINGSMENTIONLYFT-26MAY07-REVE
+      yes_ask: 0.9000
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Robotic"
@@ -2040,13 +2040,13 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Safety"
-      ticker: KXEARNINGSMENTIONUBER-26MAY06-SAFE
-      yes_ask: 0.8200
+      ticker: KXEARNINGSMENTIONLYFT-26MAY07-SAFE
+      yes_ask: 0.7700
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Safety"
-      ticker: KXEARNINGSMENTIONLYFT-26MAY07-SAFE
-      yes_ask: 0.7500
+      ticker: KXEARNINGSMENTIONUBER-26MAY06-SAFE
+      yes_ask: 0.8200
       volume_24h: 0
       close: 2026-09-30
     - phrase: "SAM"
@@ -2056,7 +2056,7 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "Same Day"
       ticker: KXEARNINGSMENTIONCVNA-26APR29-SAME
-      yes_ask: 0.5900
+      yes_ask: 0.6100
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Same Store"
@@ -2159,7 +2159,7 @@ earnings:  # 331 markets
       close: 2026-09-30
     - phrase: "Spending Trend"
       ticker: KXEARNINGSMENTIONAXP-26APR23-SPEN
-      yes_ask: 0.3600
+      yes_ask: 0.4300
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Spicy"
@@ -2193,11 +2193,6 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Supply Chain"
-      ticker: KXEARNINGSMENTIONCMG-26APR29-SUPP
-      yes_ask: 0.9000
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Supply Chain"
       ticker: KXEARNINGSMENTIONAMZN-26APR29-SUPP
       yes_ask: 0.5500
       volume_24h: 0
@@ -2207,39 +2202,14 @@ earnings:  # 331 markets
       yes_ask: 0.8900
       volume_24h: 0
       close: 2026-09-30
+    - phrase: "Supply Chain"
+      ticker: KXEARNINGSMENTIONCMG-26APR29-SUPP
+      yes_ask: 0.9000
+      volume_24h: 0
+      close: 2026-09-30
     - phrase: "Synergy"
       ticker: KXEARNINGSMENTIONVZ-26APR27-SYNE
       yes_ask: 0.8500
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Tailwind"
-      ticker: KXEARNINGSMENTIONCMG-26APR29-TAIL
-      yes_ask: 0.6100
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Tailwind"
-      ticker: KXEARNINGSMENTIONDPZ-26APR27-TAIL
-      yes_ask: 0.8700
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Tailwind"
-      ticker: KXEARNINGSMENTIONRDDT-26APR30-TAIL
-      yes_ask: 0.7500
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Tailwind"
-      ticker: KXEARNINGSMENTIONCVNA-26APR29-TAIL
-      yes_ask: 0.5500
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Tailwind"
-      ticker: KXEARNINGSMENTIONLLY-26APR30-TAIL
-      yes_ask: 0.4600
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Tailwind"
-      ticker: KXEARNINGSMENTIONVZ-26APR27-TAIL
-      yes_ask: 0.3400
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Tailwind"
@@ -2248,8 +2218,38 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Tailwind"
+      ticker: KXEARNINGSMENTIONDPZ-26APR27-TAIL
+      yes_ask: 0.8700
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Tailwind"
       ticker: KXEARNINGSMENTIONABNB-26MAY07-TAIL
       yes_ask: 0.7100
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Tailwind"
+      ticker: KXEARNINGSMENTIONCVNA-26APR29-TAIL
+      yes_ask: 0.5900
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Tailwind"
+      ticker: KXEARNINGSMENTIONVZ-26APR27-TAIL
+      yes_ask: 0.3400
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Tailwind"
+      ticker: KXEARNINGSMENTIONLLY-26APR30-TAIL
+      yes_ask: 0.4600
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Tailwind"
+      ticker: KXEARNINGSMENTIONRDDT-26APR30-TAIL
+      yes_ask: 0.7500
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Tailwind"
+      ticker: KXEARNINGSMENTIONCMG-26APR29-TAIL
+      yes_ask: 0.5500
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Take Rate"
@@ -2258,38 +2258,8 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Tariff"
-      ticker: KXEARNINGSMENTIONCMG-26APR29-TARI
-      yes_ask: 0.8100
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Tariff"
-      ticker: KXEARNINGSMENTIONDPZ-26APR27-TARI
-      yes_ask: 0.2800
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Tariff"
-      ticker: KXEARNINGSMENTIONCVNA-26APR29-TARI
-      yes_ask: 0.4400
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Tariff"
-      ticker: KXEARNINGSMENTIONLLY-26APR30-TARI
-      yes_ask: 0.3400
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Tariff"
-      ticker: KXEARNINGSMENTIONAAPL-26APR30-TARI
-      yes_ask: 0.9500
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Tariff"
-      ticker: KXEARNINGSMENTIONAMZN-26APR29-TARI
-      yes_ask: 0.9300
-      volume_24h: 0
-      close: 2026-09-30
-    - phrase: "Tariff"
-      ticker: KXEARNINGSMENTIONVZ-26APR27-TARI
-      yes_ask: 0.2800
+      ticker: KXEARNINGSMENTIONPG-26APR24-TARI
+      yes_ask: 0.9100
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Tariff"
@@ -2298,23 +2268,53 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Tariff"
+      ticker: KXEARNINGSMENTIONAMZN-26APR29-TARI
+      yes_ask: 0.9300
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Tariff"
+      ticker: KXEARNINGSMENTIONAAPL-26APR30-TARI
+      yes_ask: 0.9500
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Tariff"
+      ticker: KXEARNINGSMENTIONDPZ-26APR27-TARI
+      yes_ask: 0.2800
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Tariff"
       ticker: KXEARNINGSMENTIONSBUX-26APR28-TARI
       yes_ask: 0.8700
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Tariff"
-      ticker: KXEARNINGSMENTIONPG-26APR24-TARI
-      yes_ask: 0.9100
+      ticker: KXEARNINGSMENTIONKO-26APR28-TARI
+      yes_ask: 0.3600
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Tariff"
+      ticker: KXEARNINGSMENTIONCVNA-26APR29-TARI
+      yes_ask: 0.4400
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Tariff"
+      ticker: KXEARNINGSMENTIONVZ-26APR27-TARI
+      yes_ask: 0.2800
+      volume_24h: 0
+      close: 2026-09-30
+    - phrase: "Tariff"
+      ticker: KXEARNINGSMENTIONLLY-26APR30-TARI
+      yes_ask: 0.3400
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Tariff"
       ticker: KXEARNINGSMENTIONINTC-26APR23-TARI
-      yes_ask: 0.4600
+      yes_ask: 0.4900
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Tariff"
-      ticker: KXEARNINGSMENTIONKO-26APR28-TARI
-      yes_ask: 0.3600
+      ticker: KXEARNINGSMENTIONCMG-26APR29-TARI
+      yes_ask: 0.8100
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Teams"
@@ -2339,13 +2339,13 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "TikTok"
-      ticker: KXEARNINGSMENTIONRDDT-26APR30-TIKT
-      yes_ask: 0.2000
+      ticker: KXEARNINGSMENTIONMETA-26APR29-TIKT
+      yes_ask: 0.2400
       volume_24h: 0
       close: 2026-09-30
     - phrase: "TikTok"
-      ticker: KXEARNINGSMENTIONMETA-26APR29-TIKT
-      yes_ask: 0.2400
+      ticker: KXEARNINGSMENTIONRDDT-26APR30-TIKT
+      yes_ask: 0.2000
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Tokenization"
@@ -2379,13 +2379,13 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Trump"
-      ticker: KXEARNINGSMENTIONAXP-26APR23-TRUM
-      yes_ask: 0.1700
+      ticker: KXEARNINGSMENTIONHOOD-26APR28-TRUM
+      yes_ask: 0.8000
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Trump"
-      ticker: KXEARNINGSMENTIONHOOD-26APR28-TRUM
-      yes_ask: 0.8000
+      ticker: KXEARNINGSMENTIONAXP-26APR23-TRUM
+      yes_ask: 0.1500
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Trump"
@@ -2432,12 +2432,12 @@ earnings:  # 331 markets
     - phrase: "VR"
       variants: "VR / Virtual Reality"
       ticker: KXEARNINGSMENTIONMETA-26APR29-VR
-      yes_ask: 0.5500
+      yes_ask: 0.5700
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Waabi"
       ticker: KXEARNINGSMENTIONUBER-26MAY06-WAAB
-      yes_ask: 0.8900
+      yes_ask: 0.8600
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Walmart"
@@ -2446,13 +2446,13 @@ earnings:  # 331 markets
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Waymo"
-      ticker: KXEARNINGSMENTIONUBER-26MAY06-WAYM
-      yes_ask: 0.9000
+      ticker: KXEARNINGSMENTIONLYFT-26MAY07-WAYM
+      yes_ask: 0.8700
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Waymo"
-      ticker: KXEARNINGSMENTIONLYFT-26MAY07-WAYM
-      yes_ask: 0.8700
+      ticker: KXEARNINGSMENTIONUBER-26MAY06-WAYM
+      yes_ask: 0.9000
       volume_24h: 0
       close: 2026-09-30
     - phrase: "Wearable"
@@ -2504,7 +2504,7 @@ earnings:  # 331 markets
     - phrase: "NFL"
       variants: "NFL / NBA"
       ticker: KXEARNINGSMENTIONWING-26APR29-NFL
-      yes_ask: 0.5600
+      yes_ask: 0.6000
       volume_24h: 0
       close: 2026-09-30
     - phrase: "WNBA"
@@ -2580,7 +2580,7 @@ fed:  # 48 markets
     - phrase: "Gas"
       variants: "Gas / Gasoline / Natural Gas"
       ticker: KXFEDMENTION-26APR-GAS
-      yes_ask: 0.8100
+      yes_ask: 0.8300
       volume_24h: 0
       close: 2026-04-30
     - phrase: "Gold"
@@ -2768,13 +2768,13 @@ homan:  # 14 markets
   general:
     - phrase: "Biden"
       ticker: KXHOMANMENTION-26APR22-BIDE
-      yes_ask: 0.1400
+      yes_ask: 0.2600
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Crime"
       variants: "Crime / Criminal"
       ticker: KXHOMANMENTION-26APR22-CRIM
-      yes_ask: 0.1300
+      yes_ask: 0.1700
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Democrat"
@@ -2785,59 +2785,59 @@ homan:  # 14 markets
     - phrase: "Deport"
       variants: "Deport / Deported / Deportation"
       ticker: KXHOMANMENTION-26APR22-DEPO
-      yes_ask: 0.1700
+      yes_ask: 0.1500
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Event does not qualify"
       ticker: KXHOMANMENTION-26APR22-NQE
-      yes_ask: 0.9200
+      yes_ask: 0.9400
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Fentanyl"
       ticker: KXHOMANMENTION-26APR22-FENT
-      yes_ask: 0.2000
+      yes_ask: 0.2900
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Fraud"
       ticker: KXHOMANMENTION-26APR22-FRAU
-      yes_ask: 0.1200
+      yes_ask: 0.1600
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Mexico"
       ticker: KXHOMANMENTION-26APR22-MEXI
-      yes_ask: 0.1300
+      yes_ask: 0.0900
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Minnesota"
       variants: "Minnesota / Minneapolis"
       ticker: KXHOMANMENTION-26APR22-MINN
-      yes_ask: 0.1100
+      yes_ask: 0.1000
       volume_24h: 0
       close: 2026-05-07
     - phrase: "National Security"
       ticker: KXHOMANMENTION-26APR22-NATI
-      yes_ask: 0.1500
+      yes_ask: 0.1700
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Sanctuary"
       ticker: KXHOMANMENTION-26APR22-SANC
-      yes_ask: 0.1700
+      yes_ask: 0.0600
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Shutdown"
       variants: "Shutdown / Shut Down"
       ticker: KXHOMANMENTION-26APR22-SHUT
-      yes_ask: 0.1400
+      yes_ask: 0.0700
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Trump (3+ times0"
       ticker: KXHOMANMENTION-26APR22-TRUM
-      yes_ask: 0.1100
+      yes_ask: 0.1700
       volume_24h: 0
       close: 2026-05-07
     - phrase: "TSA"
       ticker: KXHOMANMENTION-26APR22-TSA
-      yes_ask: 0.4000
+      yes_ask: 0.3800
       volume_24h: 0
       close: 2026-05-07
 
@@ -2887,12 +2887,12 @@ leavitt:  # 26 markets
       close: 2026-05-07
     - phrase: "Cuba"
       ticker: KXSECPRESSMENTION-26MAY07-CUBA
-      yes_ask: 0.4100
+      yes_ask: 0.4200
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Economic Fury"
       ticker: KXSECPRESSMENTION-26MAY07-ECON
-      yes_ask: 0.5000
+      yes_ask: 0.4600
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Epic Fury"
@@ -2913,7 +2913,7 @@ leavitt:  # 26 markets
     - phrase: "Gas"
       variants: "Gas / Gasoline"
       ticker: KXSECPRESSMENTION-26MAY07-GAS
-      yes_ask: 0.6200
+      yes_ask: 0.6300
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Hormuz"
@@ -2939,13 +2939,13 @@ leavitt:  # 26 markets
       close: 2026-05-07
     - phrase: "NATO"
       ticker: KXSECPRESSMENTION-26MAY07-NATO
-      yes_ask: 0.3600
+      yes_ask: 0.3700
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Negotiate"
       variants: "Negotiate / Negotiated / Negotiation"
       ticker: KXSECPRESSMENTION-26MAY07-NEGO
-      yes_ask: 0.8600
+      yes_ask: 0.8800
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Oil"
@@ -2975,7 +2975,7 @@ leavitt:  # 26 markets
       close: 2026-05-07
     - phrase: "Tariff"
       ticker: KXSECPRESSMENTION-26MAY07-TARI
-      yes_ask: 0.2300
+      yes_ask: 0.2400
       volume_24h: 0
       close: 2026-05-07
 
@@ -2984,75 +2984,75 @@ mamdani:  # 26 markets
     - phrase: "Afford"
       variants: "Afford / Affordable / Affordability"
       ticker: KXMAMDANIMENTION-26APR23C-AFFO
-      yes_ask: 0.7500
+      yes_ask: 0.7600
       volume_24h: 0
       close: 2026-05-14
     - phrase: "Billionaire"
       ticker: KXMAMDANIMENTION-26APR23C-BILL
-      yes_ask: 0.4500
+      yes_ask: 0.4600
       volume_24h: 0
       close: 2026-05-14
     - phrase: "Budget"
       variants: "Budget / Deficit"
       ticker: KXMAMDANIMENTION-26APR23C-BUDG
-      yes_ask: 0.3500
+      yes_ask: 0.3600
       volume_24h: 0
       close: 2026-05-14
     - phrase: "Bus"
       variants: "Bus / Fast & Free"
       ticker: KXMAMDANIMENTION-26APR23C-BUS
-      yes_ask: 0.4500
+      yes_ask: 0.4600
       volume_24h: 0
       close: 2026-05-14
     - phrase: "Childcare"
       ticker: KXMAMDANIMENTION-26APR23C-CHIL
-      yes_ask: 0.5000
+      yes_ask: 0.5100
       volume_24h: 0
       close: 2026-05-14
     - phrase: "Economy"
       variants: "Economy / Economic"
       ticker: KXMAMDANIMENTION-26APR23C-ECON
-      yes_ask: 0.4500
+      yes_ask: 0.4600
       volume_24h: 0
       close: 2026-05-14
     - phrase: "Iran"
       variants: "Iran / Iranian"
       ticker: KXMAMDANIMENTION-26APR23C-IRAN
-      yes_ask: 0.2500
+      yes_ask: 0.2600
       volume_24h: 0
       close: 2026-05-14
     - phrase: "Knicks"
       ticker: KXMAMDANIMENTION-26APR23C-KNIC
-      yes_ask: 0.2500
+      yes_ask: 0.2600
       volume_24h: 0
       close: 2026-05-14
     - phrase: "NYPD"
       ticker: KXMAMDANIMENTION-26APR23C-NYPD
-      yes_ask: 0.4500
+      yes_ask: 0.4600
       volume_24h: 0
       close: 2026-05-14
     - phrase: "Safe"
       variants: "Safe / Safer / Safety"
       ticker: KXMAMDANIMENTION-26APR23C-SAFE
-      yes_ask: 0.6500
+      yes_ask: 0.6600
       volume_24h: 0
       close: 2026-05-14
     - phrase: "Trump"
       variants: "Trump / President"
       ticker: KXMAMDANIMENTION-26APR23C-TRUM
-      yes_ask: 0.4800
+      yes_ask: 0.4900
       volume_24h: 0
       close: 2026-05-14
     - phrase: "World Cup"
       ticker: KXMAMDANIMENTION-26APR23C-WORL
-      yes_ask: 0.3400
+      yes_ask: 0.3500
       volume_24h: 0
       close: 2026-05-14
   general:
     - phrase: "Afford"
       variants: "Afford / Affordable / Affordability"
       ticker: KXMAMDANIMENTION-26APR24-AFFO
-      yes_ask: 0.7700
+      yes_ask: 0.7800
       volume_24h: 0
       close: 2026-05-09
     - phrase: "Billionaire"
@@ -3073,56 +3073,56 @@ mamdani:  # 26 markets
     - phrase: "Free Bus"
       variants: "Free Bus / Fast & Free"
       ticker: KXMAMDANIMENTION-26APR24-FREE
-      yes_ask: 0.5400
+      yes_ask: 0.5500
       volume_24h: 0
       close: 2026-05-09
     - phrase: "Governor"
       variants: "Governor / Hochul"
       ticker: KXMAMDANIMENTION-26APR24-GOVE
-      yes_ask: 0.6500
+      yes_ask: 0.6600
       volume_24h: 0
       close: 2026-05-09
     - phrase: "Grocery"
       ticker: KXMAMDANIMENTION-26APR24-GROC
-      yes_ask: 0.6900
+      yes_ask: 0.7000
       volume_24h: 0
       close: 2026-05-09
     - phrase: "Immigrant"
       variants: "Immigrant / Immigration"
       ticker: KXMAMDANIMENTION-26APR24-IMMI
-      yes_ask: 0.5900
+      yes_ask: 0.6000
       volume_24h: 0
       close: 2026-05-09
     - phrase: "Iran"
       variants: "Iran / Iranian"
       ticker: KXMAMDANIMENTION-26APR24-IRAN
-      yes_ask: 0.4900
+      yes_ask: 0.5000
       volume_24h: 0
       close: 2026-05-09
     - phrase: "Landlord"
       ticker: KXMAMDANIMENTION-26APR24-LAND
-      yes_ask: 0.5400
+      yes_ask: 0.5300
       volume_24h: 0
       close: 2026-05-09
     - phrase: "Mental Health"
       ticker: KXMAMDANIMENTION-26APR24-MENT
-      yes_ask: 0.4900
+      yes_ask: 0.5000
       volume_24h: 0
       close: 2026-05-09
     - phrase: "Muslim"
       ticker: KXMAMDANIMENTION-26APR24-MUSL
-      yes_ask: 0.4900
+      yes_ask: 0.5000
       volume_24h: 0
       close: 2026-05-09
     - phrase: "Pothole"
       ticker: KXMAMDANIMENTION-26APR24-POTH
-      yes_ask: 0.7400
+      yes_ask: 0.7500
       volume_24h: 0
       close: 2026-05-09
     - phrase: "Trump"
       variants: "Trump / President"
       ticker: KXMAMDANIMENTION-26APR24-TRUM
-      yes_ask: 0.7700
+      yes_ask: 0.7800
       volume_24h: 0
       close: 2026-05-09
 
@@ -3150,7 +3150,7 @@ mlb:  # 76 markets
       close: 2026-05-07
     - phrase: "Bullpen"
       ticker: KXMLBMENTION-26APR25CLETOR-BULL
-      yes_ask: 0.9100
+      yes_ask: 0.9500
       volume_24h: 0
       close: 2026-05-09
     - phrase: "Bullpen"
@@ -3199,7 +3199,7 @@ mlb:  # 76 markets
       close: 2026-05-09
     - phrase: "Double Play"
       ticker: KXMLBMENTION-26APR25CLETOR-DOUB
-      yes_ask: 0.9100
+      yes_ask: 0.9500
       volume_24h: 0
       close: 2026-05-09
     - phrase: "Double Play"
@@ -3239,7 +3239,7 @@ mlb:  # 76 markets
       close: 2026-05-07
     - phrase: "Event does not qualify"
       ticker: KXMLBMENTION-26APR25CLETOR-NQE
-      yes_ask: 0.9100
+      yes_ask: 0.4500
       volume_24h: 0
       close: 2026-05-09
     - phrase: "Event does not qualify"
@@ -3274,7 +3274,7 @@ mlb:  # 76 markets
       close: 2026-05-09
     - phrase: "Extra Inning"
       ticker: KXMLBMENTION-26APR23NYYBOS-EXTR
-      yes_ask: 0.6900
+      yes_ask: 0.6200
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Fenway Park"
@@ -3309,7 +3309,7 @@ mlb:  # 76 markets
       close: 2026-05-09
     - phrase: "MVP"
       ticker: KXMLBMENTION-26APR24PHIATL-MVP
-      yes_ask: 0.8800
+      yes_ask: 0.9000
       volume_24h: 0
       close: 2026-05-08
     - phrase: "MVP"
@@ -3339,7 +3339,7 @@ mlb:  # 76 markets
       close: 2026-05-09
     - phrase: "Ohtani"
       ticker: KXMLBMENTION-26APR23NYYBOS-OHTA
-      yes_ask: 0.6200
+      yes_ask: 0.6100
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Perfect Game"
@@ -3408,7 +3408,7 @@ mlb:  # 76 markets
       close: 2026-05-07
     - phrase: "Roger Centre"
       ticker: KXMLBMENTION-26APR25CLETOR-ROGE
-      yes_ask: 0.9100
+      yes_ask: 0.9500
       volume_24h: 0
       close: 2026-05-09
     - phrase: "Trade"
@@ -3420,7 +3420,7 @@ mlb:  # 76 markets
     - phrase: "Trade"
       variants: "Trade / Traded"
       ticker: KXMLBMENTION-26APR24PHIATL-TRAD
-      yes_ask: 0.9000
+      yes_ask: 0.9100
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Trade"
@@ -3457,7 +3457,7 @@ mlb:  # 76 markets
       close: 2026-05-07
     - phrase: "Truist Park"
       ticker: KXMLBMENTION-26APR24PHIATL-TRUI
-      yes_ask: 0.9100
+      yes_ask: 0.9500
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Walk Off"
@@ -3517,7 +3517,7 @@ mlb:  # 76 markets
       close: 2026-05-09
     - phrase: "Wild Pitch"
       ticker: KXMLBMENTION-26APR23NYYBOS-WILD
-      yes_ask: 0.7500
+      yes_ask: 0.7300
       volume_24h: 0
       close: 2026-05-07
 
@@ -3628,13 +3628,13 @@ nba:  # 475 markets
     - phrase: "Airball"
       variants: "Airball / Airballs / Airballed"
       ticker: KXNBAMENTION-26APR27DETORL-AIRB
-      yes_ask: 0.5900
+      yes_ask: 0.6000
       volume_24h: 0
       close: 2026-05-12
     - phrase: "Airball"
       variants: "Airball / Airballs / Airballed"
       ticker: KXNBAMENTION-26APR27MINDEN-AIRB
-      yes_ask: 0.5900
+      yes_ask: 0.6000
       volume_24h: 0
       close: 2026-05-12
     - phrase: "Airball"
@@ -3646,7 +3646,7 @@ nba:  # 475 markets
     - phrase: "Airball"
       variants: "Airball / Airballs / Airballed"
       ticker: KXNBAMENTION-26APR22PHXOKC-AIRB
-      yes_ask: 0.7500
+      yes_ask: 0.7400
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Airball"
@@ -3688,7 +3688,7 @@ nba:  # 475 markets
     - phrase: "Airball"
       variants: "Airball / Airballs / Airballed"
       ticker: KXNBAMENTION-26APR23NYKATL-AIRB
-      yes_ask: 0.6400
+      yes_ask: 0.6300
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Airball"
@@ -3750,12 +3750,12 @@ nba:  # 475 markets
       close: 2026-05-12
     - phrase: "Alley-oop"
       ticker: KXNBAMENTION-26APR22ORLDET-ALLE
-      yes_ask: 0.6000
+      yes_ask: 0.6400
       volume_24h: 0
       close: 2026-05-06
     - phrase: "Alley-oop"
       ticker: KXNBAMENTION-26APR22PHXOKC-ALLE
-      yes_ask: 0.6200
+      yes_ask: 0.6100
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Alley-oop"
@@ -3825,7 +3825,7 @@ nba:  # 475 markets
       close: 2026-05-10
     - phrase: "Alley-oop"
       ticker: KXNBAMENTION-26APR26SASPOR-ALLE
-      yes_ask: 0.6000
+      yes_ask: 0.6200
       volume_24h: 0
       close: 2026-05-10
     - phrase: "Ankle"
@@ -3845,7 +3845,7 @@ nba:  # 475 markets
       close: 2026-05-12
     - phrase: "Ankle"
       ticker: KXNBAMENTION-26APR22ORLDET-ANKL
-      yes_ask: 0.5300
+      yes_ask: 0.7900
       volume_24h: 0
       close: 2026-05-06
     - phrase: "Ankle"
@@ -3940,17 +3940,17 @@ nba:  # 475 markets
       close: 2026-05-12
     - phrase: "Buzzer"
       ticker: KXNBAMENTION-26APR27MINDEN-BUZZ
-      yes_ask: 0.4500
+      yes_ask: 0.4400
       volume_24h: 0
       close: 2026-05-12
     - phrase: "Buzzer"
       ticker: KXNBAMENTION-26APR22ORLDET-BUZZ
-      yes_ask: 0.6700
+      yes_ask: 0.4500
       volume_24h: 0
       close: 2026-05-06
     - phrase: "Buzzer"
       ticker: KXNBAMENTION-26APR22PHXOKC-BUZZ
-      yes_ask: 0.6100
+      yes_ask: 0.5900
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Buzzer"
@@ -3990,7 +3990,7 @@ nba:  # 475 markets
       close: 2026-05-07
     - phrase: "Buzzer"
       ticker: KXNBAMENTION-26APR23CLETOR-BUZZ
-      yes_ask: 0.4000
+      yes_ask: 0.3900
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Buzzer"
@@ -4158,7 +4158,7 @@ nba:  # 475 markets
     - phrase: "Draft"
       variants: "Draft / Drafted"
       ticker: KXNBAMENTION-26APR22ORLDET-DRAF
-      yes_ask: 0.8400
+      yes_ask: 0.7800
       volume_24h: 0
       close: 2026-05-06
     - phrase: "Draft"
@@ -4308,7 +4308,7 @@ nba:  # 475 markets
       close: 2026-05-10
     - phrase: "Elbow"
       ticker: KXNBAMENTION-26APR23NYKATL-ELBO
-      yes_ask: 0.7700
+      yes_ask: 0.7500
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Elbow"
@@ -4343,7 +4343,7 @@ nba:  # 475 markets
       close: 2026-05-10
     - phrase: "Elbow"
       ticker: KXNBAMENTION-26APR26SASPOR-ELBO
-      yes_ask: 0.8500
+      yes_ask: 0.8400
       volume_24h: 0
       close: 2026-05-10
     - phrase: "GOAT"
@@ -4363,7 +4363,7 @@ nba:  # 475 markets
       close: 2026-05-12
     - phrase: "GOAT"
       ticker: KXNBAMENTION-26APR22ORLDET-GOAT
-      yes_ask: 0.0700
+      yes_ask: 0.0800
       volume_24h: 0
       close: 2026-05-06
     - phrase: "GOAT"
@@ -4468,7 +4468,7 @@ nba:  # 475 markets
     - phrase: "Injury"
       variants: "Injury / Injured"
       ticker: KXNBAMENTION-26APR22PHXOKC-INJU
-      yes_ask: 0.9700
+      yes_ask: 0.9800
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Injury"
@@ -4772,12 +4772,12 @@ nba:  # 475 markets
       close: 2026-05-12
     - phrase: "Larry O'Brien"
       ticker: KXNBAMENTION-26APR22ORLDET-LARR
-      yes_ask: 0.1700
+      yes_ask: 0.1500
       volume_24h: 0
       close: 2026-05-06
     - phrase: "Larry O'Brien"
       ticker: KXNBAMENTION-26APR22PHXOKC-LARR
-      yes_ask: 0.1300
+      yes_ask: 0.1500
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Larry O'Brien"
@@ -4867,7 +4867,7 @@ nba:  # 475 markets
       close: 2026-05-12
     - phrase: "Legacy"
       ticker: KXNBAMENTION-26APR22ORLDET-LEGA
-      yes_ask: 0.3900
+      yes_ask: 0.1700
       volume_24h: 0
       close: 2026-05-06
     - phrase: "Legacy"
@@ -4897,7 +4897,7 @@ nba:  # 475 markets
       close: 2026-05-08
     - phrase: "Legacy"
       ticker: KXNBAMENTION-26APR24LALHOU-LEGA
-      yes_ask: 0.2000
+      yes_ask: 0.2100
       volume_24h: 0
       close: 2026-05-09
     - phrase: "Legacy"
@@ -4917,7 +4917,7 @@ nba:  # 475 markets
       close: 2026-05-08
     - phrase: "Legacy"
       ticker: KXNBAMENTION-26APR24SASPOR-LEGA
-      yes_ask: 0.3100
+      yes_ask: 0.2700
       volume_24h: 0
       close: 2026-05-09
     - phrase: "Legacy"
@@ -4947,7 +4947,7 @@ nba:  # 475 markets
       close: 2026-05-10
     - phrase: "Little Caesars Arena"
       ticker: KXNBAMENTION-26APR22ORLDET-LITC
-      yes_ask: 0.5300
+      yes_ask: 0.4300
       volume_24h: 0
       close: 2026-05-06
     - phrase: "Moda"
@@ -4987,7 +4987,7 @@ nba:  # 475 markets
       close: 2026-05-12
     - phrase: "MVP"
       ticker: KXNBAMENTION-26APR22ORLDET-MVP
-      yes_ask: 0.6900
+      yes_ask: 0.6800
       volume_24h: 0
       close: 2026-05-06
     - phrase: "MVP"
@@ -5017,7 +5017,7 @@ nba:  # 475 markets
       close: 2026-05-08
     - phrase: "MVP"
       ticker: KXNBAMENTION-26APR24LALHOU-MVP
-      yes_ask: 0.8500
+      yes_ask: 0.8700
       volume_24h: 0
       close: 2026-05-09
     - phrase: "MVP"
@@ -5082,12 +5082,12 @@ nba:  # 475 markets
       close: 2026-05-12
     - phrase: "Overtime"
       ticker: KXNBAMENTION-26APR22ORLDET-OVER
-      yes_ask: 0.2800
+      yes_ask: 0.2500
       volume_24h: 0
       close: 2026-05-06
     - phrase: "Overtime"
       ticker: KXNBAMENTION-26APR22PHXOKC-OVER
-      yes_ask: 0.3000
+      yes_ask: 0.2800
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Overtime"
@@ -5162,7 +5162,7 @@ nba:  # 475 markets
       close: 2026-05-10
     - phrase: "Paycom"
       ticker: KXNBAMENTION-26APR22PHXOKC-PAYC
-      yes_ask: 0.6200
+      yes_ask: 0.6000
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Retire"
@@ -5186,7 +5186,7 @@ nba:  # 475 markets
     - phrase: "Retire"
       variants: "Retire / Retired / Retirement"
       ticker: KXNBAMENTION-26APR22ORLDET-RETI
-      yes_ask: 0.1700
+      yes_ask: 0.1600
       volume_24h: 0
       close: 2026-05-06
     - phrase: "Retire"
@@ -5296,7 +5296,7 @@ nba:  # 475 markets
       close: 2026-05-12
     - phrase: "Rookie"
       ticker: KXNBAMENTION-26APR22ORLDET-ROOK
-      yes_ask: 0.7200
+      yes_ask: 0.6900
       volume_24h: 0
       close: 2026-05-06
     - phrase: "Rookie"
@@ -5336,7 +5336,7 @@ nba:  # 475 markets
       close: 2026-05-10
     - phrase: "Rookie"
       ticker: KXNBAMENTION-26APR23NYKATL-ROOK
-      yes_ask: 0.5400
+      yes_ask: 0.5300
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Rookie"
@@ -5403,19 +5403,19 @@ nba:  # 475 markets
     - phrase: "Sweep"
       variants: "Sweep / Sweeps / Swept"
       ticker: KXNBAMENTION-26APR27DETORL-SWEE
-      yes_ask: 0.3900
+      yes_ask: 0.3800
       volume_24h: 0
       close: 2026-05-12
     - phrase: "Sweep"
       variants: "Sweep / Sweeps / Swept"
       ticker: KXNBAMENTION-26APR27MINDEN-SWEE
-      yes_ask: 0.4500
+      yes_ask: 0.4400
       volume_24h: 0
       close: 2026-05-12
     - phrase: "Sweep"
       variants: "Sweep / Sweeps / Swept"
       ticker: KXNBAMENTION-26APR22ORLDET-SWEE
-      yes_ask: 0.3000
+      yes_ask: 0.2900
       volume_24h: 0
       close: 2026-05-06
     - phrase: "Sweep"
@@ -5557,7 +5557,7 @@ nba:  # 475 markets
     - phrase: "Tech"
       variants: "Tech / Technical"
       ticker: KXNBAMENTION-26APR25DETORL-TECH
-      yes_ask: 0.8200
+      yes_ask: 0.8300
       volume_24h: 0
       close: 2026-05-09
     - phrase: "Tech"
@@ -5663,7 +5663,7 @@ nba:  # 475 markets
     - phrase: "Trade"
       variants: "Trade / Trades / Traded"
       ticker: KXNBAMENTION-26APR22ORLDET-TRAD
-      yes_ask: 0.6700
+      yes_ask: 0.6200
       volume_24h: 0
       close: 2026-05-06
     - phrase: "Trade"
@@ -5711,7 +5711,7 @@ nba:  # 475 markets
     - phrase: "Trade"
       variants: "Trade / Trades / Traded"
       ticker: KXNBAMENTION-26APR23NYKATL-TRAD
-      yes_ask: 0.9100
+      yes_ask: 0.8900
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Trade"
@@ -5753,7 +5753,7 @@ nba:  # 475 markets
     - phrase: "Trade"
       variants: "Trade / Trades / Traded"
       ticker: KXNBAMENTION-26APR26SASPOR-TRAD
-      yes_ask: 0.9000
+      yes_ask: 0.8600
       volume_24h: 0
       close: 2026-05-10
     - phrase: "Travel"
@@ -5771,7 +5771,7 @@ nba:  # 475 markets
     - phrase: "Travel"
       variants: "Travel / Travels / Traveled"
       ticker: KXNBAMENTION-26APR27MINDEN-TRAV
-      yes_ask: 0.7800
+      yes_ask: 0.7700
       volume_24h: 0
       close: 2026-05-12
     - phrase: "Travel"
@@ -5887,12 +5887,12 @@ nba:  # 475 markets
       close: 2026-05-12
     - phrase: "Triple Double"
       ticker: KXNBAMENTION-26APR22ORLDET-TRIP
-      yes_ask: 0.3900
+      yes_ask: 0.3700
       volume_24h: 0
       close: 2026-05-06
     - phrase: "Triple Double"
       ticker: KXNBAMENTION-26APR22PHXOKC-TRIP
-      yes_ask: 0.3800
+      yes_ask: 0.3700
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Triple Double"
@@ -5982,7 +5982,7 @@ nba:  # 475 markets
       close: 2026-05-12
     - phrase: "Wingspan"
       ticker: KXNBAMENTION-26APR22ORLDET-WING
-      yes_ask: 0.6600
+      yes_ask: 0.3000
       volume_24h: 0
       close: 2026-05-06
     - phrase: "Wingspan"
@@ -6081,7 +6081,7 @@ nickmercs:  # 16 markets
       close: 2026-05-08
     - phrase: "Canada"
       ticker: KXLUTNICKFTNMENTION-26APR23-CANA
-      yes_ask: 0.5900
+      yes_ask: 0.5800
       volume_24h: 0
       close: 2026-05-08
     - phrase: "China"
@@ -6092,7 +6092,7 @@ nickmercs:  # 16 markets
       close: 2026-05-08
     - phrase: "Epstein"
       ticker: KXLUTNICKFTNMENTION-26APR23-EPST
-      yes_ask: 0.3200
+      yes_ask: 0.3400
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Event does not qualify"
@@ -6109,7 +6109,7 @@ nickmercs:  # 16 markets
     - phrase: "Iran"
       variants: "Iran / Iranian"
       ticker: KXLUTNICKFTNMENTION-26APR23-IRAN
-      yes_ask: 0.5000
+      yes_ask: 0.4900
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Japan"
@@ -6148,12 +6148,12 @@ nickmercs:  # 16 markets
       close: 2026-05-08
     - phrase: "Supreme Court"
       ticker: KXLUTNICKFTNMENTION-26APR23-SUPR
-      yes_ask: 0.4600
+      yes_ask: 0.4900
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Tariff"
       ticker: KXLUTNICKFTNMENTION-26APR23-TARI
-      yes_ask: 0.9500
+      yes_ask: 0.9400
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Trump (3+ times)"
@@ -6188,7 +6188,7 @@ starmer:  # 15 markets
       close: 2026-05-14
     - phrase: "Epstein"
       ticker: KXSTARMERMENTIONB-26APR29-EPST
-      yes_ask: 0.1400
+      yes_ask: 0.1300
       volume_24h: 0
       close: 2026-05-14
     - phrase: "Immigrant"
@@ -6254,13 +6254,13 @@ survivor:  # 35 markets
       close: 2026-04-23
     - phrase: "Alliance"
       ticker: KXSURVIVORMENTION-26APR22-ALLI
-      yes_ask: 0.0800
+      yes_ask: 0.1000
       volume_24h: 0
       close: 2026-04-23
     - phrase: "Betray"
       variants: "Betray / Betrayed / Betrayal"
       ticker: KXSURVIVORMENTION-26APR23-BETR
-      yes_ask: 0.6000
+      yes_ask: 0.5800
       volume_24h: 0
       close: 2026-04-23
     - phrase: "Blood"
@@ -6277,13 +6277,13 @@ survivor:  # 35 markets
       close: 2026-04-23
     - phrase: "Clue"
       ticker: KXSURVIVORMENTION-26APR23-CLUE
-      yes_ask: 0.6300
+      yes_ask: 0.6200
       volume_24h: 0
       close: 2026-04-23
     - phrase: "Comeback"
       variants: "Comeback / Come Back"
       ticker: KXSURVIVORMENTION-26APR22-COME
-      yes_ask: 0.0800
+      yes_ask: 0.1200
       volume_24h: 0
       close: 2026-04-23
     - phrase: "Dig Deep"
@@ -6293,7 +6293,7 @@ survivor:  # 35 markets
       close: 2026-04-23
     - phrase: "Drama"
       ticker: KXSURVIVORMENTION-26APR23-DRAM
-      yes_ask: 0.1900
+      yes_ask: 0.1400
       volume_24h: 0
       close: 2026-04-23
     - phrase: "Drop"
@@ -6314,18 +6314,18 @@ survivor:  # 35 markets
       close: 2026-04-23
     - phrase: "Fire"
       ticker: KXSURVIVORMENTION-26APR22-FIRE
-      yes_ask: 0.3500
+      yes_ask: 0.3100
       volume_24h: 0
       close: 2026-04-23
     - phrase: "Hunger"
       variants: "Hunger / Hungry"
       ticker: KXSURVIVORMENTION-26APR22-HUNG
-      yes_ask: 0.1900
+      yes_ask: 0.1800
       volume_24h: 0
       close: 2026-04-23
     - phrase: "Immunity Idol"
       ticker: KXSURVIVORMENTION-26APR22-IMMU
-      yes_ask: 0.4600
+      yes_ask: 0.4200
       volume_24h: 0
       close: 2026-04-23
     - phrase: "Journey"
@@ -6335,18 +6335,18 @@ survivor:  # 35 markets
       close: 2026-04-23
     - phrase: "Key"
       ticker: KXSURVIVORMENTION-26APR22-KEY
-      yes_ask: 0.0400
+      yes_ask: 0.0600
       volume_24h: 0
       close: 2026-04-23
     - phrase: "Loyal"
       variants: "Loyal / Loyalty"
       ticker: KXSURVIVORMENTION-26APR23-LOYA
-      yes_ask: 0.6500
+      yes_ask: 0.6300
       volume_24h: 0
       close: 2026-04-23
     - phrase: "Million"
       ticker: KXSURVIVORMENTION-26APR23-MILL
-      yes_ask: 0.4600
+      yes_ask: 0.4700
       volume_24h: 0
       close: 2026-04-23
     - phrase: "MrBeast"
@@ -6358,18 +6358,18 @@ survivor:  # 35 markets
     - phrase: "MrBeast"
       variants: "MrBeast / Beast"
       ticker: KXSURVIVORMENTION-26APR22-MRBE
-      yes_ask: 0.2200
+      yes_ask: 0.2500
       volume_24h: 0
       close: 2026-04-23
     - phrase: "Puzzle"
       ticker: KXSURVIVORMENTION-26APR22-PUZZ
-      yes_ask: 0.0600
+      yes_ask: 0.1100
       volume_24h: 0
       close: 2026-04-23
     - phrase: "Record"
       variants: "Record / Longest"
       ticker: KXSURVIVORMENTION-26APR22-RECO
-      yes_ask: 0.8900
+      yes_ask: 0.7700
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Relationship"
@@ -6379,7 +6379,7 @@ survivor:  # 35 markets
       close: 2026-04-23
     - phrase: "Rope"
       ticker: KXSURVIVORMENTION-26APR22-ROPE
-      yes_ask: 0.1300
+      yes_ask: 0.4700
       volume_24h: 0
       close: 2026-04-23
     - phrase: "Safe"
@@ -6395,7 +6395,7 @@ survivor:  # 35 markets
       close: 2026-04-23
     - phrase: "Sit Out"
       ticker: KXSURVIVORMENTION-26APR22-SIT
-      yes_ask: 0.2000
+      yes_ask: 0.3100
       volume_24h: 0
       close: 2026-04-23
     - phrase: "Snake"
@@ -6416,7 +6416,7 @@ survivor:  # 35 markets
       close: 2026-04-23
     - phrase: "Threat"
       ticker: KXSURVIVORMENTION-26APR23-THRE
-      yes_ask: 0.6500
+      yes_ask: 0.6400
       volume_24h: 0
       close: 2026-04-23
     - phrase: "Tie"
@@ -6432,7 +6432,7 @@ survivor:  # 35 markets
       close: 2026-04-23
     - phrase: "Water"
       ticker: KXSURVIVORMENTION-26APR22-WATE
-      yes_ask: 0.1900
+      yes_ask: 0.2300
       volume_24h: 0
       close: 2026-04-23
 
@@ -6455,12 +6455,12 @@ trump:  # 189 markets
       close: 2026-04-26
     - phrase: "18 or above"
       ticker: KXTRUMPMENTIONDURATION-APR2626-17
-      yes_ask: 0.8700
+      yes_ask: 0.8800
       volume_24h: 0
       close: 2026-04-26
     - phrase: "20 or above"
       ticker: KXTRUMPMENTIONDURATION-APR2626-19
-      yes_ask: 0.8400
+      yes_ask: 0.8500
       volume_24h: 0
       close: 2026-04-26
     - phrase: "22 or above"
@@ -6475,42 +6475,42 @@ trump:  # 189 markets
       close: 2026-04-26
     - phrase: "26 or above"
       ticker: KXTRUMPMENTIONDURATION-APR2626-25
-      yes_ask: 0.7100
+      yes_ask: 0.7200
       volume_24h: 0
       close: 2026-04-26
     - phrase: "28 or above"
       ticker: KXTRUMPMENTIONDURATION-APR2626-27
-      yes_ask: 0.6600
+      yes_ask: 0.6700
       volume_24h: 0
       close: 2026-04-26
     - phrase: "30 or above"
       ticker: KXTRUMPMENTIONDURATION-APR2626-29
-      yes_ask: 0.5800
+      yes_ask: 0.6000
       volume_24h: 0
       close: 2026-04-26
     - phrase: "32 or above"
       ticker: KXTRUMPMENTIONDURATION-APR2626-31
-      yes_ask: 0.5100
+      yes_ask: 0.5200
       volume_24h: 0
       close: 2026-04-26
     - phrase: "34 or above"
       ticker: KXTRUMPMENTIONDURATION-APR2626-33
-      yes_ask: 0.4300
+      yes_ask: 0.4500
       volume_24h: 0
       close: 2026-04-26
     - phrase: "36 or above"
       ticker: KXTRUMPMENTIONDURATION-APR2626-35
-      yes_ask: 0.3100
+      yes_ask: 0.3300
       volume_24h: 0
       close: 2026-04-26
     - phrase: "38 or above"
       ticker: KXTRUMPMENTIONDURATION-APR2626-37
-      yes_ask: 0.2200
+      yes_ask: 0.2500
       volume_24h: 0
       close: 2026-04-26
     - phrase: "40 or above"
       ticker: KXTRUMPMENTIONDURATION-APR2626-39
-      yes_ask: 0.1700
+      yes_ask: 0.1900
       volume_24h: 0
       close: 2026-04-26
     - phrase: "50,000"
@@ -6545,7 +6545,7 @@ trump:  # 189 markets
     - phrase: "AI"
       variants: "AI / Artificial Intelligence"
       ticker: KXMELANIAMENTION-26APR23C-AI
-      yes_ask: 0.2700
+      yes_ask: 0.2600
       volume_24h: 0
       close: 2026-05-08
     - phrase: "AI"
@@ -6567,7 +6567,7 @@ trump:  # 189 markets
       close: 2026-04-27
     - phrase: "Autism"
       ticker: KXTRUMPSAY-26APR27-AUTI
-      yes_ask: 0.3000
+      yes_ask: 0.2900
       volume_24h: 0
       close: 2026-04-27
     - phrase: "Autopen"
@@ -6588,7 +6588,7 @@ trump:  # 189 markets
       close: 2026-04-26
     - phrase: "Ballrooom"
       ticker: KXTRUMPMENTION-26APR25-BALL
-      yes_ask: 0.5600
+      yes_ask: 0.5700
       volume_24h: 0
       close: 2026-04-26
     - phrase: "Barack Hussein Obama"
@@ -6608,13 +6608,13 @@ trump:  # 189 markets
       close: 2026-05-08
     - phrase: "Be Best"
       ticker: KXMELANIAMENTION-26APR23C-BE
-      yes_ask: 0.4100
+      yes_ask: 0.3900
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Bibi"
       variants: "Bibi / Netanyahu"
       ticker: KXTRUMPSAY-26APR27-BIBI
-      yes_ask: 0.6800
+      yes_ask: 0.6600
       volume_24h: 0
       close: 2026-04-27
     - phrase: "Biden"
@@ -6676,7 +6676,7 @@ trump:  # 189 markets
     - phrase: "Comedy"
       variants: "Comedy / Comedian"
       ticker: KXTRUMPMENTION-26APR25-COME
-      yes_ask: 0.5700
+      yes_ask: 0.5800
       volume_24h: 0
       close: 2026-05-10
     - phrase: "Communist"
@@ -6709,7 +6709,7 @@ trump:  # 189 markets
     - phrase: "Crypto"
       variants: "Crypto / Bitcoin"
       ticker: KXTRUMPMENTION-26APR23-CRYP
-      yes_ask: 0.6800
+      yes_ask: 0.6600
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Crypto"
@@ -6731,12 +6731,12 @@ trump:  # 189 markets
       close: 2026-05-08
     - phrase: "Democrat"
       ticker: KXPOLITICSMENTION-26APR23-DEMO
-      yes_ask: 0.2700
+      yes_ask: 0.4000
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Democrat"
       ticker: KXPOLITICSMENTION-26APR22C-DEMO
-      yes_ask: 0.3300
+      yes_ask: 0.3400
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Democrat"
@@ -6747,7 +6747,7 @@ trump:  # 189 markets
     - phrase: "Deport"
       variants: "Deport / Deportation"
       ticker: KXPOLITICSMENTION-26APR22C-DEPO
-      yes_ask: 0.2300
+      yes_ask: 0.1700
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Discombobulator"
@@ -6762,7 +6762,7 @@ trump:  # 189 markets
       close: 2026-05-01
     - phrase: "Donald"
       ticker: KXMELANIAMENTION-26APR23C-DONA
-      yes_ask: 0.1400
+      yes_ask: 0.1500
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Drill Baby Drill"
@@ -6772,17 +6772,17 @@ trump:  # 189 markets
       close: 2026-04-27
     - phrase: "Drill Baby Drill"
       ticker: KXTRUMPMENTION-26APR25-DRIL
-      yes_ask: 0.5700
+      yes_ask: 0.6000
       volume_24h: 0
       close: 2026-05-10
     - phrase: "Election"
       ticker: KXPOLITICSMENTION-26APR23-ELEC
-      yes_ask: 0.3800
+      yes_ask: 0.4600
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Election"
       ticker: KXPOLITICSMENTION-26APR22C-ELEC
-      yes_ask: 0.0800
+      yes_ask: 0.2300
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Election"
@@ -6832,17 +6832,17 @@ trump:  # 189 markets
       close: 2026-04-26
     - phrase: "Event does not qualify"
       ticker: KXMELANIAMENTION-26APR23C-NQE
-      yes_ask: 0.5900
+      yes_ask: 0.6100
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Event does not qualify"
       ticker: KXPOLITICSMENTION-26APR23-NQE
-      yes_ask: 0.1900
+      yes_ask: 0.2600
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Event does not qualify"
       ticker: KXPOLITICSMENTION-26APR22C-NQE
-      yes_ask: 0.9300
+      yes_ask: 0.9100
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Event does not qualify"
@@ -6873,7 +6873,7 @@ trump:  # 189 markets
     - phrase: "Foster"
       variants: "Foster / Fostering"
       ticker: KXMELANIAMENTION-26APR23C-FOST
-      yes_ask: 0.4700
+      yes_ask: 0.4600
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Fraud"
@@ -6883,12 +6883,12 @@ trump:  # 189 markets
       close: 2026-05-08
     - phrase: "Fraud"
       ticker: KXPOLITICSMENTION-26APR23-FRAU
-      yes_ask: 0.1400
+      yes_ask: 0.1500
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Fraud"
       ticker: KXPOLITICSMENTION-26APR22C-FRAU
-      yes_ask: 0.4400
+      yes_ask: 0.5200
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Fraud"
@@ -6913,17 +6913,17 @@ trump:  # 189 markets
       close: 2026-05-08
     - phrase: "Highest Inflation"
       ticker: KXTRUMPMENTION-26APR25-HIGH
-      yes_ask: 0.2700
+      yes_ask: 0.2600
       volume_24h: 0
       close: 2026-04-26
     - phrase: "Hoax"
       ticker: KXTRUMPMENTION-26APR23-HOAX
-      yes_ask: 0.9000
+      yes_ask: 0.8400
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Hormuz"
       ticker: KXTRUMPMENTION-26APR25-HORM
-      yes_ask: 0.4200
+      yes_ask: 0.4300
       volume_24h: 0
       close: 2026-05-10
     - phrase: "Hottest"
@@ -6944,25 +6944,25 @@ trump:  # 189 markets
     - phrase: "ICE"
       variants: "ICE / Border"
       ticker: KXPOLITICSMENTION-26APR23-ICE
-      yes_ask: 0.3100
+      yes_ask: 0.3200
       volume_24h: 0
       close: 2026-05-08
     - phrase: "ICE"
       variants: "ICE / DHS"
       ticker: KXPOLITICSMENTION-26APR22C-ICE
-      yes_ask: 0.2000
+      yes_ask: 0.1400
       volume_24h: 0
       close: 2026-05-07
     - phrase: "ID"
       variants: "ID / Identification"
       ticker: KXPOLITICSMENTION-26APR22C-ID
-      yes_ask: 0.4300
+      yes_ask: 0.2700
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Immigrant"
       variants: "Immigrant / Immigration"
       ticker: KXPOLITICSMENTION-26APR22C-IMMI
-      yes_ask: 0.0800
+      yes_ask: 0.0600
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Immigrant"
@@ -6974,7 +6974,7 @@ trump:  # 189 markets
     - phrase: "Investigate"
       variants: "Investigate / Investigating / Investigation"
       ticker: KXPOLITICSMENTION-26APR22C-INVE
-      yes_ask: 0.1400
+      yes_ask: 0.1000
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Iran"
@@ -6991,7 +6991,7 @@ trump:  # 189 markets
     - phrase: "Iran"
       variants: "Iran / Iranian"
       ticker: KXPOLITICSMENTION-26APR22C-IRAN
-      yes_ask: 0.0800
+      yes_ask: 0.1100
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Iran"
@@ -7051,7 +7051,7 @@ trump:  # 189 markets
       close: 2026-05-08
     - phrase: "Make Iran Great Again"
       ticker: KXTRUMPSAYMONTH-26MAY01-MAKE
-      yes_ask: 0.3300
+      yes_ask: 0.3400
       volume_24h: 0
       close: 2026-05-01
     - phrase: "Manufacture"
@@ -7063,13 +7063,13 @@ trump:  # 189 markets
     - phrase: "Marijuana"
       variants: "Marijuana / Weed / Cannabis"
       ticker: KXTRUMPSAY-26APR27-MARI
-      yes_ask: 0.5600
+      yes_ask: 0.5500
       volume_24h: 0
       close: 2026-04-27
     - phrase: "Marijuana"
       variants: "Marijuana / Weed"
       ticker: KXTRUMPMENTION-26APR23-MARI
-      yes_ask: 0.9000
+      yes_ask: 0.8500
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Marjorie Traitor Greene"
@@ -7090,7 +7090,7 @@ trump:  # 189 markets
       close: 2026-04-27
     - phrase: "Moscow"
       ticker: KXTRUMPSAYMONTH-26MAY01-MOSC
-      yes_ask: 0.2800
+      yes_ask: 0.2700
       volume_24h: 0
       close: 2026-05-01
     - phrase: "Mount Trump"
@@ -7100,17 +7100,17 @@ trump:  # 189 markets
       close: 2026-07-01
     - phrase: "Movie Star"
       ticker: KXTRUMPMENTION-26APR25-MOVI
-      yes_ask: 0.7700
+      yes_ask: 0.7600
       volume_24h: 0
       close: 2026-05-10
     - phrase: "National Security"
       ticker: KXPOLITICSMENTION-26APR23-NATI
-      yes_ask: 0.5700
+      yes_ask: 0.6000
       volume_24h: 0
       close: 2026-05-08
     - phrase: "NATO"
       ticker: KXTRUMPMENTION-26APR23-NATO
-      yes_ask: 0.9000
+      yes_ask: 0.8400
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Newscum"
@@ -7152,7 +7152,7 @@ trump:  # 189 markets
     - phrase: "Oil"
       variants: "Oil / Gas / Gasoline"
       ticker: KXPOLITICSMENTION-26APR23-OIL
-      yes_ask: 0.7500
+      yes_ask: 0.7600
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Oil"
@@ -7169,17 +7169,17 @@ trump:  # 189 markets
       close: 2026-05-08
     - phrase: "Peace"
       ticker: KXTRUMPMENTION-26APR25-PEAC
-      yes_ask: 0.5800
+      yes_ask: 0.6000
       volume_24h: 0
       close: 2026-05-10
     - phrase: "Peace"
       ticker: KXMELANIAMENTION-26APR23C-PEAC
-      yes_ask: 0.1900
+      yes_ask: 0.1800
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Pelosi"
       ticker: KXTRUMPSAYMONTH-26MAY01-PELO
-      yes_ask: 0.5000
+      yes_ask: 0.5600
       volume_24h: 0
       close: 2026-05-01
     - phrase: "Piggy"
@@ -7189,7 +7189,7 @@ trump:  # 189 markets
       close: 2026-07-01
     - phrase: "Planned Parenthood"
       ticker: KXPOLITICSMENTION-26APR23-PLAN
-      yes_ask: 0.3800
+      yes_ask: 0.4400
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Pocahontas"
@@ -7236,7 +7236,7 @@ trump:  # 189 markets
       close: 2026-07-01
     - phrase: "Save America Act"
       ticker: KXTRUMPMENTION-26APR25-SAVE
-      yes_ask: 0.2200
+      yes_ask: 0.2300
       volume_24h: 0
       close: 2026-04-26
     - phrase: "School"
@@ -7271,17 +7271,17 @@ trump:  # 189 markets
       close: 2026-04-26
     - phrase: "Stupid Question"
       ticker: KXTRUMPSAY-26APR27-STUP
-      yes_ask: 0.1900
+      yes_ask: 0.1600
       volume_24h: 0
       close: 2026-04-27
     - phrase: "Swamp"
       ticker: KXPOLITICSMENTION-26APR22C-SWAM
-      yes_ask: 0.5600
+      yes_ask: 0.4300
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Take it Down"
       ticker: KXMELANIAMENTION-26APR23C-TAKE
-      yes_ask: 0.4800
+      yes_ask: 0.3800
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Tampon Tim"
@@ -7307,7 +7307,7 @@ trump:  # 189 markets
     - phrase: "TDS"
       variants: "TDS / Trump Derangement Syndrome"
       ticker: KXTRUMPSAY-26APR27-TDS
-      yes_ask: 0.5000
+      yes_ask: 0.5200
       volume_24h: 0
       close: 2026-04-27
     - phrase: "Terrorist"
@@ -7348,12 +7348,12 @@ trump:  # 189 markets
       close: 2026-05-07
     - phrase: "Trump"
       ticker: KXPOLITICSMENTION-26APR23-TRUM
-      yes_ask: 0.7600
+      yes_ask: 0.8400
       volume_24h: 0
       close: 2026-05-08
     - phrase: "Trump (3+ times)"
       ticker: KXPOLITICSMENTION-26APR22C-TRUM
-      yes_ask: 0.5300
+      yes_ask: 0.0900
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Trump Airport"
@@ -7395,7 +7395,7 @@ trump:  # 189 markets
       close: 2026-05-08
     - phrase: "Truth"
       ticker: KXTRUMPMENTION-26APR25-TRUT
-      yes_ask: 0.4900
+      yes_ask: 0.5000
       volume_24h: 0
       close: 2026-05-10
     - phrase: "Vaccine"
@@ -7418,13 +7418,13 @@ trump:  # 189 markets
       close: 2026-04-27
     - phrase: "Windmill"
       ticker: KXTRUMPSAY-26APR27-WIND
-      yes_ask: 0.3900
+      yes_ask: 0.3700
       volume_24h: 0
       close: 2026-04-27
     - phrase: "Woke"
       variants: "Woke / DEI"
       ticker: KXPOLITICSMENTION-26APR22C-WOKE
-      yes_ask: 0.3400
+      yes_ask: 0.1000
       volume_24h: 0
       close: 2026-05-07
     - phrase: "Woke"
@@ -7476,7 +7476,7 @@ whitehouse:  # 13 markets
       close: 2026-05-01
     - phrase: "At least 5"
       ticker: KXPRESSBRIEFINGCOUNT-26APR-A5
-      yes_ask: 0.5300
+      yes_ask: 0.5500
       volume_24h: 0
       close: 2026-05-01
     - phrase: "At least 6"

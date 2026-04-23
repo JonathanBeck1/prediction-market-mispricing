@@ -240,53 +240,30 @@ Restricting to sports BUY_NO (NBA + NCAAB + MMA) only, retrospectively: 578 bets
 
 Local web UI at `http://localhost:8777`. Single-file Python (`app/dashboard.py`, 5,249 lines) — no external framework, no build step, no CDN dependencies. Runs as a separate process from the runner and reads the same SQLite database.
 
-Seven tabs:
+### Markets tab
 
-### Markets
-
-The primary operational view. Live scored markets grouped by speaker with per-phrase cards showing side, probability, market price, EV, and the gate codes that drove the decision.
+The primary operational view. Live scored markets grouped by speaker with per-phrase cards showing side, probability, market price, EV, and the gate codes that drove the decision. Each card expands to reveal full model state — base rate, signal multipliers, Platt-calibrated probability, Kelly fraction, and the complete reason-code trail.
 
 ![Markets tab](docs/screenshots/markets.png)
 
-Each card is expandable to reveal full model state — base rate, signal multipliers, Platt-calibrated probability, Kelly fraction, and the full reason-code trail. Blocked markets (gated WATCH cards) are visually distinguished from live recommendations.
+### Performance tab
 
-### Sports
-
-NBA, NCAAB, MLB, and MMA/UFC markets grouped by game. Shows arena/venue overrides, universal phrase floors, and the active phrase probabilities for each scheduled event.
-
-![Sports tab](docs/screenshots/sports.png)
-
-### Intelligence
-
-Signal-layer diagnostics. Per-phrase LLM analysis with reasoning, adaptive signal weights by speaker, Truth Social phrase detection, regime alerts, and drift warnings.
-
-![Intelligence tab](docs/screenshots/intelligence.png)
-
-Click any phrase row to expand the LLM's reasoning and evidence citations for the boost/suppress multiplier it assigned.
-
-### Performance
-
-Historical P&L by speaker, side, and confidence bucket. Calibration health metrics (Brier score, BSS), per-phrase win rates, and model diagnostics. This is where you watch the system's actual performance vs expected.
+Historical P&L by speaker, side, and confidence bucket. Calibration health metrics (Brier score, BSS), per-phrase win rates, model diagnostics. Real-time answer to "is this actually working?"
 
 ![Performance tab](docs/screenshots/performance.png)
 
-### Analysis
+### Intelligence tab
 
-Deeper statistical views — co-occurrence matrices, phrase correlation graphs, hazard-rate curves for live events, cross-market arbitrage candidates (Kalshi vs Polymarket divergences).
+Signal-layer diagnostics. Per-phrase LLM analysis with full reasoning and evidence citations, adaptive signal weights by speaker, Truth Social phrase detection, regime alerts, and drift warnings. Click any phrase row to expand the LLM's reasoning for the boost/suppress multiplier.
 
-![Analysis tab](docs/screenshots/analysis.png)
+![Intelligence tab](docs/screenshots/intelligence.png)
 
-### System
+### Other tabs
 
-Runtime health. Snapshot freshness, scorer idle time, DB integrity status, WAL checkpoint state, maintenance task history, and process metadata. Red banner appears at the top if any API errors are detected.
-
-![System tab](docs/screenshots/system.png)
-
-### Scripts
-
-One-click execution of 29 registered maintenance scripts — fetch markets, run calibration, backtest, analyze events, etc. Output streams live to an embedded terminal. Each script is pre-registered in an allowlist (`_ALLOWED_SCRIPTS`); arbitrary script execution is not allowed.
-
-![Scripts tab](docs/screenshots/scripts.png)
+- **Sports** — NBA, NCAAB, MLB, and MMA/UFC markets grouped by game. Shows arena/venue overrides, universal phrase floors, and active phrase probabilities per scheduled event.
+- **Analysis** — co-occurrence matrices, phrase correlation graphs, hazard-rate curves for live events, cross-market arbitrage candidates (Kalshi vs Polymarket divergences).
+- **System** — runtime health: snapshot freshness, scorer idle time, DB integrity status, WAL checkpoint state, maintenance task history.
+- **Scripts** — one-click execution of 29 registered maintenance scripts. Output streams live to an embedded terminal. Each script is pre-registered in an allowlist (`_ALLOWED_SCRIPTS`); arbitrary script execution is not allowed.
 
 ---
 

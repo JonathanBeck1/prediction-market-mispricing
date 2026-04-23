@@ -5119,7 +5119,10 @@ class DashboardHandler(BaseHTTPRequestHandler):
         self.send_response(status)
         self.send_header("Content-Type", "application/json")
         self.send_header("Cache-Control", "no-cache")
-        self.send_header("Access-Control-Allow-Origin", "*")
+        # No CORS header: the dashboard binds to 127.0.0.1 and only serves
+        # same-origin requests from its own HTML page. An open "*" policy
+        # would let any website the user has open make POST requests to
+        # /api/run-script, which executes allowlisted scripts.
         self.end_headers()
         self.wfile.write(body)
 

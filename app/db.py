@@ -259,7 +259,11 @@ def connect(
     conn = sqlite3.connect(str(db_path), check_same_thread=False, timeout=timeout)
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA journal_mode=WAL")
-    conn.execute("PRAGMA synchronous=NORMAL")
+    # synchronous=FULL required to prevent B-tree corruption during concurrent
+    # WAL checkpoints. See brain/08_DECISIONS_LOG.md — NORMAL caused observable
+    # "Tree X page Y: Rowid out of order" corruption under load. The throughput
+    # tradeoff is negligible vs the cost of a corrupted DB recovery.
+    conn.execute("PRAGMA synchronous=FULL")
     if allow_checkpoint:
         conn.execute("PRAGMA wal_autocheckpoint=500")
     else:

@@ -4431,7 +4431,8 @@ def _sport_game_meta_from_db(
     import re as _re
 
     rows = conn.execute(
-        f"SELECT market_id FROM markets WHERE market_id LIKE '{like_pattern}'"
+        "SELECT market_id FROM markets WHERE market_id LIKE ?",
+        (like_pattern,),
     ).fetchall()
     tickers: set[str] = set()
     for (mid,) in rows:
@@ -4441,7 +4442,8 @@ def _sport_game_meta_from_db(
 
     # Fetch one prompt per event ticker for NBA fallback label parsing
     prompt_rows = conn.execute(
-        f"SELECT market_id, prompt FROM markets WHERE market_id LIKE '{like_pattern}'"
+        "SELECT market_id, prompt FROM markets WHERE market_id LIKE ?",
+        (like_pattern,),
     ).fetchall()
     prompt_by_et: dict[str, str] = {}
     for mid, prompt in prompt_rows:

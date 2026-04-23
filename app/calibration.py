@@ -535,10 +535,8 @@ class PlattCalibrator:
                     "n_samples": sn,
                     "fitted":    sfitted,
                 }
-            _CALIB_CACHE_PATH.write_text(
-                json.dumps(payload, indent=2),
-                encoding="utf-8",
-            )
+            from app.utils import atomic_write_json
+            atomic_write_json(_CALIB_CACHE_PATH, payload, ensure_ascii=True)
         except Exception:
             pass
 

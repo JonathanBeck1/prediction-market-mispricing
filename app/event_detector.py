@@ -206,7 +206,8 @@ class EventDetector:
             existing["p_overrides"] = {**existing.get("p_overrides", {}), **validated_overrides}
             existing["p_floors"]    = {**existing.get("p_floors", {}), **validated_floors}
 
-            path.write_text(json.dumps(existing, indent=2, ensure_ascii=False), encoding="utf-8")
+            from app.utils import atomic_write_json
+            atomic_write_json(path, existing)
             logger.info(
                 "Propagated human overrides for %s: %d overrides, %d floors → %s",
                 target_event_id, len(validated_overrides), len(validated_floors), path.name,

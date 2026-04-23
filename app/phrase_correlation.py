@@ -246,11 +246,8 @@ def compute_and_save(output_path: Path = _DATA_PATH) -> None:
     result = compute_phrase_correlations()
     if not result:
         return
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(
-        json.dumps(result, indent=2, ensure_ascii=False),
-        encoding="utf-8",
-    )
+    from app.utils import atomic_write_json
+    atomic_write_json(output_path, result)
     logger.info("Wrote phrase correlations to %s", output_path)
 
 

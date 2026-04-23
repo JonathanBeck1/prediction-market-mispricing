@@ -324,11 +324,8 @@ def compute_and_save(db_path: Path = _DB_PATH, output_path: Path = _DATA_PATH) -
     result = compute_bayesian_rates(db_path)
     if not result:
         return
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(
-        json.dumps(result, indent=2, ensure_ascii=False),
-        encoding="utf-8",
-    )
+    from app.utils import atomic_write_json
+    atomic_write_json(output_path, result)
     logger.info("Wrote Bayesian rates to %s", output_path)
 
 

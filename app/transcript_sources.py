@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import logging
 import os
+import re
 import shlex
 import subprocess
 from dataclasses import dataclass, field
@@ -11,6 +12,12 @@ from typing import Protocol
 import httpx
 
 logger = logging.getLogger(__name__)
+
+# Allowlist for OPENCLAW_BROWSER_PROFILE — only alphanumeric, hyphen, underscore
+_PROFILE_RE = re.compile(r'^[a-zA-Z0-9_-]{1,64}$')
+
+# Basic URL sanity check — must start with http:// or https://
+_URL_RE = re.compile(r'^https?://', re.IGNORECASE)
 
 
 @dataclass(frozen=True)
@@ -36,8 +43,16 @@ class DirectHTTPTranscriptSource:
     def fetch(self, ref: str | None = None) -> TranscriptRecord | None:
         if not ref:
             return None
+        if not _URL_RE.match(ref):
+            logger.warning("DirectHTTP: rejecting non-HTTP ref: %s", ref[:80])
+            return None
         headers = {"User-Agent": self.user_agent}
-        with httpx.Client(timeout=self.timeout_sec, headers=headers, follow_redirects=True) as client:
+        with httpx.Client(
+            timeout=self.timeout_sec,
+            headers=headers,
+            follow_redirects=True,
+            verify=True,
+        ) as client:
             resp = client.get(ref)
             resp.raise_for_status()
             text = resp.text.strip()
@@ -72,7 +87,19 @@ class OpenClawTranscriptSource:
         if not ref:
             return None
 
-        profile = os.getenv("OPENCLAW_BROWSER_PROFILE", self.browser_profile)
+        if not _URL_RE.match(ref):
+            logger.warning("OpenClaw: rejecting non-HTTP ref: %s", ref[:80])
+            return None
+
+        # Validate browser profile: only alphanumeric + hyphen + underscore
+        raw_profile = os.getenv("OPENCLAW_BROWSER_PROFILE", self.browser_profile)
+        if not _PROFILE_RE.match(raw_profile):
+            logger.warning(
+                "OpenClaw: OPENCLAW_BROWSER_PROFILE contains invalid characters, "
+                "falling back to default. Got: %r", raw_profile[:40]
+            )
+            raw_profile = "openclaw"
+        profile = raw_profile
 
         if not self._run_cmd(["openclaw", "browser", "--browser-profile", profile, "start"]):
             return None
@@ -96,6 +123,18 @@ class OpenClawTranscriptSource:
 
     def _fetch_legacy(self, cmd_template: str, ref: str | None) -> TranscriptRecord | None:
         fmt_ref = ref or ""
+
+        # Validate the URL before interpolating it into the command template.
+        # A crafted URL containing format-string metacharacters like {inject}
+        # could corrupt the template. Reject anything that isn't a plain HTTP URL.
+        if fmt_ref and not _URL_RE.match(fmt_ref):
+            logger.warning("OpenClaw legacy: rejecting non-HTTP ref: %s", fmt_ref[:80])
+            return None
+        # Guard against format-string injection: URL must not contain { or }
+        if "{" in fmt_ref or "}" in fmt_ref:
+            logger.warning("OpenClaw legacy: URL contains format metacharacters, rejecting")
+            return None
+
         try:
             command = cmd_template.format(url=fmt_ref)
         except Exception as exc:

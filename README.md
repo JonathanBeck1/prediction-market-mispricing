@@ -193,7 +193,7 @@ Prompts in `config/llm/` as Markdown — editable without code changes:
 
 ### Dashboard
 
-Single-file web UI at port 8777 (`app/dashboard.py`, 5,249 lines). No external framework. Five tabs: Action Cards, Performance, Events, Intelligence, Sports. Separate process from the runner, connects to the same SQLite.
+Single-file web UI at `http://localhost:8777` — see the [Dashboard](#dashboard-1) section below for screenshots and tab-by-tab breakdown.
 
 ### Alerts
 
@@ -233,6 +233,60 @@ The legacy model is worse than the market at predicting outcomes. The Bayesian m
 ### Counterfactual
 
 Restricting to sports BUY_NO (NBA + NCAAB + MMA) only, retrospectively: 578 bets, ~55% WR, approximately +$20 gross. Whether this segment-level edge holds forward or is historical overfitting is the open research question.
+
+---
+
+## Dashboard
+
+Local web UI at `http://localhost:8777`. Single-file Python (`app/dashboard.py`, 5,249 lines) — no external framework, no build step, no CDN dependencies. Runs as a separate process from the runner and reads the same SQLite database.
+
+Seven tabs:
+
+### Markets
+
+The primary operational view. Live scored markets grouped by speaker with per-phrase cards showing side, probability, market price, EV, and the gate codes that drove the decision.
+
+![Markets tab](docs/screenshots/markets.png)
+
+Each card is expandable to reveal full model state — base rate, signal multipliers, Platt-calibrated probability, Kelly fraction, and the full reason-code trail. Blocked markets (gated WATCH cards) are visually distinguished from live recommendations.
+
+### Sports
+
+NBA, NCAAB, MLB, and MMA/UFC markets grouped by game. Shows arena/venue overrides, universal phrase floors, and the active phrase probabilities for each scheduled event.
+
+![Sports tab](docs/screenshots/sports.png)
+
+### Intelligence
+
+Signal-layer diagnostics. Per-phrase LLM analysis with reasoning, adaptive signal weights by speaker, Truth Social phrase detection, regime alerts, and drift warnings.
+
+![Intelligence tab](docs/screenshots/intelligence.png)
+
+Click any phrase row to expand the LLM's reasoning and evidence citations for the boost/suppress multiplier it assigned.
+
+### Performance
+
+Historical P&L by speaker, side, and confidence bucket. Calibration health metrics (Brier score, BSS), per-phrase win rates, and model diagnostics. This is where you watch the system's actual performance vs expected.
+
+![Performance tab](docs/screenshots/performance.png)
+
+### Analysis
+
+Deeper statistical views — co-occurrence matrices, phrase correlation graphs, hazard-rate curves for live events, cross-market arbitrage candidates (Kalshi vs Polymarket divergences).
+
+![Analysis tab](docs/screenshots/analysis.png)
+
+### System
+
+Runtime health. Snapshot freshness, scorer idle time, DB integrity status, WAL checkpoint state, maintenance task history, and process metadata. Red banner appears at the top if any API errors are detected.
+
+![System tab](docs/screenshots/system.png)
+
+### Scripts
+
+One-click execution of 29 registered maintenance scripts — fetch markets, run calibration, backtest, analyze events, etc. Output streams live to an embedded terminal. Each script is pre-registered in an allowlist (`_ALLOWED_SCRIPTS`); arbitrary script execution is not allowed.
+
+![Scripts tab](docs/screenshots/scripts.png)
 
 ---
 

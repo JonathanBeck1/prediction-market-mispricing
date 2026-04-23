@@ -1,36 +1,28 @@
 # kalshi-edge
 
-I spent about three months building a system to find mispriced markets on [Kalshi](https://kalshi.com). Specifically the "speaker mention" markets — bets on whether a politician says a specific phrase during a speech, or whether a sports broadcaster says a specific word during a game.
+A 24/7 mispricing detector for Kalshi speaker mention markets. Built over three months as a research project on whether historical phrase frequency data can be used to systematically trade against market sentiment.
 
-The idea was simple enough: if I could measure how often someone actually uses a phrase across hundreds of real speeches and games, and the market price didn't match that frequency, I should be able to bet on the gap.
+Live P&L: **-$15.34 across 1,107 resolved bets.** The system is being open-sourced because the data pipeline and architecture are more interesting than the returns, and the underperformance itself has useful lessons.
 
-**It's running right now on my Mac and it's currently down $15.34 across 1,107 resolved bets.** I'm open-sourcing it because I think the code and the data pipeline are more interesting than the P&L, and honestly I'd like to know what I'm missing.
-
-> This is not financial advice. See [DISCLAIMER.md](DISCLAIMER.md).
+> Not financial advice. See [DISCLAIMER.md](DISCLAIMER.md).
 
 ---
 
-## What Kalshi mention markets actually are
+## Dataset
 
-If you haven't traded these before — Kalshi has markets like:
+| Source | Volume |
+|---|---|
+| Kalshi resolved outcomes (training set) | **12,490** across 17 speaker categories |
+| Speaker corpus transcripts | **337** files across 7 speakers |
+| Live price snapshots recorded | 547,265 |
+| Scored action cards produced | 161,312 |
+| Phrase hits detected in transcripts | 39,487 |
+| Bets matched to resolved outcomes | 1,107 |
+| Beta-Binomial posteriors maintained | 1,761 |
 
-- "Will Trump say the word 'tariff' in his press conference today?" → resolves YES or NO at close
-- "Will the NBA broadcast mention 'alley-oop' during tonight's game?" → same idea
-- "Will Karoline Leavitt say 'illegal alien' at the White House briefing?" → YES/NO
+**Outcome breakdown:**
 
-Each market resolves based on whether Kalshi's team finds the exact phrase (or a close match) in the official transcript. You can buy YES if you think the phrase gets said, or NO if you think it doesn't. The prices work like any other prediction market — 55¢ for YES means the market thinks there's a 55% chance the phrase gets said.
-
-The edge I was looking for: the market prices these based on general sentiment. I wanted to price them based on historical frequency — how often has Trump actually said "tariff" in the last 179 speeches I have transcripts for?
-
----
-
-## The numbers behind this
-
-Before getting into how it works, here's the scale of data the system is built on:
-
-**Kalshi outcomes tracked:** 12,490 total resolved markets across 17 speaker categories
-
-| Speaker / category | Resolved outcomes |
+| Category | Outcomes |
 |---|---|
 | NBA broadcasts | 2,747 |
 | Auto-detected | 3,119 |
@@ -39,340 +31,294 @@ Before getting into how it works, here's the scale of data the system is built o
 | MLB broadcasts | 712 |
 | MMA/UFC broadcasts | 504 |
 | Mamdani | 425 |
-| Hochul | 243 |
-| Starmer | 89 |
 | Leavitt | 338 |
+| Hochul | 243 |
 | Newsom | 126 |
 | Carney | 96 |
+| Starmer | 89 |
 | Melania | 84 |
 | Powell/Fed | 54 |
 | Homan | 25 |
+| AOC | 14 |
 
-**Corpus transcripts collected:** 337 files across 7 speakers
-- Trump: 179 transcripts (rallies, briefings, addresses, signings, interviews — from 2022 through early 2026)
-- Leavitt: 85 press briefings
-- Mamdani: 27 events
-- Powell: 33 Fed press conferences
-- Starmer: 8 transcripts
-- Carney: 3 transcripts
-- Homan: 2 transcripts
+**Corpus:**
 
-**What's in the database right now:**
-- 5,951 tracked markets
-- 547,265 price snapshots
-- 161,312 scored action cards
-- 39,487 phrase hit records
-- 343 tracked events
-- 1,107 bets matched to outcomes (with P&L)
+| Speaker | Transcripts |
+|---|---|
+| Trump | 179 (rallies, briefings, addresses, signings, interviews, 2022–2026) |
+| Leavitt | 85 press briefings |
+| Powell | 33 Fed press conferences |
+| Mamdani | 27 events |
+| Starmer | 8 |
+| Carney | 3 |
+| Homan | 2 |
 
-**Statistical model:** 1,761 Beta-Binomial posteriors across (speaker, phrase) pairs, trained from the 12,490 outcomes above
+Corpus files are not included in the repo (copyright). [data/corpus/README.md](data/corpus/README.md) documents public-domain sources.
 
 ---
 
-## How I was getting data
-
-This is the part that took the most work to get right.
+## Data pipeline
 
 ### Market prices
 
-The Kalshi public API (`GET /markets`) gives you current YES/NO ask prices, bid-ask spreads, and book depth for every active market. No authentication needed, 20 requests/second on the free tier. The system polls this every 30 seconds and writes every price change to SQLite. Over a few months that accumulates to half a million snapshots.
+`GET /markets` on the Kalshi public API polled every 30 seconds. Free tier allows 20 req/s unauthenticated. Advanced API (30 req/s + WebSocket streaming) is available free by application. Every price change writes to `market_snapshots`; unchanged snapshots are deduplicated on the write path.
 
-If you want the higher rate tier (30 req/s + WebSocket streaming), Kalshi has an Advanced API program — it's free, you just apply through their typeform. The `KALSHI_API_KEY_ID` and `KALSHI_API_KEY_PATH` settings in the config handle that.
+Config: `KALSHI_API_KEY_ID` and `KALSHI_API_KEY_PATH` for the authenticated tier.
 
-### Transcripts (the hard part)
+### Transcripts — OpenClaw browser relay
 
-This is where OpenClaw comes in. Getting live transcripts during active speeches is genuinely difficult. For most sources, the transcript page updates live as someone speaks — you need a real browser to get it, not just an HTTP request.
+Live transcripts typically require JavaScript rendering. Direct HTTP fails on most sources because the transcript updates via JS as the speaker talks. The ingestor has three modes:
 
-**OpenClaw** is a browser automation relay. You point it at a URL and it opens the page in an actual browser session, waits for JavaScript to render, and returns the body text. The system has three modes:
+1. **Direct HTTP** — `httpx` with `verify=True`. Used for static sources.
+2. **OpenClaw browser relay** — 3-step pipeline: `openclaw browser start` → `open <url>` → `evaluate --fn "() => document.body.innerText"`. Returns rendered DOM text.
+3. **Fallback chain** — tries Direct HTTP first, falls back to OpenClaw on failure. Configurable order via `TRANSCRIPT_SOURCE`.
 
-1. **Direct HTTP** — for transcript sources that serve plain text or static HTML. Fast, no browser needed, works for most pre-event corpus building.
+URL refs are validated against a `^https?://` allowlist before any subprocess call. Format-string metacharacters (`{`, `}`) are rejected to prevent command injection via `OPENCLAW_SCRAPE_CMD`. `OPENCLAW_BROWSER_PROFILE` is validated against `^[a-zA-Z0-9_-]{1,64}$`.
 
-2. **OpenClaw browser relay** — for live transcripts that require JavaScript rendering. The runner calls `openclaw browser open <url>` then `openclaw browser evaluate --fn "() => document.body.innerText"` to get the rendered text. Works for news wire sites, live caption feeds, etc.
+### Corpus sources
 
-3. **Fallback chain** — tries direct HTTP first, falls back to OpenClaw if that returns empty. Both sources run in the background; whichever returns first wins.
+| Source | Coverage | Notes |
+|---|---|---|
+| whitehouse.gov | Trump, Leavitt | Public domain (US Gov work), primary source |
+| federalreserve.gov | Powell | Public domain, FOMC press conferences |
+| Rev.com | Trump rallies | Copyrighted, parsed via `scripts/rev_transcript_cleaner.py` |
+| factba.se | Trump historical | Supplementary |
+| C-SPAN | Mixed | Older transcripts |
 
-The transcript ingestor polls whatever URLs you configure every 30 seconds, runs the text through the phrase matcher, and writes hits to the `phrase_hits` table. When a hit is recorded, the scorer immediately sees it on the next cycle and the affected market's probability jumps to 0.98.
-
-For corpus building (historical transcripts, not live), I used a mix of:
-- **whitehouse.gov** — the press briefing and remarks transcripts are public domain and update within hours of any event
-- **Rev.com** — professional transcription service, has most Trump rallies. The `scripts/rev_transcript_cleaner.py` handles their HTML format
-- **factba.se** and **C-SPAN** — supplementary sources for older transcripts
-- Manual HTML saves for a few edge cases
-
-The corpus files live in `data/corpus/<speaker>/` with filenames like `briefing_2026-01-15_01.txt`. The convention matters because the calibration scripts use the event type in the filename to compute event-specific base rates — "rally" vs "briefing" vs "signing" can have very different phrase frequencies.
+File naming: `data/corpus/<speaker>/<event_type>_YYYY-MM-DD_NN.txt`. Event type is parsed from filename for event-specific base rate stratification (`rally`, `briefing`, `signing`, `presser`, `remarks`, `interview`, `address`).
 
 ### Outcome data
 
-`make fetch-outcomes` hits the Kalshi `/settlements` API which gives you every resolved market and whether it settled YES or NO. I have 12,490 of these. This is what trains the Bayesian model and calibrates the legacy scorer.
+`make fetch-outcomes` hits Kalshi `/settlements`. 12,490 resolved markets in the current training set. This trains the Bayesian posteriors and calibrates the legacy scorer's Platt scaling.
 
-### Cross-market signals (Polymarket)
+### Cross-market signals
 
-`make fetch-poly` pulls prices from Polymarket for markets that match the same underlying questions. When Polymarket has Trump saying "tariff" at 62¢ and Kalshi has it at 41¢, that divergence is a signal (though usually the divergence exists because the markets don't perfectly overlap in time or resolution criteria).
+**Polymarket** (`make fetch-poly`) — Fuzzy-matched against Kalshi markets using phrase overlap and event title similarity with a confidence score per match. Price divergence is a signal for the legacy scorer.
 
-The matching is fuzzy — it uses phrase overlap and event title similarity to link the two markets. There's a confidence score attached to each match that the legacy scorer uses to decide how much weight to give the signal.
+**Wallet flow** (`make fetch-wallet`) — Polymarket trade flow API. Tracks `conviction_weighted_flow` (price-distance weighted) and `extreme_bet_count`. The adaptive signal learner drove this weight close to zero in production.
 
-### Wallet flow signals
+**X/news** (`make fetch-x`) — Configured watchlist of political journalists and official accounts via the X API. Boost factor for phrases in the news. Same neutralization pattern as wallet flow.
 
-`make fetch-wallet` hits Polymarket's trade flow API. The idea was to detect "smart money" — large trades moving the price in an unusual direction shortly before an event. The signal tracks things like `conviction_weighted_flow` (price-distance weighted) and `extreme_bet_count` to identify when sophisticated traders are loading up on one side.
-
-In practice this signal was noisy and the adaptive signal learner (more on that below) ended up driving its weight close to zero.
-
-### News signals
-
-`make fetch-x` pulls posts from a configured list of political journalists and White House accounts via the X API. The signal is used to boost phrase probabilities when a specific topic is heavily in the news. Again, the adaptive learner mostly neutralized this for political markets.
-
-### White House schedule
-
-`make fetch-wh` pulls the official White House daily schedule. This tells you if Trump is speaking at a bill signing vs a press conference vs a rally today — different event types have very different phrase frequency profiles.
+**White House schedule** (`make fetch-wh`) — Official daily schedule. Event type (signing vs briefing vs rally) materially changes phrase frequency profiles.
 
 ---
 
-## What I actually built
+## Architecture
 
-### The core loop
+One Python process with five concurrent service loops:
 
-There's one Python process running 24/7 that manages five concurrent service loops:
+| Service | Function |
+|---|---|
+| `KalshiWatcher` | Polls Kalshi API every 30s, writes `market_snapshots` |
+| `TranscriptIngestor` | Polls configured transcript URLs, runs phrase matcher, writes `phrase_hits` |
+| `Scorer` | Reads snapshots + hits, runs scoring model, emits action cards |
+| `MaintenanceRunner` | Scheduled background refresh (markets, outcomes, Polymarket, calibration) |
+| `Watchdog` | Monitors snapshot staleness; exits for launchd auto-restart if data goes cold |
 
-**KalshiWatcher** — polls the Kalshi API every 30 seconds, writes price changes to `market_snapshots`. In live mode it hits the real API. In mock mode it returns deterministic fake prices so you can test without touching anything real.
+Each loop has a dedicated SQLite connection (shared connections across threads cause WAL corruption — `check_same_thread=False` suppresses the exception but provides no locking). Auto-healing logic on startup checkpoints and removes orphaned WAL/SHM sidecar files.
 
-**TranscriptIngestor** — polls whatever transcript URLs you've configured, runs the phrase matcher on the text, writes hits to `phrase_hits`. The phrase matcher does boundary-safe literal matching with negation detection — "will NOT say Iran" doesn't count as a hit on "Iran". It also detects attribution ("he said 'tariff'") and skips those.
+### Phrase matching
 
-**Scorer** (BayesianScorer or ScoringEngine) — reads the latest price snapshots and phrase hits, runs every market through the scoring model, and emits action cards. More on the two models below.
+Boundary-aware regex with Unicode normalization. Maintains a 10-token window before each match to detect:
 
-**MaintenanceRunner** — runs in the background on configurable intervals. Fetches fresh market definitions, pulls new outcomes, updates Polymarket prices, recomputes calibration. In 24/7 mode this keeps everything current without you doing anything.
+- **Negation** — "will not say", "refused to mention", etc. Hits are recorded but flagged.
+- **Attribution** — "he said X", "according to", etc. Hits flagged as non-primary-speaker.
 
-**Watchdog** — monitors how stale the price data is. If snapshots stop updating for more than 5 minutes, it exits the process and launchd auto-restarts it. This is what makes the system genuinely 24/7 — it recovers from crashes, network blips, and sleep/wake cycles automatically.
+Phrase dictionary is assembled from `config/base_rates.yaml` + `config/base_rates_auto.yaml`. ~1,800 tracked phrases.
 
-### The phrase matcher
+### Database
 
-The matcher does boundary-aware regex matching, not substring search. "Iran" doesn't match "Iranian". "tariff" matches "tariffs" because it uses word-boundary stemming. Unicode normalization handles smart quotes and em-dashes.
-
-It also maintains a negation window — 10 tokens before a phrase match, it checks for negation words ("not", "never", "refused to") and attribution words ("said", "claimed", "according to"). Hits with these are still recorded but flagged, so the scorer can treat them differently.
-
-The phrase dictionary is built from `config/base_rates.yaml` plus auto-calibrated entries from `config/base_rates_auto.yaml`. There are currently ~1,800+ phrases tracked across all speakers.
-
-### The database
-
-Everything goes into SQLite at `data/edge.db`. WAL mode with `synchronous=FULL`. Five tables matter:
-
-- `markets` — market definitions (ID, speaker, phrase, close time)
-- `market_snapshots` — every price change (yes_ask, yes_bid, no_ask, depth, spread)
-- `phrase_hits` — every time a phrase was detected in a transcript
-- `action_cards` — every scored card the system produced, with full model state
-- `outcome_reviews` — bets matched to their resolved outcomes, with P&L
-
-The DB had a lot of corruption issues early on. The root cause was all five service loops sharing a single SQLite connection across threads. SQLite connections are not thread-safe even with `check_same_thread=False` — that flag just suppresses the exception, it doesn't add locking. The fix was giving each loop its own connection. There's also auto-healing logic that runs on startup: if the WAL file is stale (from a crash mid-write), it does a checkpoint and removes the orphaned sidecar files before opening.
-
-### The scoring models
-
-**BayesianScorer** (the current default)
-
-Built from scratch after the legacy model's performance analysis. For each (speaker, phrase) pair in the market, it loads a pre-computed Beta-Binomial posterior from `data/bayesian_rates.json`. That file is rebuilt from the 12,490 historical outcomes every few hours by the maintenance runner.
-
-The posterior gives you a mean probability and a 90% credible interval. The decision logic:
+SQLite, WAL mode, `synchronous=FULL`. Primary tables:
 
 ```
-if yes_ask < ci_low:
-    → BUY_YES (market is pricing YES below our CI lower bound)
-if (1 - no_ask) > ci_high:
-    → BUY_NO  (market's implied YES price is above our CI upper bound)
-else:
-    → WATCH   (market price is inside our uncertainty range, no edge)
+markets            — market definitions
+market_snapshots   — price history (deduplicated on unchanged)
+phrase_hits        — transcript detection events
+action_cards       — every scored card with full model state
+outcome_reviews    — bets matched to resolutions with realized P&L
+events             — scheduled/live/ended state machine
 ```
 
-Kelly criterion sizes the bet based on edge and the loss if wrong. A handful of structural gates handle edge cases: settled markets, books too thin to enter, spreads too wide.
+### Scoring — two models
 
-The hierarchical part: for phrases with sparse data (< 3 observations), instead of returning nothing, it uses the speaker-level prior — the average YES rate across all phrases for that speaker. So if you have a new Trump phrase you've never seen resolved, it starts at ~0.45 (Trump's overall base rate) rather than 0 or some arbitrary number.
+**BayesianScorer** (`USE_BAYESIAN_SCORER=1`, default)
 
-**ScoringEngine** (the legacy model, still available)
+Hierarchical Beta-Binomial posteriors per `(speaker, phrase)` pair, trained from the 12,490 outcomes. Decision logic:
 
-The original model. Starts with the same historical base rates but runs them through several signal layers:
+```
+if yes_ask < ci_low:              → BUY_YES
+if (1 - no_ask) > ci_high:        → BUY_NO
+else:                              → WATCH
+```
+
+Kelly sizing on posterior mean and edge. For `n_obs < 3`, falls back to the speaker-level pooled prior (e.g., Trump overall ~0.45). Structural gates handle settled markets, thin books, wide spreads.
+
+**ScoringEngine** (`USE_BAYESIAN_SCORER=0`, legacy)
 
 ```
 p_literal = base_rate × time_decay × news_pressure × x_buzz × llm_boost × event_llm
+p_calibrated = platt_scale(p_literal)
+ev = p_calibrated - market_price
 ```
 
-- **base_rate** — from the manual `config/base_rates.yaml` or auto-calibrated `config/base_rates_auto.yaml`
-- **time_decay** — if there's a live event, probability decays as time runs out. Replaced a static exponential curve with empirical hazard rates: some phrases get said early, some late, some uniformly — the hazard model captures these patterns from the corpus
-- **news_pressure** — how heavily the phrase is trending in recent news and X posts
-- **x_buzz** — signal from tracked political journalist accounts
-- **llm_boost** — OpenAI GPT-5-mini analyzes the phrase in the context of today's event and outputs a multiplier. Runs every 45 minutes on a schedule
-- **event_llm** — separate per-event LLM analysis (not per-phrase). Looks at the specific event happening today and generates p_floor and p_override values for contextually certain phrases
+- `time_decay` — empirical hazard rates per phrase, not static exponential
+- `llm_boost` — GPT-5-mini analyzes phrase in event context, 45-minute schedule
+- `event_llm` — per-event analysis producing `p_floor` and `p_override` values
+- Platt scaling + 17-gate decision stack, each gate backed by live outcome data in `brain/08_DECISIONS_LOG.md`
 
-Then Platt scaling calibrates the p_literal to account for systematic bias in the model, and a 17-gate decision stack filters out bets that historical data showed were consistently losing.
+Legacy model cost ~$50/month in OpenAI calls. Production Brier score: 0.352 (vs market mid: 0.238).
 
-This is the model that cost ~$50/month in OpenAI calls and whose Brier score was 0.352 vs the market's 0.238.
+### Adaptive signal learner
 
-### The adaptive signal learner
+Watches `outcome_reviews` and maintains win rates per `(speaker, signal_source)`. Outputs weights in `data/signal_weights.json` that scale each signal multiplicatively. Signals that consistently lose money get weighted toward 0; signals that win get weighted up to 1.5. Neutralized wallet flow and X/news signals for most political speakers in production.
 
-One of the later additions. It watches `outcome_reviews` and tracks win rates per `(speaker, signal_source)` combination — e.g. "Trump bets that were influenced by LLM_BOOST: 31% WR". It outputs a weight file that the scorer applies to scale each signal.
+### Event state machine
 
-A signal that consistently loses money gets its weight driven toward 0. A signal that wins gets boosted toward 1.5. This is what eventually neutralized the wallet flow and X buzz signals for most speakers — the live data showed they were noise.
-
-### The event system
-
-Events are the core context the scorer uses. There are three states:
-
-- **Scheduled** — speech hasn't started, using historical base rates + pre-event signals
-- **Live** — speech is in progress, time decay applies, phrase hits override everything
-- **Ended** — speech finished without the phrase → probability collapses toward 0.02
-
-The system auto-seeds events from the Kalshi market metadata (markets tied to a specific date/event get detected automatically). You can also manually add events to `config/events.yaml` with custom p_overrides and p_floors:
-
-```yaml
-events:
-  - event_id: "trump:2026-03-24:signing-01"
-    speaker: trump
-    event_type: signing
-    p_overrides:
-      kristi: 0.95    # Kristi Noem is being sworn in — guaranteed mention
-    p_floors:
-      deport: 0.65    # DHS Secretary ceremony — elevated structural probability
+```
+scheduled → live → ended
 ```
 
-### The LLM instruction layer
+Transitions are auto-detected from Kalshi market metadata. Live state applies hazard-based time decay. Ended state with no phrase hit collapses probability to 0.02. Phrase hits during live state override to 0.98.
 
-The LLM analysis is driven by Markdown files in `config/llm/` rather than hardcoded prompts. There's a `global_signals_guide.md` that tells the model which phrases to boost or suppress, a `per_event_guide.md` for event-specific analysis, and a `trump_patterns.md` with data-backed behavioral profiles.
+`config/events.yaml` supports manual `p_overrides` (hard bypass — e.g., "Kristi Noem sworn in today → 'kristi' = 0.95") and `p_floors` (clamp minimum).
 
-The key lesson from debugging the LLM layer: the model's intuition was wrong about Trump. It suppressed phrases like "sleepy joe" at diplomatic events because "it's inappropriate for a diplomatic ceremony." The historical data showed Trump says "sleepy joe" at 92% of ALL event types including bill signings. The fix was rewriting the prompts to include actual win rate data so the model couldn't override observed frequencies with creative reasoning.
+### LLM instruction layer
 
-### The dashboard
+Prompts in `config/llm/` as Markdown — editable without code changes:
 
-Local web UI at port 8777. Five tabs:
+- `global_signals_guide.md` — global boost/suppress rules
+- `per_event_guide.md` — per-event analysis instructions
+- `trump_patterns.md` — data-backed behavioral profiles (e.g., Trump says "sleepy joe" at 92% of events including signings, regardless of format)
+- `calibration_guide.md`, `event_formats.md`, `mission.md`
 
-- **Action Cards** — live scored markets, sorted by conviction
-- **Performance** — P&L by segment, win rate charts, calibration health
-- **Events** — upcoming and live events with phrase-by-phrase probability breakdown
-- **Intelligence** — signal weight table, LLM analysis, regime alerts
-- **Sports** — NBA/NCAAB/MLB/MMA markets grouped by game
+### Dashboard
 
-The whole thing is single-file Python (`app/dashboard.py`, about 5,200 lines) serving a custom HTML/JS page. No external dashboard framework. It runs as a separate process from the runner and connects to the same SQLite DB.
+Single-file web UI at port 8777 (`app/dashboard.py`, 5,249 lines). No external framework. Five tabs: Action Cards, Performance, Events, Intelligence, Sports. Separate process from the runner, connects to the same SQLite.
 
-### WhatsApp alerts
+### Alerts
 
-When a high-conviction BUY card appears, it can ping your phone via OpenClaw. The notifier formats the action card as a readable text message (`app/notifier.py`) and sends it through `openclaw message send <number> <text>`. This is how I used it during live events — the system would text me "BUY NO @ 0.31 | NBA alley-oop | KXNBAMENTION-ATLLAL" and I'd go check the market.
+`WhatsAppNotifier` sends high-conviction BUY cards via `openclaw message send <number> <text>`. Target phone number in `WHATSAPP_TARGET`. Formatted for 5-second phone reads.
 
 ---
 
-## What's working and what isn't
+## Performance
 
-Here's the real segment breakdown from 1,107 resolved bets:
+### Segment breakdown (1,107 resolved bets)
 
 | Segment | Bets | Win Rate | P&L | Per bet |
-|---------|------|----------|-----|---------|
+|---|---|---|---|---|
 | NBA BUY_NO | 283 | 51.9% | **+$12.62** | +$0.045 |
 | NCAAB BUY_NO | 235 | 57.0% | **+$6.20** | +$0.026 |
 | NCAAB BUY_YES | 24 | 41.7% | **+$3.63** | +$0.151 |
 | MMA BUY_NO | 60 | 61.7% | **+$2.03** | +$0.034 |
 | MMA BUY_YES | 12 | 41.7% | **+$1.03** | +$0.086 |
-| MLB BUY_NO | 128 | 42.2% | **-$17.61** | -$0.138 |
-| NBA BUY_YES | 93 | 33.3% | **-$8.68** | -$0.093 |
-| Trump BUY_NO | 42 | 33.3% | **-$8.50** | -$0.202 |
-| Trump BUY_YES | 125 | 33.6% | **-$3.28** | -$0.026 |
-| Legacy model total | 975 | 49.2% | **-$1.97** | -$0.002 |
-| Bayesian model total | 132 | 32.6% | **-$13.37** | -$0.101 |
+| MLB BUY_NO | 128 | 42.2% | **−$17.61** | −$0.138 |
+| NBA BUY_YES | 93 | 33.3% | **−$8.68** | −$0.093 |
+| Trump BUY_NO | 42 | 33.3% | **−$8.50** | −$0.202 |
+| Trump BUY_YES | 125 | 33.6% | **−$3.28** | −$0.026 |
 
-The sports BUY_NO markets (NBA, NCAAB, MMA) are consistently profitable across hundreds of bets. If the system had only ever traded those three segments, the total P&L would be around +$20 gross.
+### Model comparison
 
-The Bayesian model has only been live since April 14 (132 resolved bets). The main problem with it right now: 76% of its bets are BUY_YES, and most of those are NBA. The NBA speaker prior is 0.591 — high because so many NBA phrases do get mentioned — and the model uses that prior for thin-data phrases, which biases it toward buying YES on things the market has already priced correctly.
+| | Legacy ScoringEngine | BayesianScorer |
+|---|---|---|
+| Bets | 975 | 132 |
+| Win rate | 49.2% | 32.6% |
+| P&L | −$1.97 | −$13.37 |
+| BUY_YES share | 20% | 76% |
+| Brier score | 0.352 | — |
+| Market mid Brier | 0.238 | — |
 
-The biggest single money drain is MLB BUY_NO. "Bunt" has a 19% win rate on 17 bets (-$5.94). "Triple" has 8% win rate on 12 bets (-$3.39). Somehow these phrases are getting said far more often than the historical data suggests they should. I genuinely don't know why and it's the thing I most want someone to look at.
+The legacy model is worse than the market at predicting outcomes. The Bayesian model has been live since April 14 with sparse data — its current failure mode is over-firing NBA BUY_YES bets, driven by a high pooled NBA speaker prior (0.591) being applied to thin-data phrases.
 
-Retroactively: if I'd only traded NBA/NCAAB/MMA BUY_NO and excluded everything else, total P&L would be around +$20 on 578 bets. Whether that edge holds forward or whether it's historical pattern-fitting is the open question.
+### Counterfactual
+
+Restricting to sports BUY_NO (NBA + NCAAB + MMA) only, retrospectively: 578 bets, ~55% WR, approximately +$20 gross. Whether this segment-level edge holds forward or is historical overfitting is the open research question.
 
 ---
 
-## Getting started
+## Setup
 
 ### Requirements
 
 - Python 3.9+
-- macOS (for 24/7 auto-restart via launchd) or Linux (manual process management)
-- Kalshi account — the public API doesn't require authentication for basic polling
+- macOS (for launchd-based 24/7 mode) or Linux (manual process supervision)
+- Kalshi account (public API requires no authentication for basic polling)
 
 ### Install
 
 ```bash
-git clone https://github.com/yourusername/kalshi-edge.git
+git clone https://github.com/<user>/kalshi-edge.git
 cd kalshi-edge
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-python3 -m pytest -q   # 246 tests, should all pass
+python3 -m pytest -q      # 246 tests
 ```
 
-### Mock mode first
+### Mock mode
 
 ```bash
 KALSHI_MOCK=1 python3 -m app.runner
-# Second terminal:
-python3 -m app.dashboard
-# Open http://localhost:8777
+python3 -m app.dashboard  # second terminal → http://localhost:8777
 ```
 
-Mock mode generates ~660 deterministic fake markets with realistic price distributions. Good for exploring the dashboard and understanding how scoring works without touching any real data.
+Mock mode generates ~660 deterministic fake markets. Useful for exploring the system without touching live data.
 
 ### Live mode
 
 ```bash
 cp config/runtime.env.example config/runtime.env
-# Set KALSHI_MOCK=0 in that file
-# Everything else is optional
+# Set KALSHI_MOCK=0; other settings optional
 make run-live
 ```
 
-### Switch between models
+### Model selection
 
 ```bash
-# Bayesian (default) — no LLM, free to run
-USE_BAYESIAN_SCORER=1 python3 -m app.runner
-
-# Legacy with LLM signals — requires OPENAI_API_KEY in runtime.env
-USE_BAYESIAN_SCORER=0 python3 -m app.runner
+USE_BAYESIAN_SCORER=1 python3 -m app.runner   # default, no LLM cost
+USE_BAYESIAN_SCORER=0 python3 -m app.runner   # legacy, requires OPENAI_API_KEY
 ```
 
-### 24/7 on macOS
+### 24/7 operation (macOS)
 
-**Before installing, do these three things — they will save you hours of debugging:**
+Before installing launchd services, complete these three steps:
 
-1. Remove the quarantine flag macOS puts on cloned files:
+1. Remove macOS quarantine on cloned files:
    ```bash
    xattr -dr com.apple.quarantine /path/to/kalshi-edge
    ```
+2. Grant Terminal **Full Disk Access** (System Settings → Privacy & Security). Without this, launchd services silently fail to read project files.
+3. Place the repo outside `~/Documents`, `~/Desktop`, `~/Downloads`. Those locations have sandbox restrictions that block launchd.
 
-2. Go to **System Settings → Privacy & Security → Full Disk Access** and enable Terminal (or your terminal emulator). Without this, launchd services silently fail to read files.
-
-3. Keep the repo outside `~/Documents`, `~/Desktop`, `~/Downloads` — macOS applies extra sandbox restrictions to those folders that block launchd.
-
-Then install:
+Then:
 
 ```bash
-make install-24x7-all   # sets up launchd services, starts on login
-make local-status        # check what's running, tail logs
+make install-24x7-all    # installs runner + dashboard + watchdog + caffeinate
+make local-status
 ```
 
-See [docs/QUICKSTART.md](docs/QUICKSTART.md) for the full macOS setup walkthrough including Gatekeeper approval and sleep prevention.
+Full macOS setup walkthrough (Gatekeeper approval, sleep prevention, troubleshooting): [docs/QUICKSTART.md](docs/QUICKSTART.md).
 
 ---
 
-## Useful commands
+## Commands
 
 ```bash
-# Fetch fresh data
-make fetch-markets     # Kalshi market definitions
-make fetch-outcomes    # resolved outcomes (the training data)
-make fetch-poly        # Polymarket cross-prices
+# Data refresh
+make fetch-markets        # Kalshi market definitions
+make fetch-outcomes       # resolved outcomes (training data)
+make fetch-poly           # Polymarket cross-prices
 
-# Rebuild calibration from outcomes
+# Calibration pipeline
 make calibrate
 
-# After running live for a while
-make record-outcomes   # match your BUY cards to outcomes
-make report-outcomes   # P&L breakdown
-make backtest          # win rates by segment, confidence, regime
+# Outcome tracking and P&L
+make record-outcomes      # match BUY cards to outcomes
+make report-outcomes
+make backtest             # win rates by segment, confidence, regime
 
-# Health check
+# Runtime health
 make health-check
-make doctor            # verify repo, venv, package structure
+make doctor
 ```
 
 ---
@@ -381,84 +327,58 @@ make doctor            # verify repo, venv, package structure
 
 ```
 app/
-  runner.py              async service orchestrator (5 loops)
-  bayesian_scorer.py     current model — Beta-Binomial CI comparison
-  scoring.py             legacy model — 17-gate LLM-enhanced stack (~2,600 lines)
-  dashboard.py           web UI (~5,200 lines)
-  transcript_sources.py  HTTP + OpenClaw + file sources, fallback chain
-  transcript_ingestor.py polls sources, runs phrase matcher, writes hits
-  phrase_matcher.py      boundary-safe regex with negation/attribution detection
-  bayesian_rates.py      Beta posteriors loader + hot-reload cache
-  bayesian_scorer.py     CI-vs-market decision, Kelly sizing
+  runner.py              async service orchestrator
+  bayesian_scorer.py     BayesianScorer — CI-vs-market decisions, Kelly sizing
+  scoring.py             ScoringEngine — 17-gate legacy model, 2,579 lines
+  dashboard.py           web UI, 5,249 lines
+  transcript_sources.py  Direct HTTP + OpenClaw + file sources with fallback
+  transcript_ingestor.py phrase detection pipeline
+  phrase_matcher.py      boundary-safe regex with negation/attribution
+  bayesian_rates.py      Beta posteriors, hierarchical pooling
   base_rates.py          YAML base rate lookup
   bias_map.py            series-specific empirical rate overrides
-  rolling_rates.py       last-3/5/10-speech phrase frequency signals
-  phrase_hazard.py       empirical hazard rates for live event time decay
-  signal_learner.py      adaptive signal weight learner from outcomes
-  phrase_cooccurrence.py lift table — "if A was said, does that change P(B)?"
+  rolling_rates.py       3/5/10-speech rolling window signals
+  phrase_hazard.py       empirical hazard rates for live time decay
+  signal_learner.py      adaptive weight learner from outcomes
+  phrase_cooccurrence.py conditional phrase lift table
   phrase_correlation.py  phi-coefficient correlation matrix
   event_detector.py      scheduled/live/ended state machine
-  event_signals.py       per-event LLM overrides and floors
-  polymarket.py          Polymarket cross-market price signal
-  wallet_flow.py         smart-money flow signal from Polymarket trades
-  price_velocity.py      rate-of-change signal on YES prices
-  calibration.py         Platt scaling calibrator for legacy model
-  db.py                  SQLite setup, WAL healing, schema management
+  event_signals.py       per-event overrides and floors
+  polymarket.py          cross-market price signal
+  wallet_flow.py         Polymarket trade flow signal
+  price_velocity.py      YES price rate-of-change signal
+  calibration.py         Platt scaling
+  db.py                  SQLite setup, WAL healing
   maintenance.py         background task scheduler
-  notifier.py            WhatsApp alerts via OpenClaw
-  watchdog.py            staleness monitor, triggers auto-restart
-  ... (40 modules total)
+  notifier.py            WhatsApp via OpenClaw
+  watchdog.py            staleness monitor
 
-scripts/
-  fetch_*.py             data fetching scripts (12 scripts)
-  compute_*.py           signal/calibration computation (11 scripts)
-  backtest_*.py          historical analysis (4 scripts)
-  calibrate_base_rates.py full calibration pipeline
-  record_outcomes.py     match BUY cards to outcomes
-  report_outcomes.py     P&L breakdown
-  analyze_event.py       LLM per-event analysis
-  analyze_signals.py     LLM global signal analysis
-  scrape_corpus.py       corpus transcript scraper
-  rev_transcript_cleaner.py  Rev.com HTML → plain text
-  health_check.py        runtime health verification
-
+scripts/                 67 fetch/compute/backtest/admin scripts
 config/
-  base_rates.yaml        manually-curated phrase base rates by speaker
-  base_rates_auto.yaml   auto-calibrated from resolved outcomes
-  base_rates_priors.yaml conservative priors for thin/new speakers
-  runtime.env.example    all config options with comments
-  events.yaml            upcoming events with p_overrides/p_floors
-  llm/                   LLM instruction files (edit without code changes)
-    trump_patterns.md    data-backed behavioral profiles for prompts
-    global_signals_guide.md  what to boost/suppress globally
-    per_event_guide.md   how to analyze per-event context
-
-brain/                   architecture specs, decisions log, scoring rules
-  08_DECISIONS_LOG.md    every gate decision with bet counts + P&L evidence
-
+  base_rates.yaml        manually-curated phrase rates
+  base_rates_auto.yaml   auto-calibrated from outcomes
+  runtime.env.example    all env options documented
+  events.yaml            upcoming events with overrides
+  llm/                   LLM prompt files
+brain/                   architecture specs, decisions log
 tests/                   246 pytest tests
-data/                    runtime state — gitignored
-  edge.db                the database
-  corpus/                transcripts — not included (see corpus/README.md)
-  *.json                 signal caches, calibration outputs
-docs/
-  QUICKSTART.md          getting started walkthrough
-  archive/               65-session development log, all build plan versions
+data/                    runtime state (gitignored)
+docs/                    quickstart, architecture, development archive
 ```
 
 ---
 
 ## Known problems
 
-**BayesianScorer is firing too many NBA BUY_YES bets.** The NBA speaker prior (0.591) is high because many NBA phrases actually do get said, but individual thin-data phrases borrow that prior and end up overpriced. Adding a minimum CI exclusion margin — requiring `yes_ask < ci_low - 0.05` rather than just `< ci_low` — should help.
+**NBA BUY_YES over-firing (Bayesian).** Pooled NBA prior of 0.591 is applied to sparse-data phrases, producing artificially high posterior means. Candidate fix: minimum CI exclusion margin — require `yes_ask < ci_low − 0.05` rather than just `< ci_low`.
 
-**MLB BUY_NO keeps losing.** "Bunt" at 19% win rate on 17 bets. "Triple" at 8% on 12. "Wild pitch" at 46% on 11. Something structural is wrong. My best guess is that the outcome data I'm training on has different resolution criteria from what Kalshi is actually using to settle recent markets, but I haven't confirmed that.
+**MLB BUY_NO systematically losing.** "Bunt" (19% WR, n=17), "triple" (8% WR, n=12), "wild pitch" (46% WR, n=11). The outcome data used for calibration may have different resolution criteria than current Kalshi settlements. Needs investigation — highest priority open issue.
 
-**The legacy scorer is worse than the market at predicting outcomes.** Brier score 0.352 vs the market's 0.238. This was hard to accept after building it, but it's what the data shows. The Bayesian model is conceptually cleaner but losing money in live trading too.
+**Legacy ScoringEngine Brier score exceeds market mid Brier** (0.352 vs 0.238). The layered signal model is net-negative. Fix attempt is the BayesianScorer (currently underperforming for separate reasons).
 
-**No corpus included.** The 337 transcripts are the single most valuable calibration resource and they're not in the repo because of copyright uncertainty. Without them, calibration falls back to conservative priors and accuracy is lower.
+**Corpus not included.** Without user-supplied transcripts, calibration falls back to priors in `config/base_rates_priors.yaml`. Accuracy degrades significantly.
 
-**macOS-only for 24/7 daemon mode.** The auto-restart mechanism uses launchd. Should work on Linux with systemd with minor changes to `scripts/manage_launchd.py`, but I haven't tested it.
+**launchd-specific 24/7 mode.** Linux systemd port is straightforward but unimplemented.
 
 ---
 
@@ -466,11 +386,13 @@ docs/
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-The thing I most want help with is figuring out what's wrong with MLB BUY_NO. If you have a theory — wrong calibration data, resolution criteria mismatch, something else — open an issue.
+Priority contributions:
 
-The second most useful thing is corpus expansion: if you know reliable, redistributable public-domain sources for speaker transcripts (especially Carney, Starmer, or Homan where coverage is thin), that directly improves calibration accuracy.
+1. **MLB BUY_NO analysis.** Anyone with a theory for why common MLB phrases are hitting far above their historical rates should open an issue.
+2. **Corpus expansion.** Redistributable sources for Carney, Starmer, Homan transcripts.
+3. **Linux/Docker port.** Scope is limited to `scripts/manage_launchd.py` and the runner service scripts.
 
-If you make changes to any scoring logic, the convention in this project is to cite actual bet counts and win rates from `outcome_reviews` in the PR. Every gate in the legacy model exists because a specific data pattern justified it — there's a record of those decisions in `brain/08_DECISIONS_LOG.md`. New scoring changes should follow the same standard.
+Scoring logic changes must cite outcome-level evidence (bet counts, win rates, P&L) from `outcome_reviews`, per the convention in `brain/08_DECISIONS_LOG.md`.
 
 ---
 
@@ -482,4 +404,4 @@ MIT. See [LICENSE](LICENSE).
 
 ## Disclaimer
 
-This software lost real money in live trading. Read [DISCLAIMER.md](DISCLAIMER.md).
+This software lost real money in live trading. [DISCLAIMER.md](DISCLAIMER.md).

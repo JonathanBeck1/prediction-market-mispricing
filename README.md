@@ -2,7 +2,7 @@
 
 A 24/7 mispricing detector for Kalshi speaker mention markets. Built over three months as a research project on whether historical phrase frequency data can be used to systematically trade against market sentiment.
 
-Live P&L: **-$15.34 across 1,107 resolved bets.** The system is being open-sourced because the data pipeline and architecture are more interesting than the returns, and the underperformance itself has useful lessons.
+Live P&L: **-$16.40 across 1,115 resolved bets** (47% win rate, BSS -0.47 vs market mid). The system is being open-sourced because the data pipeline and architecture are more interesting than the returns, and the underperformance itself has useful lessons.
 
 > Not financial advice. See [DISCLAIMER.md](DISCLAIMER.md).
 
@@ -17,7 +17,7 @@ Live P&L: **-$15.34 across 1,107 resolved bets.** The system is being open-sourc
 | Live price snapshots recorded | 547,265 |
 | Scored action cards produced | 161,312 |
 | Phrase hits detected in transcripts | 39,487 |
-| Bets matched to resolved outcomes | 1,107 |
+| Bets matched to resolved outcomes | 1,115 |
 | Beta-Binomial posteriors maintained | 1,761 |
 
 **Outcome breakdown:**
@@ -203,7 +203,7 @@ Single-file web UI at `http://localhost:8777` — see the [Dashboard](#dashboard
 
 ## Performance
 
-### Segment breakdown (1,107 resolved bets)
+### Segment breakdown (1,107 resolved bets, April snapshot)
 
 | Segment | Bets | Win Rate | P&L | Per bet |
 |---|---|---|---|---|
@@ -238,32 +238,38 @@ Restricting to sports BUY_NO (NBA + NCAAB + MMA) only, retrospectively: 578 bets
 
 ## Dashboard
 
-Local web UI at `http://localhost:8777`. Single-file Python (`app/dashboard.py`, 5,249 lines) — no external framework, no build step, no CDN dependencies. Runs as a separate process from the runner and reads the same SQLite database.
-
-### Markets tab
-
-The primary operational view. Live scored markets grouped by speaker with per-phrase cards showing side, probability, market price, EV, and the gate codes that drove the decision. Each card expands to reveal full model state — base rate, signal multipliers, Platt-calibrated probability, Kelly fraction, and the complete reason-code trail.
-
-![Markets tab](docs/screenshots/markets.png)
+Local web UI at `http://localhost:8777`. Single-file Python (`app/dashboard.py`, 5,249 lines) — no external framework, no build step, no CDN dependencies. Runs as a separate process from the runner and reads the same SQLite database. A persistent top bar shows live system state: active BUY signals, total markets tracked, AI boosts applied, gate blocks, net P&L, win rate, and snapshot freshness.
 
 ### Performance tab
 
-Historical P&L by speaker, side, and confidence bucket. Calibration health metrics (Brier score, BSS), per-phrase win rates, model diagnostics. Real-time answer to "is this actually working?"
+The honest view. Journal bets, rolling win rate, realized P&L, and [BSS](https://en.wikipedia.org/wiki/Brier_score#Brier_Skill_Score) vs the market mid. Speaker Rank sorts by BSS (or P&L, win%, or bet count) so you can see which segments are pulling weight. Each speaker expands to a card with rolling performance windows (7d / 30d / 60d / 90d / all-time), a live recent-activity feed, and a per-phrase breakdown sorted by contribution.
 
 ![Performance tab](docs/screenshots/performance.png)
 
+This is the tab that tells you whether the system is working. It's where you watch segment-level edge develop or erode in real time.
+
 ### Intelligence tab
 
-Signal-layer diagnostics. Per-phrase LLM analysis with full reasoning and evidence citations, adaptive signal weights by speaker, Truth Social phrase detection, regime alerts, and drift warnings. Click any phrase row to expand the LLM's reasoning for the boost/suppress multiplier.
+Signal-layer diagnostics. The top summary row shows how many phrases are currently LLM-boosted or LLM-suppressed. Recent Events & Schedule surfaces the news items and White House calendar entries that are shaping today's signals.
 
 ![Intelligence tab](docs/screenshots/intelligence.png)
 
+The **Model Health** calibration table compares predicted probability to actual outcome rate across buckets — the red "Bad" quality flags in this screenshot are exactly the systematic bias the project is trying to diagnose. Below that, Top Opportunities lists current BUY candidates, and Today's Topics clusters the LLM-identified themes driving per-event `p_floor` adjustments.
+
+### Scripts tab
+
+One-click operational control. Every maintenance script in the repo is registered with a label, group, and description, then exposed as a Run button. Output streams live to an embedded terminal below each button.
+
+![Scripts tab](docs/screenshots/scripts.png)
+
+Grouped by workflow: **Engine Control** (start/stop the runner), **Pre-Event** (certainties, Truth Social floors), **Sports** (NBA/MLB/NCAAB certainties and schedules), **Data Fetching** (markets, outcomes, Polymarket, wallet flow, news, X signals, Fed transcripts), and **AI Intelligence** (LLM signal analysis). Each script is allowlisted via `_ALLOWED_SCRIPTS` — arbitrary script execution is not possible.
+
 ### Other tabs
 
-- **Sports** — NBA, NCAAB, MLB, and MMA/UFC markets grouped by game. Shows arena/venue overrides, universal phrase floors, and active phrase probabilities per scheduled event.
+- **Markets** — live scored markets grouped by speaker, per-phrase cards showing side, probability, market price, EV, and the gate codes that drove the decision. Each card expands to reveal full model state (base rate, signal multipliers, Platt-calibrated probability, Kelly fraction, reason-code trail).
+- **Sports** — NBA, NCAAB, MLB, and MMA/UFC markets grouped by game. Arena/venue overrides, universal phrase floors, active phrase probabilities per scheduled event.
 - **Analysis** — co-occurrence matrices, phrase correlation graphs, hazard-rate curves for live events, cross-market arbitrage candidates (Kalshi vs Polymarket divergences).
-- **System** — runtime health: snapshot freshness, scorer idle time, DB integrity status, WAL checkpoint state, maintenance task history.
-- **Scripts** — one-click execution of 29 registered maintenance scripts. Output streams live to an embedded terminal. Each script is pre-registered in an allowlist (`_ALLOWED_SCRIPTS`); arbitrary script execution is not allowed.
+- **System** — runtime health: snapshot freshness, scorer idle time, DB integrity, WAL checkpoint state, maintenance task history.
 
 ---
 

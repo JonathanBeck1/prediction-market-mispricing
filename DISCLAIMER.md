@@ -10,9 +10,9 @@ Nothing in this repository constitutes financial advice, investment advice, trad
 
 This software has been run in production against real Kalshi markets. As of the date of this writing:
 
-- **1,107 bets resolved**
-- **Win rate: 47.2%**
-- **Realized P&L: -$15.34**
+- **1,115 bets resolved**
+- **Win rate: 47%**
+- **Realized P&L: -$16.40**
 
 Past performance — positive or negative — is not indicative of future results.
 

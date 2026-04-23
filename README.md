@@ -332,12 +332,25 @@ USE_BAYESIAN_SCORER=0 python3 -m app.runner
 
 ### 24/7 on macOS
 
+**Before installing, do these three things — they will save you hours of debugging:**
+
+1. Remove the quarantine flag macOS puts on cloned files:
+   ```bash
+   xattr -dr com.apple.quarantine /path/to/kalshi-edge
+   ```
+
+2. Go to **System Settings → Privacy & Security → Full Disk Access** and enable Terminal (or your terminal emulator). Without this, launchd services silently fail to read files.
+
+3. Keep the repo outside `~/Documents`, `~/Desktop`, `~/Downloads` — macOS applies extra sandbox restrictions to those folders that block launchd.
+
+Then install:
+
 ```bash
 make install-24x7-all   # sets up launchd services, starts on login
 make local-status        # check what's running, tail logs
 ```
 
-See [docs/QUICKSTART.md](docs/QUICKSTART.md) for a full walkthrough.
+See [docs/QUICKSTART.md](docs/QUICKSTART.md) for the full macOS setup walkthrough including Gatekeeper approval and sleep prevention.
 
 ---
 

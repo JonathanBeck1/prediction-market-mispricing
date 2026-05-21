@@ -1,5 +1,20 @@
 # Project Status (Living Document)
 
+## Session 2026-05-21 — OSS polish + runner reconnect hardening
+
+**Scope:** Public repo polish and two small operational safety fixes. No scoring logic changed and the manual-only invariant remains intact.
+
+**Changes:**
+1. Added GitHub community files: CI workflow, pull request template, issue forms, and code of conduct.
+2. Added `docs/CORPUS.md` and updated README/quickstart/contributing/agent docs for current clone URL, Python 3.10+ support, non-hardcoded test counts, and safer launchd guidance.
+3. Fixed `app.runner.run_app()` so the ingestor service loop receives `app=app`, matching watcher/scorer and enabling DB reconnect handling for ingestor failures.
+4. Updated `scripts/watchdog.sh` so it no longer deletes the flock-backed `data/runner.lock`; it now honors a pause file instead.
+5. Added regression tests for ingestor loop app-context wiring and watchdog lock preservation.
+
+**Verification:**
+- `python3 -m compileall -q app scripts tests` — passed
+- `python3 -m pytest -q` — 264 passed, 7 existing `datetime.utcnow()` deprecation warnings
+
 ## Session 2026-04-07 — Model Rebuild: BayesianScorer replaces ScoringEngine
 
 **Root cause:** Deep analysis showed the old ScoringEngine's Brier score (0.352) was WORSE than simply using market price (0.238). Every signal layer (LLM, news, Poly, wallet) degraded performance when added to base rates. The multiplicative p_literal formula, Platt scaling, calibration floors, and 20+ gates were compounding errors, not correcting them.

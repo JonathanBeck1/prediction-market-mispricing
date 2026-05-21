@@ -5,13 +5,13 @@ This guide gets the system running in **mock mode** (no real API, no real money)
 ## Prerequisites
 
 - macOS or Linux
-- Python 3.9+
+- Python 3.10+
 - Git
 
 ## Step 1: Clone and Install
 
 ```bash
-git clone https://github.com/yourusername/kalshi-edge.git
+git clone https://github.com/JonathanBeck1/KALSHI-edge.git
 cd kalshi-edge
 
 python3 -m venv .venv
@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 ```bash
 python3 -m pytest -q
-# Expected: 246 passed
+# Expected: all tests pass
 ```
 
 ## Step 3: Start the Runner (Mock Mode)
@@ -147,14 +147,14 @@ tail -50 data/logs/runner.err.log
 
 # If the script was blocked, approve it via:
 spctl --add scripts/launchd_run_runner.sh
-spctl --add scripts/watchdog.sh
+spctl --add scripts/launchd_run_dashboard.sh
 ```
 
 Or just open each `.sh` file in Finder (right-click → Open) once to approve it through the normal Gatekeeper flow.
 
 **5. Prevent macOS from sleeping**
 
-The runner needs the Mac to stay awake to poll prices. The install script sets up a `caffeinate` service automatically, but you can also enable **System Settings → Battery → Prevent automatic sleeping when display is off** for a permanent solution.
+The runner needs the Mac to stay awake to poll prices. Enable **System Settings → Battery → Prevent automatic sleeping when display is off**, or run the stack inside your own always-awake supervisor.
 
 ---
 
@@ -167,7 +167,7 @@ Once the above is done:
 make install-24x7-all
 
 # Check status
-make local-status
+make status-24x7
 
 # View logs
 tail -f data/logs/runner.err.log
@@ -211,7 +211,9 @@ Each card looks like:
 
 **"Another runner instance is already running"**
 ```bash
-rm data/runner.lock
+pgrep -fl "python3 -m app.runner|app.runner"
+# Stop the old runner first, then retry. Do not delete data/runner.lock
+# while a runner process is alive; the lock is flock-based.
 ```
 
 **"database disk image is malformed"**
@@ -247,12 +249,9 @@ tail -50 data/logs/runner.err.log
 
 **Mac goes to sleep and runner stops**
 
-The install script creates a `caffeinate` service automatically. If your Mac is still sleeping:
-```bash
-# Check if caffeinate is running
-launchctl list com.kalshi-edge.caffeinate
+Enable the permanent setting:
 
-# Or enable permanent setting:
+```bash
 # System Settings → Battery → Options → Prevent automatic sleeping when display is off
 ```
 
@@ -262,7 +261,7 @@ launchctl list com.kalshi-edge.caffeinate
 # Option 1: right-click the .sh file in Finder and choose Open
 # Option 2: approve via spctl:
 spctl --add scripts/launchd_run_runner.sh
-spctl --add scripts/watchdog.sh
+spctl --add scripts/launchd_run_dashboard.sh
 
 # Or disable Gatekeeper check for this repo (less safe):
 xattr -dr com.apple.quarantine .

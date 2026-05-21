@@ -2,6 +2,15 @@
 
 Manual-only invariant applies to all decisions below.
 
+## 2026-05-21 — OSS polish and runner reconnect safety
+
+- **Decision:** Add GitHub community metadata files (`.github/workflows/ci.yml`, issue forms, PR template, and `CODE_OF_CONDUCT.md`) so public contributions have a clear path and every PR runs compile/test checks.
+- **Decision:** Stop documenting hardcoded test counts. The suite changes often; public docs and agent guidance now require `python3 -m pytest -q` to pass rather than naming stale counts.
+- **Decision:** Document corpus source handling in `docs/CORPUS.md` instead of linking to a gitignored `data/corpus/README.md`.
+- **Decision:** Pass `app=app` into the ingestor `_service_loop()` in `app/runner.py`. Watcher and scorer already had reconnect context; ingestor did not, so DB connection failures in that loop could not use the same targeted reconnect path.
+- **Decision:** Preserve the `data/runner.lock` inode in `scripts/watchdog.sh`. The runner lock is `flock`-backed; deleting the file can create a new inode and allow duplicate runners. The script now honors `data/logs/runner.paused` instead of deleting the lock.
+- **Verification:** `python3 -m compileall -q app scripts tests` passed. `python3 -m pytest -q` passed with 264 tests and 7 existing `datetime.utcnow()` deprecation warnings.
+
 ## 2026-04-07 — Model Rebuild: BayesianScorer replaces ScoringEngine
 
 **Problem**: Old model's Brier score (0.352) worse than market price as predictor (0.238). Multiplicative p_literal formula, Platt scaling, calibration floors, and 20+ gates were compounding errors. Every signal layer (LLM, news, Poly, wallet) degraded performance when added to base rates.

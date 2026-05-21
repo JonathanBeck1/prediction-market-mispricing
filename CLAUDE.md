@@ -13,7 +13,7 @@ for manual review and trading. It never places orders — it only outputs recomm
 - NO order placement. NO trading automation. All outputs are advisory only.
 - Never modify `app/scoring.py` or `app/runner.py` without reading the full gate stack first.
   Scoring gates are calibrated from live outcome data. Wrong changes cost money.
-- Always run `python3 -m pytest -q` before finishing any change. All 240 tests must pass.
+- Always run `python3 -m pytest -q` before finishing any change. The full test suite must pass.
 - Update `brain/STATUS.md` at the end of any session where you changed code or data.
 - Append key decisions to `brain/08_DECISIONS_LOG.md` — never delete existing entries.
 
@@ -43,7 +43,7 @@ make health-check        # Verify strict runtime gates
 
 ### Testing
 ```bash
-python3 -m pytest -q                          # all 240 tests must pass
+python3 -m pytest -q                          # full suite
 python3 -m pytest -q tests/test_scoring.py    # scoring-specific
 python3 -m pytest -k "test_name" -q           # single test by name
 ```
@@ -234,7 +234,7 @@ Full list: `README.md` "Key env vars" section. For launchd: `cp config/runtime.e
 
 ## Coding Conventions
 
-- Python 3.9+, type hints, dataclasses
+- Python 3.10+, type hints, dataclasses
 - `from __future__ import annotations` in every module
 - No unnecessary dependencies — stdlib + httpx only
 - Comments explain WHY, not WHAT

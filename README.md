@@ -53,7 +53,7 @@ Live P&L: **-$16.40 across 1,115 resolved bets** (47% win rate, BSS -0.47 vs mar
 | Carney | 3 |
 | Homan | 2 |
 
-Corpus files are not included in the repo (copyright). [data/corpus/README.md](data/corpus/README.md) documents public-domain sources.
+Corpus files are not included in the repo (copyright). [docs/CORPUS.md](docs/CORPUS.md) documents the local corpus layout and source notes.
 
 ---
 
@@ -238,7 +238,7 @@ Restricting to sports BUY_NO (NBA + NCAAB + MMA) only, retrospectively: 578 bets
 
 ## Dashboard
 
-Local web UI at `http://localhost:8777`. Single-file Python (`app/dashboard.py`, 5,249 lines) — no external framework, no build step, no CDN dependencies. Runs as a separate process from the runner and reads the same SQLite database. A persistent top bar shows live system state: active BUY signals, total markets tracked, AI boosts applied, gate blocks, net P&L, win rate, and snapshot freshness.
+Local web UI at `http://localhost:8777`. Single-file Python (`app/dashboard.py`) — no external framework, no build step, no CDN dependencies. Runs as a separate process from the runner and reads the same SQLite database. A persistent top bar shows live system state: active BUY signals, total markets tracked, AI boosts applied, gate blocks, net P&L, win rate, and snapshot freshness.
 
 ### Performance tab
 
@@ -277,18 +277,18 @@ Grouped by workflow: **Engine Control** (start/stop the runner), **Pre-Event** (
 
 ### Requirements
 
-- Python 3.9+
+- Python 3.10+
 - macOS (for launchd-based 24/7 mode) or Linux (manual process supervision)
 - Kalshi account (public API requires no authentication for basic polling)
 
 ### Install
 
 ```bash
-git clone https://github.com/<user>/kalshi-edge.git
+git clone https://github.com/JonathanBeck1/KALSHI-edge.git
 cd kalshi-edge
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-python3 -m pytest -q      # 246 tests
+python3 -m pytest -q
 ```
 
 ### Mock mode
@@ -329,8 +329,8 @@ Before installing launchd services, complete these three steps:
 Then:
 
 ```bash
-make install-24x7-all    # installs runner + dashboard + watchdog + caffeinate
-make local-status
+make install-24x7-all    # installs runner + dashboard launchd services
+make status-24x7
 ```
 
 Full macOS setup walkthrough (Gatekeeper approval, sleep prevention, troubleshooting): [docs/QUICKSTART.md](docs/QUICKSTART.md).
@@ -398,7 +398,7 @@ config/
   events.yaml            upcoming events with overrides
   llm/                   LLM prompt files
 brain/                   architecture specs, decisions log
-tests/                   246 pytest tests
+tests/                   pytest suite
 data/                    runtime state (gitignored)
 docs/                    quickstart, architecture, development archive
 ```

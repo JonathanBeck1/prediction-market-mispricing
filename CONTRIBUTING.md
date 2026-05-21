@@ -21,7 +21,7 @@ Thanks for your interest. Given the project's honest track record (see README), 
 
 ## Rules
 
-1. **Run the test suite before submitting.** All 246 tests must pass: `python3 -m pytest -q`
+1. **Run the test suite before submitting.** `python3 -m pytest -q` must pass.
 2. **Any scoring gate change requires outcome data.** If you change `app/scoring.py` or `app/bayesian_scorer.py`, cite specific bet counts, win rates, and P&L from `outcome_reviews` in the PR description and append to `brain/08_DECISIONS_LOG.md`.
 3. **No order placement.** The manual-only invariant is non-negotiable. PRs that add auto-execution will be closed.
 4. **No secrets in PRs.** Double-check that `config/runtime.env` and any API keys are not committed.
@@ -29,7 +29,7 @@ Thanks for your interest. Given the project's honest track record (see README), 
 ## Setup
 
 ```bash
-git clone https://github.com/yourusername/kalshi-edge.git
+git clone https://github.com/JonathanBeck1/KALSHI-edge.git
 cd kalshi-edge
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt

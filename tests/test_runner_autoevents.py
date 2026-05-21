@@ -1,8 +1,11 @@
 from __future__ import annotations
 
+import asyncio
 from datetime import datetime, timedelta, timezone
+from types import SimpleNamespace
 
 from app.kalshi_api import KalshiMarket, LiveMarketCatalog
+from app import runner
 from app.runner import _seed_events_from_live_markets
 
 
@@ -129,3 +132,55 @@ def test_skips_windowed_monthly_markets(tmp_db):
     assert inserted == 0
     count = tmp_db.execute("SELECT COUNT(*) AS c FROM events").fetchone()["c"]
     assert count == 0
+
+
+def test_run_app_passes_app_context_to_ingestor_loop(monkeypatch):
+    captured_app_by_loop: dict[str, object | None] = {}
+
+    class DummyConn:
+        def execute(self, *_args, **_kwargs):
+            return self
+
+        def commit(self):
+            pass
+
+        def close(self):
+            pass
+
+    settings = SimpleNamespace(
+        kalshi_mock=True,
+        transcript_source="directhttp",
+        transcript_urls=[],
+        focus_event_markets=False,
+        pre_event_window_sec=21600.0,
+        maintenance_enabled=False,
+        watchdog_enabled=False,
+        event_seed_interval_sec=300.0,
+        watcher_interval_sec=10.0,
+        transcript_interval_sec=30.0,
+        scorer_interval_sec=10.0,
+    )
+    app = SimpleNamespace(
+        settings=settings,
+        conn=DummyConn(),
+        watcher=SimpleNamespace(run_once=lambda: None),
+        ingestor=SimpleNamespace(run_once=lambda: None),
+        scorer=SimpleNamespace(run_once=lambda: None),
+        maintenance=None,
+        watchdog=None,
+    )
+
+    async def fake_service_loop(name, _interval, stop_event, _fn, *, app=None):
+        captured_app_by_loop[name] = app
+        if len(captured_app_by_loop) == 3:
+            stop_event.set()
+
+    monkeypatch.setattr(runner, "load_settings", lambda: settings)
+    monkeypatch.setattr(runner, "build_app", lambda _settings: app)
+    monkeypatch.setattr(runner, "_service_loop", fake_service_loop)
+
+    asyncio.run(runner.run_app())
+
+    assert captured_app_by_loop["watcher"] is app
+    assert captured_app_by_loop["ingestor"] is app
+    assert captured_app_by_loop["scorer"] is app

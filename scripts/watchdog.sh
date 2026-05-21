@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # 24/7 watchdog — started by macOS LaunchAgent on login and after reboot.
-# Keeps the runner + dashboard alive. Handles stale lock files and crashed pids.
+# Keeps the runner + dashboard alive. Handles crashed pids without deleting
+# the flock-backed runner lock file.
 # Loops forever; launchd KeepAlive will restart this script if it ever exits.
 
 set -uo pipefail
@@ -15,7 +16,7 @@ RUNNER_PID="$RUN_DIR/runner.pid"
 DASH_PID="$RUN_DIR/dashboard.pid"
 RUNNER_LOG="$LOG_DIR/runner.local.log"
 DASH_LOG="$LOG_DIR/dashboard.local.log"
-RUNNER_LOCK="$ROOT/data/runner.lock"
+PAUSE_FILE="$LOG_DIR/runner.paused"
 PORT=8777
 
 mkdir -p "$RUN_DIR" "$LOG_DIR"
@@ -31,8 +32,10 @@ is_alive() {
 
 start_runner() {
     if is_alive "$RUNNER_PID"; then return 0; fi
-    # Clear stale lock so restart is clean
-    rm -f "$RUNNER_LOCK"
+    if [[ -f "$PAUSE_FILE" ]]; then
+        log "Runner restart paused ($PAUSE_FILE)"
+        return 0
+    fi
     log "Starting runner..."
     nohup env KALSHI_MOCK=0 MAINTENANCE_ENABLED=1 \
         PRE_EVENT_WINDOW_SEC=604800 FETCH_MARKETS_INTERVAL_SEC=600 \

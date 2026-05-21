@@ -1,0 +1,31 @@
+name: Analysis request
+description: Propose a model, data, or performance investigation.
+title: "[analysis] "
+labels:
+  - question
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What segment, market, phrase, or behavior should be investigated?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Include bet counts, win rates, P&L, Brier/BSS, or command output when available.
+      render: text
+  - type: textarea
+    id: idea
+    attributes:
+      label: Hypothesis or proposed change
+      description: What do you think explains the result?
+  - type: checkboxes
+    id: invariants
+    attributes:
+      label: Invariants
+      options:
+        - label: This request preserves the manual-only, no-order-placement invariant.
+          required: true

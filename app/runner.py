@@ -620,7 +620,13 @@ async def run_app() -> None:
             _service_loop("watcher", settings.watcher_interval_sec, stop_event, app.watcher.run_once, app=app)
         ),
         asyncio.create_task(
-            _service_loop("ingestor", settings.transcript_interval_sec, stop_event, app.ingestor.run_once)
+            _service_loop(
+                "ingestor",
+                settings.transcript_interval_sec,
+                stop_event,
+                app.ingestor.run_once,
+                app=app,
+            )
         ),
         asyncio.create_task(
             _service_loop("scorer", settings.scorer_interval_sec, stop_event, app.scorer.run_once, app=app)
@@ -751,4 +757,3 @@ if __name__ == "__main__":
         )
         raise SystemExit(1)
     asyncio.run(run_app())
-

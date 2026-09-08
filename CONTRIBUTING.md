@@ -29,8 +29,8 @@ Thanks for your interest. Given the project's honest track record (see README), 
 ## Setup
 
 ```bash
-git clone https://github.com/JonathanBeck1/KALSHI-edge.git
-cd kalshi-edge
+git clone https://github.com/JonathanBeck1/prediction-market-mispricing.git
+cd prediction-market-mispricing
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 python3 -m pytest -q   # verify baseline

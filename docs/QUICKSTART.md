@@ -11,8 +11,8 @@ This guide gets the system running in **mock mode** (no real API, no real money)
 ## Step 1: Clone and Install
 
 ```bash
-git clone https://github.com/JonathanBeck1/KALSHI-edge.git
-cd kalshi-edge
+git clone https://github.com/JonathanBeck1/prediction-market-mispricing.git
+cd prediction-market-mispricing
 
 python3 -m venv .venv
 source .venv/bin/activate
@@ -114,7 +114,7 @@ This is the part that trips most people up. macOS has several security layers th
 When you clone from GitHub, macOS tags downloaded files with a quarantine attribute. This can cause launchd to refuse to execute the shell scripts. Remove it:
 
 ```bash
-xattr -dr com.apple.quarantine /path/to/kalshi-edge
+xattr -dr com.apple.quarantine /path/to/prediction-market-mispricing
 ```
 
 You'll need to re-run this if you do a fresh clone.
@@ -129,12 +129,12 @@ This is required because the launchd process inherits Terminal's sandbox level. 
 
 macOS applies stricter privacy controls to files under `~/Documents`, `~/Desktop`, and `~/Downloads`. If your repo lives there, launchd services may be blocked from reading the `.venv` folder.
 
-Recommended location: `~/kalshi-edge` or anywhere directly under your home directory.
+Recommended location: `~/prediction-market-mispricing` or anywhere directly under your home directory.
 
 ```bash
-# If you cloned to ~/Documents/kalshi-edge, move it:
-mv ~/Documents/kalshi-edge ~/kalshi-edge
-cd ~/kalshi-edge
+# If you cloned to ~/Documents/prediction-market-mispricing, move it:
+mv ~/Documents/prediction-market-mispricing ~/prediction-market-mispricing
+cd ~/prediction-market-mispricing
 ```
 
 **4. Allow the scripts to run (Gatekeeper)**
@@ -237,7 +237,7 @@ tail -50 data/logs/runner.err.log
 # Most common causes:
 # 1. Missing Full Disk Access for Terminal — see macOS Privacy section above
 # 2. Quarantine flag on scripts — run: xattr -dr com.apple.quarantine .
-# 3. Repo is in ~/Documents or ~/Desktop — move it to ~/kalshi-edge
+# 3. Repo is in ~/Documents or ~/Desktop — move it to ~/prediction-market-mispricing
 # 4. .venv doesn't exist — run: python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
 ```
 

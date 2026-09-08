@@ -1,4 +1,4 @@
-# kalshi-edge
+# prediction-market-mispricing
 
 A 24/7 mispricing detector for Kalshi speaker mention markets. Built over three months as a research project on whether historical phrase frequency data can be used to systematically trade against market sentiment.
 
@@ -284,8 +284,8 @@ Grouped by workflow: **Engine Control** (start/stop the runner), **Pre-Event** (
 ### Install
 
 ```bash
-git clone https://github.com/JonathanBeck1/KALSHI-edge.git
-cd kalshi-edge
+git clone https://github.com/JonathanBeck1/prediction-market-mispricing.git
+cd prediction-market-mispricing
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 python3 -m pytest -q
@@ -321,7 +321,7 @@ Before installing launchd services, complete these three steps:
 
 1. Remove macOS quarantine on cloned files:
    ```bash
-   xattr -dr com.apple.quarantine /path/to/kalshi-edge
+   xattr -dr com.apple.quarantine /path/to/prediction-market-mispricing
    ```
 2. Grant Terminal **Full Disk Access** (System Settings → Privacy & Security). Without this, launchd services silently fail to read project files.
 3. Place the repo outside `~/Documents`, `~/Desktop`, `~/Downloads`. Those locations have sandbox restrictions that block launchd.
